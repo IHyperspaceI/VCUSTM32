@@ -1,0 +1,164 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: CAN_IO_1
+
+
+BO_ 656 INV3_Send_4: 8 Vector__XXX
+ SG_ TInvRR : 0|16@1- (0.1,-0) [-3276.8|3276.7] "degree"  CAN_IO_1
+ SG_ Motor_Peak_Current : 16|16@1- (1,0) [-32768|32767] "A"  CAN_IO_1
+ SG_ Motor_Nomial_Current_IN : 48|16@1- (1,0) [-32768|32767] "A"  CAN_IO_1
+ SG_ Converter_Peak_Current : 32|16@1- (1,0) [-32768|32767] "A"  CAN_IO_1
+
+BO_ 648 INV3_Send_3: 8 Vector__XXX
+ SG_ VDCInvRL : 48|16@1- (1,0) [-32768|32767] "V"  CAN_IO_1
+ SG_ NInvErrorInfoRR2 : 0|16@1- (1,0) [-32768|32767] ""  CAN_IO_1
+ SG_ NInvErrorInfoRR3 : 16|16@1- (1,0) [-32768|32767] ""  CAN_IO_1
+ SG_ Raw_Torque_Current : 32|16@1- (1,0) [-32768|32767] "A"  CAN_IO_1
+
+BO_ 646 INV3_Send_2: 8 Vector__XXX
+ SG_ MMotorMeasuredRR : 16|16@1- (1,0) [-32768|32767] ""  CAN_IO_1
+ SG_ NInvDTCRR : 32|16@1- (1,0) [-32768|32767] ""  CAN_IO_1
+ SG_ NInvErrorInfoRR1 : 48|16@1- (1,0) [-32768|32767] ""  CAN_IO_1
+ SG_ TMotorRL : 0|16@1- (0.1,-0) [-3276.8|3276.7] "degrees"  CAN_IO_1
+
+BO_ 644 INV3_Send_1: 8 Vector__XXX
+ SG_ BInvQuitInvOnRR : 45|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ nMotorRR : 48|16@1- (1,0) [-32768|32767] "rpm"  CAN_IO_1
+ SG_ BInvDCOnRRIn : 44|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ BInvErrorRR : 41|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ BInvOnRRIn : 46|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ BInvDCQuitInvOnRR : 43|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ BInvSysReadyRR : 40|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ BInvWarnRR : 42|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ Message_Counter : 0|16@1+ (1,0) [0|65535] ""  CAN_IO_1
+ SG_ Checksum : 16|16@1+ (1,0) [0|65535] ""  CAN_IO_1
+ SG_ AMK_bReserve : 32|8@1- (1,0) [-128|127] ""  CAN_IO_1
+ SG_ AMK_bDerating : 47|1@1+ (1,0) [0|1] ""  CAN_IO_1
+
+BO_ 389 INV3_Receive_1: 8 CAN_IO_1
+ SG_ BInvDCOnRROut : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BInvEnableRR : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BInvErrorResetRR : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BInvOnRROut : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MTorqueLimitNegativeRR : 48|16@1- (0.1,-0) [-3276.8|3276.7] "rpm" Vector__XXX
+ SG_ MTorqueLimitPositiveRR : 32|16@1- (0.1,-0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ MInvRRFinal : 16|16@1- (0.1,-0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ AMK_bReserve : 12|8@1- (1,0) [-128|127] "" Vector__XXX
+
+BO_ 649 INV1_Send_4: 8 Vector__XXX
+ SG_ TInvRL : 0|16@1- (0.1,-0) [-3276.8|3276.7] "degree"  CAN_IO_1
+ SG_ Motor_Peak_Current : 16|16@1- (1,0) [-32768|32767] "A"  CAN_IO_1
+ SG_ Motor_Nomial_Current_IN : 48|16@1- (1,0) [-32768|32767] "A"  CAN_IO_1
+ SG_ Converter_Peak_Current : 32|16@1- (1,0) [-32768|32767] "A"  CAN_IO_1
+
+BO_ 647 INV1_Send_3: 8 Vector__XXX
+ SG_ VDCInvRL : 48|16@1- (1,0) [-32768|32767] "V"  CAN_IO_1
+ SG_ NInvErrorInfoRL2 : 0|16@1- (1,0) [-32768|32767] ""  CAN_IO_1
+ SG_ NInvErrorInfoRL3 : 16|16@1- (1,0) [-32768|32767] ""  CAN_IO_1
+ SG_ Raw_Torque_Current : 32|16@1- (1,0) [-32768|32767] "A"  CAN_IO_1
+
+BO_ 645 INV1_Send_2: 8 Vector__XXX
+ SG_ MMotorMeasuredRL : 16|16@1- (1,0) [-32768|32767] ""  CAN_IO_1
+ SG_ NInvDTCRL : 32|16@1- (1,0) [-32768|32767] ""  CAN_IO_1
+ SG_ NInvErrorInfoRL1 : 48|16@1- (1,0) [-32768|32767] ""  CAN_IO_1
+ SG_ TMotorRL : 0|16@1- (0.1,-0) [-3276.8|3276.7] "degrees"  CAN_IO_1
+
+BO_ 643 INV1_Send_1: 8 Vector__XXX
+ SG_ nMotorRL : 48|16@1- (1,0) [-32768|32767] "rpm"  CAN_IO_1
+ SG_ BInvDCOnRLIn : 44|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ BInvErrorRL : 41|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ BInvOnRLIn : 46|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ BInvDCQuitInvOnRL : 43|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ BInvQuitInvOnRL : 45|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ BInvSysReadyRL : 40|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ BInvWarnRL : 42|1@1+ (1,0) [0|1] ""  CAN_IO_1
+ SG_ Message_Counter : 0|16@1+ (1,0) [0|65535] ""  CAN_IO_1
+ SG_ Checksum : 16|16@1+ (1,0) [0|65535] ""  CAN_IO_1
+ SG_ AMK_bReserve : 32|8@1- (1,0) [-128|127] ""  CAN_IO_1
+ SG_ AMK_bDerating : 47|1@1+ (1,0) [0|1] ""  CAN_IO_1
+
+BO_ 388 INV1_Receive_1: 8 CAN_IO_1
+ SG_ BInvDCOnRLOut : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BInvEnableRL : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BInvErrorResetRL : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BInvOnRLOut : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MTorqueLimitNegativeRL : 48|16@1- (0.1,-0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ MTorqueLimitPositiveRL : 32|16@1- (0.1,-0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ MInvRLFinal : 16|16@1- (0.1,-0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ AMK_bReserve : 12|8@1- (1,0) [-128|127] "" Vector__XXX
+
+
+
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "CANFD_BRS" "0";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "BusType" "CAN";
+BA_ "CANFD_BRS" BO_ 656 0;
+BA_ "GenMsgCycleTime" BO_ 656 20;
+BA_ "VFrameFormat" BO_ 656 0;
+BA_ "CANFD_BRS" BO_ 648 0;
+BA_ "GenMsgCycleTime" BO_ 648 20;
+BA_ "VFrameFormat" BO_ 648 0;
+BA_ "CANFD_BRS" BO_ 646 0;
+BA_ "GenMsgCycleTime" BO_ 646 20;
+BA_ "VFrameFormat" BO_ 646 0;
+BA_ "CANFD_BRS" BO_ 644 0;
+BA_ "GenMsgCycleTime" BO_ 644 5;
+BA_ "VFrameFormat" BO_ 644 0;
+BA_ "CANFD_BRS" BO_ 389 0;
+BA_ "GenMsgCycleTime" BO_ 389 1;
+BA_ "VFrameFormat" BO_ 389 0;
+BA_ "CANFD_BRS" BO_ 649 0;
+BA_ "GenMsgCycleTime" BO_ 649 20;
+BA_ "VFrameFormat" BO_ 649 0;
+BA_ "CANFD_BRS" BO_ 647 0;
+BA_ "GenMsgCycleTime" BO_ 647 20;
+BA_ "VFrameFormat" BO_ 647 0;
+BA_ "CANFD_BRS" BO_ 645 0;
+BA_ "GenMsgCycleTime" BO_ 645 20;
+BA_ "VFrameFormat" BO_ 645 0;
+BA_ "CANFD_BRS" BO_ 643 0;
+BA_ "GenMsgCycleTime" BO_ 643 5;
+BA_ "VFrameFormat" BO_ 643 0;
+BA_ "CANFD_BRS" BO_ 388 0;
+BA_ "GenMsgCycleTime" BO_ 388 1;
+BA_ "VFrameFormat" BO_ 388 0;
+

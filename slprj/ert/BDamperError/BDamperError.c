@@ -1,0 +1,86 @@
+/*
+ * Academic License - for use in teaching, academic research, and meeting
+ * course requirements at degree granting institutions only.  Not for
+ * government, commercial, or other organizational use.
+ *
+ * File: BDamperError.c
+ *
+ * Code generated for Simulink model 'BDamperError'.
+ *
+ * Model version                  : 13.5
+ * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
+ * C/C++ source code generated on : Tue Jun  2 18:46:07 2026
+ *
+ * Target selection: ert.tlc
+ * Embedded hardware selection: ARM Compatible->ARM Cortex-M
+ * Code generation objectives: Unspecified
+ * Validation result: Not run
+ */
+
+#include "BDamperError.h"
+#include "rtwtypes.h"
+#include "BDamperError_private.h"
+
+/* Output and update for referenced model: 'BDamperError' */
+void BDamperError(const real_T *rtu_VDamperPotentiometerFL, const real_T
+                  *rtu_VDamperPotentiometerFR, const real_T
+                  *rtu_VDamperPotentiometerRL, const real_T
+                  *rtu_VDamperPotentiometerRR, boolean_T *rty_BDamperErrorFL,
+                  boolean_T *rty_BDamperErrorFR, boolean_T *rty_BDamperErrorRL,
+                  boolean_T *rty_BDamperErrorRR)
+{
+  /* Logic: '<Root>/OR' incorporates:
+   *  Constant: '<S1>/Constant'
+   *  Constant: '<S2>/Constant'
+   *  RelationalOperator: '<S1>/Compare'
+   *  RelationalOperator: '<S2>/Compare'
+   */
+  *rty_BDamperErrorFL = ((*rtu_VDamperPotentiometerFL < 0.0) ||
+    (*rtu_VDamperPotentiometerFL > 4900.0));
+
+  /* Logic: '<Root>/OR1' incorporates:
+   *  Constant: '<S3>/Constant'
+   *  Constant: '<S4>/Constant'
+   *  RelationalOperator: '<S3>/Compare'
+   *  RelationalOperator: '<S4>/Compare'
+   */
+  *rty_BDamperErrorFR = ((*rtu_VDamperPotentiometerFR < 0.0) ||
+    (*rtu_VDamperPotentiometerFR > 4900.0));
+
+  /* Logic: '<Root>/OR2' incorporates:
+   *  Constant: '<S5>/Constant'
+   *  Constant: '<S6>/Constant'
+   *  RelationalOperator: '<S5>/Compare'
+   *  RelationalOperator: '<S6>/Compare'
+   */
+  *rty_BDamperErrorRL = ((*rtu_VDamperPotentiometerRL < 0.0) ||
+    (*rtu_VDamperPotentiometerRL > 4900.0));
+
+  /* Logic: '<Root>/OR3' incorporates:
+   *  Constant: '<S7>/Constant'
+   *  Constant: '<S8>/Constant'
+   *  RelationalOperator: '<S7>/Compare'
+   *  RelationalOperator: '<S8>/Compare'
+   */
+  *rty_BDamperErrorRR = ((*rtu_VDamperPotentiometerRR < 0.0) ||
+    (*rtu_VDamperPotentiometerRR > 4900.0));
+}
+
+/* Model initialize function */
+void BDamperError_initialize(const char_T **rt_errorStatus,
+  RT_MODEL_BDamperError_T *const BDamperError_M)
+{
+  /* Registration code */
+
+  /* initialize error status */
+  rtmSetErrorStatusPointer(BDamperError_M, rt_errorStatus);
+
+  /* user code (Initialize function Body) */
+  LL_TIM_EnableCounter(TIM2);
+}
+
+/*
+ * File trailer for generated code.
+ *
+ * [EOF]
+ */

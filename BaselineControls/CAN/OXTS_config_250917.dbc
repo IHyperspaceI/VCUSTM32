@@ -1,0 +1,90 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYNNNNNNNNNN/4/%%%/4/'%**4NNN///"
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:AV200
+
+BO_ 2050 Altitude: 4 AV200
+ SG_ PosAlt : 0|32@1- (0.001,0) [-2147483.648|2147483.647] "m" Vector__XXX
+
+BO_ 2052 VelocityLevel: 4 AV200
+ SG_ VelForward : 0|16@1- (0.01,0) [-327.68|327.67] "m/s" Vector__XXX
+ SG_ VelLateral : 16|16@1- (0.01,0) [-327.68|327.67] "m/s" Vector__XXX
+
+BO_ 2053 AccelVehicle: 6 AV200
+ SG_ AccelX : 0|16@1- (0.01,0) [-327.68|327.67] "m/s²" Vector__XXX
+ SG_ AccelY : 16|16@1- (0.01,0) [-327.68|327.67] "m/s²" Vector__XXX
+ SG_ AccelZ : 32|16@1- (0.01,0) [-327.68|327.67] "m/s²" Vector__XXX
+
+BO_ 2055 HeadingPitchRoll: 6 AV200
+ SG_ AngleHeading : 0|16@1+ (0.01,0) [0|655.35] "°" Vector__XXX
+ SG_ AnglePitch : 16|16@1- (0.01,0) [-327.68|327.67] "°" Vector__XXX
+ SG_ AngleRoll : 32|16@1- (0.01,0) [-327.68|327.67] "°" Vector__XXX
+
+BO_ 2059 Distance: 8 AV200
+ SG_ DistanceWithHold : 0|32@1+ (0.001,0) [0|4294967.295] "m" Vector__XXX
+ SG_ Distance : 32|32@1+ (0.001,0) [0|4294967.295] "m" Vector__XXX
+
+BO_ 2062 AngAccelVehicle: 6 AV200
+ SG_ AngAccelX : 0|16@1- (0.1,0) [-3276.8|3276.7] "°/s²" Vector__XXX
+ SG_ AngAccelY : 16|16@1- (0.1,0) [-3276.8|3276.7] "°/s²" Vector__XXX
+ SG_ AngAccelZ : 32|16@1- (0.1,0) [-3276.8|3276.7] "°/s²" Vector__XXX
+
+BO_ 2089 ApproxLatitudeLongitude: 8 AV200
+ SG_ ApproxPosLat : 0|32@1- (1E-07,0) [-214.7483648|214.7483647] "°" Vector__XXX
+ SG_ ApproxPosLon : 32|32@1- (1E-07,0) [-214.7483648|214.7483647] "°" Vector__XXX
+
+CM_ "OxTS AV200";
+CM_ BO_ 2050 "Altitude.";
+CM_ SG_ 2050 PosAlt "Altitude.";
+CM_ BO_ 2052 "OxTS horizontal frame velocity.";
+CM_ SG_ 2052 VelForward "OxTS horizontal frame longitudinal (forward) velocity.";
+CM_ SG_ 2052 VelLateral "OxTS horizontal frame lateral (right) velocity.";
+CM_ BO_ 2053 "OxTS output frame IMU acceleration.";
+CM_ SG_ 2053 AccelX "OxTS output frame longitudinal (forward) IMU acceleration.";
+CM_ SG_ 2053 AccelY "OxTS output frame lateral (right) IMU acceleration.";
+CM_ SG_ 2053 AccelZ "OxTS output frame vertical (down) IMU acceleration.";
+CM_ BO_ 2055 "OxTS orientation.";
+CM_ SG_ 2055 AngleHeading "Heading angle.";
+CM_ SG_ 2055 AnglePitch "Pitch angle.";
+CM_ SG_ 2055 AngleRoll "Roll angle.";
+CM_ BO_ 2059 "Distance.";
+CM_ SG_ 2059 DistanceWithHold "Horizontal distance with hold.";
+CM_ SG_ 2059 Distance "Horizontal distance without hold.";
+CM_ BO_ 2062 "OxTS output frame IMU angular acceleration.";
+CM_ SG_ 2062 AngAccelX "OxTS output frame longitudinal (forward) IMU angular acceleration.";
+CM_ SG_ 2062 AngAccelY "OxTS output frame lateral (right) IMU angular acceleration.";
+CM_ SG_ 2062 AngAccelZ "OxTS output frame vertical (down) IMU angular acceleration.";
+CM_ BO_ 2089 "Approximate latitude and longitude.";
+CM_ SG_ 2089 ApproxPosLat "Approximate latitude.";
+CM_ SG_ 2089 ApproxPosLon "Approximate longitude.";

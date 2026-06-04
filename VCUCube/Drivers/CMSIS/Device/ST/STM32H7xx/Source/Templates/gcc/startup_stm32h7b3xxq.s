@@ -60,8 +60,6 @@ defined in linker script */
 Reset_Handler:  
   ldr   sp, =_estack      /* set stack pointer */
 
-/* Call the ExitRun0Mode function to configure the power supply */
-  bl  ExitRun0Mode
 /* Call the clock system initialization function.*/
   bl  SystemInit
   
@@ -98,10 +96,8 @@ LoopFillZerobss:
 /* Call static constructors */
     bl __libc_init_array
 /* Call the application's entry point.*/
-    bl  main
-LoopForever:
-    b LoopForever
-
+  bl  main
+  bx  lr
 .size  Reset_Handler, .-Reset_Handler
 
 /**
@@ -125,6 +121,7 @@ Infinite_Loop:
 *******************************************************************************/
    .section  .isr_vector,"a",%progbits
   .type  g_pfnVectors, %object
+  .size  g_pfnVectors, .-g_pfnVectors
    
    
 g_pfnVectors:
@@ -302,8 +299,6 @@ g_pfnVectors:
   .word     OTFDEC2_IRQHandler                /* OTFDEC2                      */
   .word     GFXMMU_IRQHandler                 /* GFXMMU                       */
   .word     BDMA1_IRQHandler                  /* BDMA1                        */
-
-  .size  g_pfnVectors, .-g_pfnVectors
 
 /*******************************************************************************
 *

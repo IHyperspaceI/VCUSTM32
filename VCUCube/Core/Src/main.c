@@ -118,10 +118,10 @@ void SystemClock_Config(void)
 
   }
   LL_RCC_SetAHBPrescaler(LL_RCC_AHB_DIV_1);
-  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_2);
-  LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_2);
-  LL_RCC_SetAPB3Prescaler(LL_RCC_APB3_DIV_2);
-  LL_RCC_SetAPB4Prescaler(LL_RCC_APB4_DIV_2);
+  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_1);
+  LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_1);
+  LL_RCC_SetAPB3Prescaler(LL_RCC_APB3_DIV_1);
+  LL_RCC_SetAPB4Prescaler(LL_RCC_APB4_DIV_1);
   LL_SetSystemCoreClock(128000000);
 
    /* Update the time base */

@@ -1,0 +1,447 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: CAN_IO_4
+
+
+BO_ 1716 MSGID_0X6B4: 8 Vector__XXX
+ SG_ BBMSP0AFA : 38|1@1+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ BBMSP0AC0 : 37|1@1+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ BBMSP0A80 : 36|1@1+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ BBMSP0A10 : 35|1@1+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ BBMSP0A0E : 34|1@1+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ BBMSP0A0C : 33|1@1+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ Blank : 56|8@1+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ BBalancingOn : 32|1@1+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ RCellAverage : 7|16@0+ (0.01,-0) [0|655] "mOhm"  CAN_IO_4
+
+BO_ 1715 MSGID_0X6B3: 8 Vector__XXX
+ SG_ Minimum_Cell_Voltage : 55|16@0+ (0.0001,-0) [0|6.5535] "Volts"  CAN_IO_4
+ SG_ Maximum_Cell_Voltage : 39|16@0+ (0.0001,-0) [0|6.5535] "Volts"  CAN_IO_4
+ SG_ VCellMin : 23|16@0+ (0.0001,-0) [0|6.5535] "Volts"  CAN_IO_4
+ SG_ High_Cell_Resistance : 7|16@0+ (0.01,-0) [0|655] "mOhm"  CAN_IO_4
+
+BO_ 1714 MSGID_0X6B2: 8 Vector__XXX
+ SG_ IBMSDCL : 48|16@1+ (1,0) [0|65535] "Amps"  CAN_IO_4
+ SG_ TCellMax : 39|16@0- (1,0) [80|32767] "Celsius"  CAN_IO_4
+ SG_ VCellMax : 23|16@0+ (0.0001,-0) [0|6.5535] "Volts"  CAN_IO_4
+ SG_ VCellAverage : 7|16@0+ (1E-08,-0) [0|0.00065535] "Volts"  CAN_IO_4
+
+BO_ 1713 MSGID_0X6B1: 8 Vector__XXX
+ SG_ Pack_SOC : 7|16@0+ (0.5,-0) [0|32767.5] "Percent"  CAN_IO_4
+ SG_ TCellMin : 55|16@0- (1,0) [80|32767] "Celsius"  CAN_IO_4
+ SG_ DTC_Flags_2 : 39|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ DTC_Flags_1 : 16|16@1+ (1,0) [0|65535] ""  CAN_IO_4
+
+BO_ 1712 MSGID_0X6B0: 8 Vector__XXX
+ SG_ VDCAccumulator_NOT : 7|16@0+ (0.1,-0) [0|6553.5] "Volts"  CAN_IO_4
+ SG_ VDCAccumulator : 16|16@1+ (1,0) [0|65535] "Volts"  CAN_IO_4
+ SG_ IBMSHallEffect : 32|16@1- (1,0) [32767|32767] "Amps"  CAN_IO_4
+ SG_ CRC_Checksum : 48|16@1+ (1,0) [0|65535] ""  CAN_IO_4
+
+BO_ 54 MSGID_0X36_CELLBCAST: 8 Vector__XXX
+ SG_ Checksum : 63|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ CellVoltage : 15|16@0+ (0.0001,-0) [0|6.5535] "Volts"  CAN_IO_4
+ SG_ CellResistance : 30|15@0+ (0.01,-0) [0|327.67] "mOhms"  CAN_IO_4
+ SG_ CellOpenVoltage : 47|16@0+ (0.0001,-0) [0|6.5535] "Volts"  CAN_IO_4
+ SG_ CellId : 7|8@0+ (1,0) [0|255] "#"  CAN_IO_4
+ SG_ CellBalancing : 31|1@1+ (1,0) [0|1] ""  CAN_IO_4
+
+BO_ 1320 IVT_Msg_Result_Wh: 6 Vector__XXX
+ SG_ IVT_Result_Wh_System_Error : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_Wh_OCS : 12|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_Wh_Measurement_Error : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_Wh_Channel_Error : 13|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_Wh : 23|32@0- (1,0) [-2147483648|2147483647] "Wh"  CAN_IO_4
+ SG_ IVT_MsgCount_Result_Wh : 11|4@0+ (1,0) [0|15] ""  CAN_IO_4
+ SG_ IVT_ID_Result_Wh : 7|8@0+ (1,0) [7|7] ""  CAN_IO_4
+
+BO_ 1318 IVT_Msg_Result_W: 6 Vector__XXX
+ SG_ IVT_Result_W_System_Error : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_W_OCS : 12|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_W_Measurement_Error : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_W_Channel_Error : 13|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_W : 23|32@0- (1,0) [-2147483648|2147483647] "W"  CAN_IO_4
+ SG_ IVT_MsgCount_Result_W : 11|4@0+ (1,0) [0|15] ""  CAN_IO_4
+ SG_ IVT_ID_Result_W : 7|8@0+ (1,0) [5|5] ""  CAN_IO_4
+
+BO_ 1316 IVT_Msg_Result_U3: 6 Vector__XXX
+ SG_ IVT_Result_U3_System_Error : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U3_OCS : 12|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U3_Measurement_Error : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U3_Channel_Error : 13|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U3 : 23|32@0- (1,0) [-2147483648|2147483647] "mV"  CAN_IO_4
+ SG_ IVT_MsgCount_Result_U3 : 11|4@0+ (1,0) [0|15] ""  CAN_IO_4
+ SG_ IVT_ID_Result_U3 : 7|8@0+ (1,0) [3|3] ""  CAN_IO_4
+
+BO_ 1315 IVT_Msg_Result_U2: 6 Vector__XXX
+ SG_ IVT_Result_U2_System_Error : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U2_OCS : 12|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U2_Measurement_Error : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U2_Channel_Error : 13|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U2 : 23|32@0- (1,0) [-2147483648|2147483647] "mV"  CAN_IO_4
+ SG_ IVT_MsgCount_Result_U2 : 11|4@0+ (1,0) [0|15] ""  CAN_IO_4
+ SG_ IVT_ID_Result_U2 : 7|8@0+ (1,0) [2|2] ""  CAN_IO_4
+
+BO_ 1314 IVT_Msg_Result_U1: 6 Vector__XXX
+ SG_ IVT_Result_U1_System_Error : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U1_OCS : 12|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U1_Measurement_Error : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U1_Channel_Error : 13|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_U1 : 23|32@0- (1,0) [-2147483648|2147483647] "mV"  CAN_IO_4
+ SG_ IVT_MsgCount_Result_U1 : 11|4@0+ (1,0) [0|15] ""  CAN_IO_4
+ SG_ IVT_ID_Result_U1 : 7|8@0+ (1,0) [1|1] ""  CAN_IO_4
+
+BO_ 1317 IVT_Msg_Result_T: 6 Vector__XXX
+ SG_ IVT_Result_T_System_Error : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_T_OCS : 12|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_T_Measurement_Error : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_T_Channel_Error : 13|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_T : 23|32@0- (0.1,-0) [-214748364.8|214748364.7] "°C"  CAN_IO_4
+ SG_ IVT_MsgCount_Result_T : 11|4@0+ (1,0) [0|15] ""  CAN_IO_4
+ SG_ IVT_ID_Result_T : 7|8@0+ (1,0) [4|4] ""  CAN_IO_4
+
+BO_ 1313 IVT_Msg_Result_I: 6 Vector__XXX
+ SG_ IVT_Result_I_System_Error : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_I_OCS : 12|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_I_Measurement_Error : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_I_Channel_Error : 13|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IIVTS : 23|32@0- (1,0) [-2147483648|2147483647] "mA"  CAN_IO_4
+ SG_ IVT_MsgCount_Result_I : 11|4@0+ (1,0) [0|15] ""  CAN_IO_4
+ SG_ IVT_ID_Result_I : 7|8@0+ (1,0) [0|255] ""  CAN_IO_4
+
+BO_ 1319 IVT_Msg_Result_As: 6 Vector__XXX
+ SG_ IVT_Result_As_System_Error : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_As_OCS : 12|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_As_Measurement_Error : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_As_Channel_Error : 13|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ IVT_Result_As : 23|32@0- (1,0) [-2147483648|2147483647] "As"  CAN_IO_4
+ SG_ IVT_MsgCount_Result_As : 11|4@0+ (1,0) [0|15] ""  CAN_IO_4
+ SG_ IVT_ID_Result_As : 7|8@0+ (1,0) [6|6] ""  CAN_IO_4
+
+BO_ 1297 IVT_Msg_Response: 8 Vector__XXX
+ SG_ _FF_Wrong_Command m255 : 15|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BF_Restart_Alive_SN m191 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _BF_Restart_Alive_Cmd_ID m191 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _BC_Resp_Art_N_byte_6 m188 : 63|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BC_Resp_Art_N_byte_5 m188 : 55|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BC_Resp_Art_N_byte_4 m188 : 47|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BC_Resp_Art_N_byte_3 m188 : 39|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BC_Resp_Art_N_byte_2 m188 : 31|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BC_Resp_Art_N_byte_1 m188 : 23|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BC_Resp_Art_N_byte_0 m188 : 15|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BB_Resp_Serien_Nr m187 : 15|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _BA_Resp_SW_Ver_Vear m186 : 39|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BA_Resp_SW_Ver_Revision m186 : 31|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BA_Resp_SW_Ver_Month m186 : 40|8@1- (1,0) [-128|127] ""  CAN_IO_4
+ SG_ _BA_Resp_SW_Ver_Minor m186 : 23|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BA_Resp_SW_Ver_Major_HW m186 : 15|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BA_Resp_SW_Ver_Internal m186 : 63|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _BA_Resp_SW_Ver_Day m186 : 55|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _B9_Resp_Device_Voltage_chan m185 : 27|4@0+ (1,0) [0|15] ""  CAN_IO_4
+ SG_ _B9_Resp_Device_V_supply m185 : 55|8@0+ (1,0) [0|255] "V"  CAN_IO_4
+ SG_ _B9_Resp_Device_type m185 : 15|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _B9_Resp_Device_TOI m185 : 39|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _B9_Resp_Device_current m185 : 23|12@0+ (1,0) [0|4095] "A"  CAN_IO_4
+ SG_ _B9_Resp_Device_Com m185 : 47|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _B6_Resp_OC_Neg_Set_Threshold m182 : 15|16@0- (1,0) [-32768|32767] ""  CAN_IO_4
+ SG_ _B6_Resp_OC_Neg_Reset_Threshold m182 : 31|16@0- (1,0) [-32768|32767] ""  CAN_IO_4
+ SG_ _B5_Resp_OC_Pos_Set_Threshold m181 : 15|16@0- (1,0) [-32768|32767] ""  CAN_IO_4
+ SG_ _B5_Resp_OC_Pos_Reset_Threshold m181 : 31|16@0- (1,0) [-32768|32767] ""  CAN_IO_4
+ SG_ _B4_Resp_Startup_Mode m180 : 16|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _B4_Resp_Code_Level m180 : 31|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _B4_Resp_Actual_Mode m180 : 8|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _B3_Resp_Oc_Test_Time m179 : 15|16@0+ (1,0) [0|65535] "ms"  CAN_IO_4
+ SG_ _B2_Resp_Store_dummy m178 : 15|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _B2_Resp_Store_Device_SN m178 : 23|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _B1_Trigger_spare m177 : 15|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _B1_07_Trigger_WH m177 : 23|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _B1_06_Trigger_As m177 : 22|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _B1_05_Trigger_W m177 : 21|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _B1_04_Trigger_T m177 : 20|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _B1_03_Trigger_U3 m177 : 19|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _B1_02_Trigger_U2 m177 : 18|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _B1_01_Trigger_U1 m177 : 17|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _B1_00_Trigger_I m177 : 16|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _B0_Resp_Reset_Item m176 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _B0_Resp_Reset_Device_SN m176 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _A7_Resp_TriggerMode_WH m167 : 9|2@0+ (1,0) [0|2] ""  CAN_IO_4
+ SG_ _A7_Resp_Sign_WH m167 : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A7_Resp_Endianess_WH m167 : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A7_Resp_CycleTime_WH m167 : 23|16@0+ (1,0) [0|65535] "ms"  CAN_IO_4
+ SG_ _A6_Resp_TriggerMode_As m166 : 9|2@0+ (1,0) [0|2] ""  CAN_IO_4
+ SG_ _A6_Resp_Sign_As m166 : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A6_Resp_Endianess_As m166 : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A6_Resp_CycleTime_As m166 : 23|16@0+ (1,0) [0|65535] "ms"  CAN_IO_4
+ SG_ _A5_Resp_TriggerMode_W m165 : 9|2@0+ (1,0) [0|2] ""  CAN_IO_4
+ SG_ _A5_Resp_Sign_W m165 : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A5_Resp_Endianess_W m165 : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A5_Resp_CycleTime_W m165 : 23|16@0+ (1,0) [0|65535] "ms"  CAN_IO_4
+ SG_ _A4_Resp_TriggerMode_T m164 : 9|2@0+ (1,0) [0|2] ""  CAN_IO_4
+ SG_ _A4_Resp_Sign_T m164 : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A4_Resp_Endianess_T m164 : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A4_Resp_CycleTime_T m164 : 23|16@0+ (1,0) [0|65535] "ms"  CAN_IO_4
+ SG_ _A3_Resp_TriggerMode_U3 m163 : 9|2@0+ (1,0) [0|2] ""  CAN_IO_4
+ SG_ _A3_Resp_Sign_U3 m163 : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A3_Resp_Endianess_U3 m163 : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A3_Resp_CycleTime_U3 m163 : 23|16@0+ (1,0) [0|65535] "ms"  CAN_IO_4
+ SG_ _A2_Resp_TriggerMode_U2 m162 : 9|2@0+ (1,0) [0|2] ""  CAN_IO_4
+ SG_ _A2_Resp_Sign_U2 m162 : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A2_Resp_Endianess_U2 m162 : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A2_Resp_CycleTime_U2 m162 : 23|16@0+ (1,0) [0|65535] "ms"  CAN_IO_4
+ SG_ _A1_Resp_TriggerMode_U1 m161 : 9|2@0+ (1,0) [0|2] ""  CAN_IO_4
+ SG_ _A1_Resp_Sign_U1 m161 : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A1_Resp_Endianess_U1 m161 : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A1_Resp_CycleTime_U1 m161 : 23|16@0+ (1,0) [0|65535] "ms"  CAN_IO_4
+ SG_ _A0_Resp_TriggerMode_I m160 : 9|2@0+ (1,0) [0|2] ""  CAN_IO_4
+ SG_ _A0_Resp_Sign_I m160 : 15|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A0_Resp_Endianess_I m160 : 14|1@0+ (1,0) [0|1] ""  CAN_IO_4
+ SG_ _A0_Resp_CycleTime_I m160 : 23|16@0+ (1,0) [0|65535] "ms"  CAN_IO_4
+ SG_ _9F_Resp_Can_ID_val_Response m159 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _9F_Resp_Can_ID_SN_Response m159 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _9D_Resp_Can_ID_val_Command m157 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _9D_Resp_Can_ID_SN_Command m157 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _97_Resp_Can_ID_val_Wh m151 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _97_Resp_Can_ID_SN_Wh m151 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _96_Resp_Can_ID_val_As m150 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _96_Resp_Can_ID_SN_As m150 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _95_Resp_Can_ID_val_W m149 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _95_Resp_Can_ID_SN_W m149 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _94_Resp_Can_ID_val_T m148 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _94_Resp_Can_ID_SN_T m148 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _93_Resp_Can_ID_val_U3 m147 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _93_Resp_Can_ID_SN_U3 m147 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _92_Resp_Can_ID_val_U2 m146 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _92_Resp_Can_ID_SN_U2 m146 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _91_Resp_Can_ID_val_U1 m145 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _91_Resp_Can_ID_SN_U1 m145 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _90_Resp_Can_ID_val_I m144 : 15|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _90_Resp_Can_ID_SN_I m144 : 31|32@0+ (1,0) [0|4294967295] ""  CAN_IO_4
+ SG_ _83_Resp_LogData_Item m131 : 15|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _83_Resp_LogData_Counter_byte_5 m131 : 63|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _83_Resp_LogData_Counter_byte_4 m131 : 55|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _83_Resp_LogData_Counter_byte_3 m131 : 47|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _83_Resp_LogData_Counter_byte_2 m131 : 39|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _83_Resp_LogData_Counter_byte_1 m131 : 31|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _83_Resp_LogData_Counter_byte_0 m131 : 23|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _82_Resp_AllLogData_Item m130 : 15|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _82_Resp_AllLogData_Counter_byte m130 : 63|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _82_Resp_AllLogData_Counter_0000 m130 : 55|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _82_Resp_AllLogData_Counter_0001 m130 : 47|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _82_Resp_AllLogData_Counter_0002 m130 : 39|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _82_Resp_AllLogData_Counter_0003 m130 : 31|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _82_Resp_AllLogData_Counter_0004 m130 : 23|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _81_Resp_SystemError_Item m129 : 15|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _81_Resp_SystemError_Count_Mask m129 : 23|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ _80_Resp_MeasError_Item m128 : 15|8@0+ (1,0) [0|255] ""  CAN_IO_4
+ SG_ _80_Resp_MeasError_Count_Mask m128 : 23|16@0+ (1,0) [0|65535] ""  CAN_IO_4
+ SG_ IVT_ID_Response M : 7|8@0+ (1,0) [0|255] ""  CAN_IO_4
+
+BO_ 1041 IVT_Msg_Cmd: 8 CAN_IO_4
+ SG_ _63_Get_Result_dummy_U3 m99 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _62_Get_Result_dummy_U2 m98 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _61_Get_Result_dummy_U1 m97 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _60_Get_Result_dummy_I m96 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _5F_Get_Can_ID_SN_Response m95 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _5D_Get_Can_ID_SN_Command m93 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _57_Get_Can_ID_SN_Wh m87 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _56_Get_Can_ID_SN_As m86 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _55_Get_Can_ID_SN_W m85 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _54_Get_Can_ID_SN_T m84 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _53_Get_Can_ID_SN_U3 m83 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _52_Get_Can_ID_SN_U2 m82 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _51_Get_Can_ID_SN_U1 m81 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _50_Get_Can_ID_SN_I m80 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _43_Get_LogData_Item m67 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _42_Get_AllLogData_Item m66 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _41_Get_SystemError_Item m65 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _40_Get_MeasError_Item m64 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _3F_Restart_Dummy m63 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _3D_Restart_Default_Dummy m61 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _3A_RESTART_to_Bitrate m58 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _36_OC_Neg_Set_Threshold m54 : 15|16@0- (1,0) [-32768|32767] "A" Vector__XXX
+ SG_ _36_OC_Neg_Reset_Threshold m54 : 31|16@0- (1,0) [-32768|32767] "A" Vector__XXX
+ SG_ _35_OC_Pos_Set_Threshold m53 : 15|16@0- (1,0) [-32768|32767] "A" Vector__XXX
+ SG_ _35_OC_Pos_Reset_Threshold m53 : 31|16@0- (1,0) [-32768|32767] "A" Vector__XXX
+ SG_ _34_Startup_Mode m52 : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _34_Code_Level m52 : 31|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ _34_Actual_Mode m52 : 8|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _33_Oc_Test_Time m51 : 15|16@0+ (1,0) [0|65535] "ms" Vector__XXX
+ SG_ _32_Store_dummy m50 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _31_Trigger_spare m49 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _31_07_Trigger_WH m49 : 23|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _31_06_Trigger_As m49 : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _31_05_Trigger_W m49 : 21|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _31_04_Trigger_T m49 : 20|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _31_03_Trigger_U3 m49 : 19|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _31_02_Trigger_U2 m49 : 18|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _31_01_Trigger_U1 m49 : 17|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _31_00_Trigger_I m49 : 16|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _30_Reset_Item m48 : 15|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ _30_Reset_Device_SN m48 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _27_Conf_TriggerMode_WH m39 : 9|2@0+ (1,0) [0|2] "" Vector__XXX
+ SG_ _27_Conf_Sign_WH m39 : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _27_Conf_Endianess_WH m39 : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _27_Conf_CycleTime_WH m39 : 23|16@0+ (1,0) [0|65535] "ms" Vector__XXX
+ SG_ _26_Conf_TriggerMode_As m38 : 9|2@0+ (1,0) [0|2] "" Vector__XXX
+ SG_ _26_Conf_Sign_As m38 : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _26_Conf_Endianess_As m38 : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _26_Conf_CycleTime_As m38 : 23|16@0+ (1,0) [0|65535] "ms" Vector__XXX
+ SG_ _25_Conf_TriggerMode_W m37 : 9|2@0+ (1,0) [0|2] "" Vector__XXX
+ SG_ _25_Conf_Sign_W m37 : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _25_Conf_Endianess_W m37 : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _25_Conf_CycleTime_W m37 : 23|16@0+ (1,0) [0|65535] "ms" Vector__XXX
+ SG_ _24_Conf_TriggerMode_T m36 : 9|2@0+ (1,0) [0|2] "" Vector__XXX
+ SG_ _24_Conf_Sign_T m36 : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _24_Conf_Endianess_T m36 : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _24_Conf_CycleTime_T m36 : 23|16@0+ (1,0) [0|65535] "ms" Vector__XXX
+ SG_ _23_Conf_TriggerMode_U3 m35 : 9|2@0+ (1,0) [0|2] "" Vector__XXX
+ SG_ _23_Conf_Sign_U3 m35 : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _23_Conf_Endianess_U3 m35 : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _23_Conf_CycleTime_U3 m35 : 23|16@0+ (1,0) [0|65535] "ms" Vector__XXX
+ SG_ _22_Conf_TriggerMode_U2 m34 : 9|2@0+ (1,0) [0|2] "" Vector__XXX
+ SG_ _22_Conf_Sign_U2 m34 : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _22_Conf_Endianess_U2 m34 : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _22_Conf_CycleTime_U2 m34 : 23|16@0+ (1,0) [0|65535] "ms" Vector__XXX
+ SG_ _21_Conf_TriggerMode_U1 m33 : 9|2@0+ (1,0) [0|2] "" Vector__XXX
+ SG_ _21_Conf_Sign_U1 m33 : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _21_Conf_Endianess_U1 m33 : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _21_Conf_CycleTime_U1 m33 : 23|16@0+ (1,0) [0|65535] "ms" Vector__XXX
+ SG_ _20_Conf_TriggerMode_I m32 : 9|2@0+ (1,0) [0|2] "" Vector__XXX
+ SG_ _20_Conf_Sign_I m32 : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _20_Conf_Endianess_I m32 : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ _20_Conf_CycleTime_I m32 : 23|16@0+ (1,0) [0|65535] "ms" Vector__XXX
+ SG_ _1F_Set_Can_ID_val_Response m31 : 15|16@0+ (1,0) [0|2047] "" Vector__XXX
+ SG_ _1F_Set_Can_ID_SN_Response m31 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _1D_Set_Can_ID_val_Command m29 : 15|16@0+ (1,0) [0|2047] "" Vector__XXX
+ SG_ _1D_Set_Can_ID_SN_Command m29 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _17_Set_Can_ID_val_Wh m23 : 15|16@0+ (1,0) [0|2047] "" Vector__XXX
+ SG_ _17_Set_Can_ID_SN_Wh m23 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _16_Set_Can_ID_val_As m22 : 15|16@0+ (1,0) [0|2047] "" Vector__XXX
+ SG_ _16_Set_Can_ID_SN_As m22 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _15_Set_Can_ID_val_W m21 : 15|16@0+ (1,0) [0|2047] "" Vector__XXX
+ SG_ _15_Set_Can_ID_SN_W m21 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _14_Set_Can_ID_val_T m20 : 15|16@0+ (1,0) [0|2047] "" Vector__XXX
+ SG_ _14_Set_Can_ID_SN_T m20 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _13_Set_Can_ID_val_U3 m19 : 15|16@0+ (1,0) [0|2047] "" Vector__XXX
+ SG_ _13_Set_Can_ID_SN_U3 m19 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _12_Set_Can_ID_val_U2 m18 : 15|16@0+ (1,0) [0|2047] "" Vector__XXX
+ SG_ _12_Set_Can_ID_SN_U2 m18 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _11_Set_Can_ID_val_U1 m17 : 15|16@0+ (1,0) [0|2047] "" Vector__XXX
+ SG_ _11_Set_Can_ID_SN_U1 m17 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _10_Set_Can_ID_val_I m16 : 15|16@0+ (1,0) [0|2047] "" Vector__XXX
+ SG_ _10_Set_Can_ID_SN_I m16 : 31|32@0+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ _7C_Get_Art_Nr_dummy m124 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _7B_Get_Serien_Nr_dummy m123 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _7A_Get_SW_Version_dummy m122 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _79_Get_Device_Id_dummy m121 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _76_Get_OC_Neg_dummy m118 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _75_Get_OC_Pos_dummy m117 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _74_Get_Mode_dummy m116 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _73_Get_OC_Test_dummy m115 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _67_Get_Result_dummy_Wh m103 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _66_Get_Result_dummy_As m102 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _65_Get_Result_dummy_W m101 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ _64_Get_Result_dummy_T m100 : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ IVT_ID_Cmd M : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+
+
+
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "CANFD_BRS" "0";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "BusType" "CAN";
+BA_ "VFrameFormat" BO_ 1716 0;
+BA_ "GenMsgCycleTime" BO_ 1716 100;
+BA_ "CANFD_BRS" BO_ 1716 0;
+BA_ "VFrameFormat" BO_ 1715 0;
+BA_ "GenMsgCycleTime" BO_ 1715 100;
+BA_ "CANFD_BRS" BO_ 1715 0;
+BA_ "VFrameFormat" BO_ 1714 0;
+BA_ "GenMsgCycleTime" BO_ 1714 100;
+BA_ "CANFD_BRS" BO_ 1714 0;
+BA_ "VFrameFormat" BO_ 1713 0;
+BA_ "GenMsgCycleTime" BO_ 1713 100;
+BA_ "CANFD_BRS" BO_ 1713 0;
+BA_ "VFrameFormat" BO_ 1712 0;
+BA_ "GenMsgCycleTime" BO_ 1712 100;
+BA_ "CANFD_BRS" BO_ 1712 0;
+BA_ "VFrameFormat" BO_ 54 0;
+BA_ "GenMsgCycleTime" BO_ 54 100;
+BA_ "CANFD_BRS" BO_ 54 0;
+BA_ "VFrameFormat" BO_ 1320 0;
+BA_ "GenMsgCycleTime" BO_ 1320 100;
+BA_ "CANFD_BRS" BO_ 1320 0;
+BA_ "VFrameFormat" BO_ 1318 0;
+BA_ "GenMsgCycleTime" BO_ 1318 100;
+BA_ "CANFD_BRS" BO_ 1318 0;
+BA_ "VFrameFormat" BO_ 1316 0;
+BA_ "GenMsgCycleTime" BO_ 1316 100;
+BA_ "CANFD_BRS" BO_ 1316 0;
+BA_ "VFrameFormat" BO_ 1315 0;
+BA_ "GenMsgCycleTime" BO_ 1315 100;
+BA_ "CANFD_BRS" BO_ 1315 0;
+BA_ "VFrameFormat" BO_ 1314 0;
+BA_ "GenMsgCycleTime" BO_ 1314 100;
+BA_ "CANFD_BRS" BO_ 1314 0;
+BA_ "VFrameFormat" BO_ 1317 0;
+BA_ "GenMsgCycleTime" BO_ 1317 100;
+BA_ "CANFD_BRS" BO_ 1317 0;
+BA_ "VFrameFormat" BO_ 1313 0;
+BA_ "GenMsgCycleTime" BO_ 1313 1;
+BA_ "CANFD_BRS" BO_ 1313 0;
+BA_ "VFrameFormat" BO_ 1319 0;
+BA_ "GenMsgCycleTime" BO_ 1319 100;
+BA_ "CANFD_BRS" BO_ 1319 0;
+BA_ "VFrameFormat" BO_ 1297 0;
+BA_ "GenMsgCycleTime" BO_ 1297 100;
+BA_ "CANFD_BRS" BO_ 1297 0;
+BA_ "VFrameFormat" BO_ 1041 0;
+BA_ "GenMsgCycleTime" BO_ 1041 100;
+BA_ "CANFD_BRS" BO_ 1041 0;
+BA_ "SystemSignalLongSymbol" SG_ 1297 _82_Resp_AllLogData_Counter_byte "_82_Resp_AllLogData_Counter_byte_5";
+BA_ "SystemSignalLongSymbol" SG_ 1297 _82_Resp_AllLogData_Counter_0000 "_82_Resp_AllLogData_Counter_byte_4";
+BA_ "SystemSignalLongSymbol" SG_ 1297 _82_Resp_AllLogData_Counter_0001 "_82_Resp_AllLogData_Counter_byte_3";
+BA_ "SystemSignalLongSymbol" SG_ 1297 _82_Resp_AllLogData_Counter_0002 "_82_Resp_AllLogData_Counter_byte_2";
+BA_ "SystemSignalLongSymbol" SG_ 1297 _82_Resp_AllLogData_Counter_0003 "_82_Resp_AllLogData_Counter_byte_1";
+BA_ "SystemSignalLongSymbol" SG_ 1297 _82_Resp_AllLogData_Counter_0004 "_82_Resp_AllLogData_Counter_byte_0";
+

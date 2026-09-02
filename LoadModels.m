@@ -27,3 +27,4 @@ end
 missing = setdiff(unique(refModelNames), models);
 fprintf('\nIn ModelReference blocks but NOT returned by find_mdlrefs:\n');
 disp(missing);
+clear;

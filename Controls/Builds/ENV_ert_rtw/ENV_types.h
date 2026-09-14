@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ENV'.
  *
- * Model version                  : 13.227
+ * Model version                  : 13.231
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Mon Sep 14 13:12:00 2026
+ * C/C++ source code generated on : Mon Sep 14 14:14:10 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -21,20 +21,6 @@
 #define ENV_types_h_
 #include "rtwtypes.h"
 #include "mw_stm32_spi_ll.h"
-#ifndef DEFINED_TYPEDEF_FOR_CANMessage_
-#define DEFINED_TYPEDEF_FOR_CANMessage_
-
-typedef struct {
-  uint32_T ID;
-  boolean_T Extended;
-  boolean_T Remote;
-  boolean_T Error;
-  real_T Length;
-  uint8_T Data[8];
-} CANMessage;
-
-#endif
-
 #ifndef DEFINED_TYPEDEF_FOR_CAN_MESSAGE_BUS_
 #define DEFINED_TYPEDEF_FOR_CAN_MESSAGE_BUS_
 
@@ -50,7 +36,21 @@ typedef struct {
 
 #endif
 
-/* Custom Type definition for MATLABSystem: '<S1>/SPI Controller Transfer1' */
+#ifndef DEFINED_TYPEDEF_FOR_CANMessage_
+#define DEFINED_TYPEDEF_FOR_CANMessage_
+
+typedef struct {
+  uint32_T ID;
+  boolean_T Extended;
+  boolean_T Remote;
+  boolean_T Error;
+  real_T Length;
+  uint8_T Data[8];
+} CANMessage;
+
+#endif
+
+/* Custom Type definition for MATLABSystem: '<S1>/SPI Controller Transfer' */
 #include "mw_stm32_spi_ll.h"
 #include "mw_stm32_spi_ll.h"
 #ifndef struct_tag_eH4w3s88qRk3dEce3kceRG

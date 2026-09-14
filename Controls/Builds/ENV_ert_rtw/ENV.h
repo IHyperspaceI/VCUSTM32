@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ENV'.
  *
- * Model version                  : 1.41
+ * Model version                  : 13.227
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Tue Sep  8 17:11:11 2026
+ * C/C++ source code generated on : Mon Sep 14 13:12:00 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -31,7 +31,6 @@
 
 #include "ENV_types.h"
 #include <stddef.h>
-#include "can_message.h"
 #include "MW_target_hardware_resources.h"
 
 /* Macros for accessing real-time model data structure */
@@ -43,98 +42,160 @@
 #define rtmSetErrorStatus(rtm, val)    ((rtm)->errorStatus = (val))
 #endif
 
-/* Block states (default storage) for system '<S25>/SPI Controller Transfer1' */
+/* user code (top of header file) */
+#include "stm32h7xx_ll_tim.h"
+
+/* Block signals for system '<S1>/SPI Controller Transfer1' */
 typedef struct {
-  stm32cube_blocks_SPIControlle_T obj; /* '<S25>/SPI Controller Transfer1' */
-  boolean_T objisempty;                /* '<S25>/SPI Controller Transfer1' */
+  uint8_T SPIControllerTransfer1[15];  /* '<S1>/SPI Controller Transfer1' */
+} B_SPIControllerTransfer1_ENV_T;
+
+/* Block states (default storage) for system '<S1>/SPI Controller Transfer1' */
+typedef struct {
+  stm32cube_blocks_SPIControlle_T obj; /* '<S1>/SPI Controller Transfer1' */
+  boolean_T objisempty;                /* '<S1>/SPI Controller Transfer1' */
 } DW_SPIControllerTransfer1_ENV_T;
 
-/* Block states (default storage) for system '<S25>/SPI Controller Transfer5' */
+/* Block states (default storage) for system '<S2>/MATLAB Function' */
 typedef struct {
-  stm32cube_blocks_SPIControlle_T obj; /* '<S25>/SPI Controller Transfer5' */
-  boolean_T objisempty;                /* '<S25>/SPI Controller Transfer5' */
+  uint16_T count;                      /* '<S2>/MATLAB Function' */
+} DW_MATLABFunction_ENV_T;
+
+/* Block states (default storage) for system '<S2>/SPI Controller Transfer' */
+typedef struct {
+  stm32cube_blocks_SPIControlle_T obj; /* '<S2>/SPI Controller Transfer' */
+  boolean_T objisempty;                /* '<S2>/SPI Controller Transfer' */
+} DW_SPIControllerTransfer_ENV_T;
+
+/* Block states (default storage) for system '<S2>/SPI Controller Transfer1' */
+typedef struct {
+  stm32cube_blocks_SPIControlle_T obj; /* '<S2>/SPI Controller Transfer1' */
+  boolean_T objisempty;                /* '<S2>/SPI Controller Transfer1' */
+} DW_SPIControllerTransfer1_E_f_T;
+
+/* Block states (default storage) for system '<S26>/SPI Controller Transfer1' */
+typedef struct {
+  stm32cube_blocks_SPIControlle_T obj; /* '<S26>/SPI Controller Transfer1' */
+  boolean_T objisempty;                /* '<S26>/SPI Controller Transfer1' */
+} DW_SPIControllerTransfer1_fw_T;
+
+/* Block states (default storage) for system '<S26>/SPI Controller Transfer5' */
+typedef struct {
+  stm32cube_blocks_SPIControlle_T obj; /* '<S26>/SPI Controller Transfer5' */
+  boolean_T objisempty;                /* '<S26>/SPI Controller Transfer5' */
 } DW_SPIControllerTransfer5_ENV_T;
 
 /* Block signals (default storage) */
 typedef struct {
-  CAN_MESSAGE_def Message;             /* '<S1>/MATLAB Function' */
   CAN_MESSAGE_BUS CANPack4;            /* '<S2>/CAN Pack4' */
+  CANMessage Message;                  /* '<S1>/MATLAB Function7' */
   real_T DataTypeConversion;           /* '<Root>/Data Type Conversion' */
-  real_T CANUnpack_o1;                 /* '<S1>/CAN Unpack' */
-  real_T CANUnpack_o2;                 /* '<S1>/CAN Unpack' */
-  real_T CANUnpack_o3;                 /* '<S1>/CAN Unpack' */
-  real_T CANUnpack_o4;                 /* '<S1>/CAN Unpack' */
   real_T Length;
-  uint16_T Output;                     /* '<S6>/Output' */
-  boolean_T DataTypeConversion_d;      /* '<S1>/Data Type Conversion' */
+  boolean_T OutportBufferForMCPInitialized;/* '<S25>/Constant' */
+  B_SPIControllerTransfer1_ENV_T SPIControllerTransfer7_p;/* '<S1>/SPI Controller Transfer1' */
+  B_SPIControllerTransfer1_ENV_T SPIControllerTransfer6_p;/* '<S1>/SPI Controller Transfer1' */
+  B_SPIControllerTransfer1_ENV_T SPIControllerTransfer5_p;/* '<S1>/SPI Controller Transfer1' */
+  B_SPIControllerTransfer1_ENV_T SPIControllerTransfer4_p;/* '<S1>/SPI Controller Transfer1' */
+  B_SPIControllerTransfer1_ENV_T SPIControllerTransfer3_p;/* '<S1>/SPI Controller Transfer1' */
+  B_SPIControllerTransfer1_ENV_T SPIControllerTransfer1_p;/* '<S1>/SPI Controller Transfer1' */
 } B_ENV_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  stm32cube_blocks_SPIControlle_T obj; /* '<S25>/SPI Controller Transfer' */
-  stm32cube_blocks_SPIControlle_T obj_n;/* '<S2>/SPI Controller Transfer7' */
-  stm32cube_blocks_SPIControlle_T obj_h;/* '<S2>/SPI Controller Transfer6' */
-  stm32cube_blocks_SPIControlle_T obj_p;/* '<S1>/SPI Controller Transfer' */
-  real_T UnitDelay_DSTATE;             /* '<S10>/Unit Delay' */
-  real_T DelayInput1_DSTATE;           /* '<S23>/Delay Input1' */
+  stm32cube_blocks_SPIControlle_T obj; /* '<S26>/SPI Controller Transfer' */
+  real_T UnitDelay_DSTATE;             /* '<S7>/Unit Delay' */
+  real_T DelayInput1_DSTATE;           /* '<S24>/Delay Input1' */
+  int_T CANPack1_ModeSignalID;         /* '<S2>/CAN Pack1' */
+  int_T CANPack2_ModeSignalID;         /* '<S2>/CAN Pack2' */
+  int_T CANPack3_ModeSignalID;         /* '<S2>/CAN Pack3' */
   int_T CANPack4_ModeSignalID;         /* '<S2>/CAN Pack4' */
-  int_T CANUnpack_ModeSignalID;        /* '<S1>/CAN Unpack' */
-  int_T CANUnpack_StatusPortID;        /* '<S1>/CAN Unpack' */
-  uint16_T Output_DSTATE;              /* '<S6>/Output' */
-  uint16_T count;                      /* '<S2>/MATLAB Function4' */
-  DW_SPIControllerTransfer5_ENV_T SPIControllerTransfer7_p;/* '<S25>/SPI Controller Transfer5' */
-  DW_SPIControllerTransfer1_ENV_T SPIControllerTransfer6_p;/* '<S25>/SPI Controller Transfer1' */
-  DW_SPIControllerTransfer5_ENV_T SPIControllerTransfer5;/* '<S25>/SPI Controller Transfer5' */
-  DW_SPIControllerTransfer1_ENV_T SPIControllerTransfer4;/* '<S25>/SPI Controller Transfer1' */
-  DW_SPIControllerTransfer1_ENV_T SPIControllerTransfer3;/* '<S25>/SPI Controller Transfer1' */
-  DW_SPIControllerTransfer1_ENV_T SPIControllerTransfer2;/* '<S25>/SPI Controller Transfer1' */
-  DW_SPIControllerTransfer1_ENV_T SPIControllerTransfer1;/* '<S25>/SPI Controller Transfer1' */
+  uint8_T Output_DSTATE;               /* '<S4>/Output' */
+  DW_SPIControllerTransfer5_ENV_T SPIControllerTransfer7_pn;/* '<S26>/SPI Controller Transfer5' */
+  DW_SPIControllerTransfer1_fw_T SPIControllerTransfer6_pn;/* '<S26>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer5_ENV_T SPIControllerTransfer5_pn;/* '<S26>/SPI Controller Transfer5' */
+  DW_SPIControllerTransfer1_fw_T SPIControllerTransfer4_pn;/* '<S26>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer1_fw_T SPIControllerTransfer3_pn;/* '<S26>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer1_fw_T SPIControllerTransfer2_p;/* '<S26>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer1_fw_T SPIControllerTransfer1_pn;/* '<S26>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer1_E_f_T SPIControllerTransfer7;/* '<S2>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer_ENV_T SPIControllerTransfer6;/* '<S2>/SPI Controller Transfer' */
+  DW_SPIControllerTransfer1_E_f_T SPIControllerTransfer5;/* '<S2>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer_ENV_T SPIControllerTransfer4;/* '<S2>/SPI Controller Transfer' */
+  DW_SPIControllerTransfer1_E_f_T SPIControllerTransfer3;/* '<S2>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer_ENV_T SPIControllerTransfer2;/* '<S2>/SPI Controller Transfer' */
+  DW_SPIControllerTransfer1_E_f_T SPIControllerTransfer1;/* '<S2>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer_ENV_T SPIControllerTransfer;/* '<S2>/SPI Controller Transfer' */
+  DW_MATLABFunction_ENV_T sf_MATLABFunction4;/* '<S2>/MATLAB Function4' */
+  DW_MATLABFunction_ENV_T sf_MATLABFunction2;/* '<S2>/MATLAB Function2' */
+  DW_MATLABFunction_ENV_T sf_MATLABFunction1;/* '<S2>/MATLAB Function1' */
+  DW_MATLABFunction_ENV_T sf_MATLABFunction;/* '<S2>/MATLAB Function' */
+  DW_SPIControllerTransfer1_ENV_T SPIControllerTransfer7_p;/* '<S1>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer1_ENV_T SPIControllerTransfer6_p;/* '<S1>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer1_ENV_T SPIControllerTransfer5_p;/* '<S1>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer1_ENV_T SPIControllerTransfer4_p;/* '<S1>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer1_ENV_T SPIControllerTransfer3_p;/* '<S1>/SPI Controller Transfer1' */
+  DW_SPIControllerTransfer1_ENV_T SPIControllerTransfer1_p;/* '<S1>/SPI Controller Transfer1' */
 } DW_ENV_T;
+
+/* Invariant block signals (default storage) */
+typedef struct {
+  const CAN_MESSAGE_BUS CANPack1;      /* '<S2>/CAN Pack1' */
+  const CAN_MESSAGE_BUS CANPack2;      /* '<S2>/CAN Pack2' */
+  const CAN_MESSAGE_BUS CANPack3;      /* '<S2>/CAN Pack3' */
+  const real_T Gain;                   /* '<Root>/Gain' */
+  const boolean_T Constant;            /* '<S25>/Constant' */
+} ConstB_ENV_T;
 
 /* Constant parameters (default storage) */
 typedef struct {
-  /* Expression: uint8([0x90, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
-   * Referenced by: '<S1>/Read RX Buffer start at RXB0SIDH'
+  /* Pooled Parameter (Expression: uint8([0x90, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
+   * Referenced by:
+   *   '<S1>/Read RX Buffer start at RXB0SIDH1'
+   *   '<S1>/Read RX Buffer start at RXB0SIDH3'
+   *   '<S1>/Read RX Buffer start at RXB0SIDH4'
+   *   '<S1>/Read RX Buffer start at RXB0SIDH5'
+   *   '<S1>/Read RX Buffer start at RXB0SIDH6'
+   *   '<S1>/Read RX Buffer start at RXB0SIDH7'
    */
-  uint8_T ReadRXBufferstartatRXB0SIDH_Val[15];
+  uint8_T pooled5[15];
 
   /* Expression: 0xc0
-   * Referenced by: '<S25>/Enter Configuration Mode'
+   * Referenced by: '<S26>/Enter Configuration Mode'
    */
   uint8_T EnterConfigurationMode_Value;
 
   /* Expression: [0x02, 0x2A, 0xC0]
-   * Referenced by: '<S25>/CNF1'
+   * Referenced by: '<S26>/CNF1'
    */
   uint8_T CNF1_Value[3];
 
   /* Expression: [0x02, 0x29, 0x99]
-   * Referenced by: '<S25>/CNF2'
+   * Referenced by: '<S26>/CNF2'
    */
   uint8_T CNF2_Value[3];
 
   /* Expression: [0x02, 0x28, 0x02]
-   * Referenced by: '<S25>/CNF3'
+   * Referenced by: '<S26>/CNF3'
    */
   uint8_T CNF3_Value[3];
 
   /* Expression: [0x05, 0x2B, 0xFF, 0x01]
-   * Referenced by: '<S25>/CANINTE'
+   * Referenced by: '<S26>/CANINTE'
    */
   uint8_T CANINTE_Value[4];
 
   /* Expression: [0x02, 0x60, 0x60]
-   * Referenced by: '<S25>/Set acceptance filters'
+   * Referenced by: '<S26>/Set acceptance filters'
    */
   uint8_T Setacceptancefilters_Value[3];
 
   /* Expression: [0x05, 0x2C, 0xFF, 0x00]
-   * Referenced by: '<S25>/Clear flags'
+   * Referenced by: '<S26>/Clear flags'
    */
   uint8_T Clearflags_Value[4];
 
   /* Expression: [0x02, 0x0F, 0x00]
-   * Referenced by: '<S25>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
+   * Referenced by: '<S26>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
    */
   uint8_T u00normalmode0dontabortpendingt[3];
 } ConstP_ENV_T;
@@ -540,8 +601,6 @@ struct tag_RTM_ENV_T {
   } Timing;
 };
 
-extern CAN_DATATYPE CAN_DATATYPE_GROUND;
-
 /* Block signals (default storage) */
 extern B_ENV_T ENV_B;
 
@@ -553,6 +612,7 @@ extern ExtU_ENV_T ENV_U;
 
 /* External outputs (root outports fed by signals with default storage) */
 extern ExtY_ENV_T ENV_Y;
+extern const ConstB_ENV_T ENV_ConstB;  /* constant block i/o */
 
 /* Constant parameters (default storage) */
 extern const ConstP_ENV_T ENV_ConstP;
@@ -570,27 +630,16 @@ extern volatile boolean_T runModel;
 /*-
  * These blocks were eliminated from the model due to optimizations:
  *
- * Block '<S1>/Data Type Conversion1' : Unused code path elimination
- * Block '<S1>/Data Type Conversion2' : Unused code path elimination
- * Block '<S1>/Data Type Conversion3' : Unused code path elimination
- * Block '<S3>/Compare' : Unused code path elimination
- * Block '<S3>/Constant' : Unused code path elimination
- * Block '<Root>/Constant3' : Unused code path elimination
- * Block '<S5>/Data Type Propagation' : Unused code path elimination
- * Block '<S13>/FixPt Constant' : Unused code path elimination
- * Block '<S13>/FixPt Data Type Duplicate' : Unused code path elimination
- * Block '<S13>/FixPt Sum1' : Unused code path elimination
- * Block '<S5>/Output' : Unused code path elimination
- * Block '<S14>/Constant' : Unused code path elimination
- * Block '<S14>/FixPt Data Type Duplicate1' : Unused code path elimination
- * Block '<S14>/FixPt Switch' : Unused code path elimination
- * Block '<S6>/Data Type Propagation' : Unused code path elimination
- * Block '<S15>/FixPt Data Type Duplicate' : Unused code path elimination
- * Block '<S16>/FixPt Data Type Duplicate1' : Unused code path elimination
- * Block '<Root>/NOT' : Unused code path elimination
- * Block '<Root>/NOT4' : Unused code path elimination
- * Block '<S24>/Constant' : Unused code path elimination
- * Block '<Root>/Unit Delay' : Unused code path elimination
+ * Block '<S1>/CAN Unpack2' : Unused code path elimination
+ * Block '<S1>/CAN Unpack3' : Unused code path elimination
+ * Block '<S1>/CAN Unpack4' : Unused code path elimination
+ * Block '<S1>/CAN Unpack5' : Unused code path elimination
+ * Block '<S1>/CAN Unpack6' : Unused code path elimination
+ * Block '<S1>/CAN Unpack7' : Unused code path elimination
+ * Block '<Root>/Constant1' : Unused code path elimination
+ * Block '<S4>/Data Type Propagation' : Unused code path elimination
+ * Block '<S18>/FixPt Data Type Duplicate' : Unused code path elimination
+ * Block '<S19>/FixPt Data Type Duplicate1' : Unused code path elimination
  * Block '<Root>/Data Type Conversion1' : Eliminate redundant data type conversion
  */
 
@@ -609,31 +658,32 @@ extern volatile boolean_T runModel;
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'ENV'
- * '<S1>'   : 'ENV/CAN Rx1'
- * '<S2>'   : 'ENV/CAN Tx20'
+ * '<S1>'   : 'ENV/CAN Rx'
+ * '<S2>'   : 'ENV/CAN Tx'
  * '<S3>'   : 'ENV/Compare To Constant'
- * '<S4>'   : 'ENV/Compare To Constant1'
- * '<S5>'   : 'ENV/Counter Limited'
- * '<S6>'   : 'ENV/Counter Limited1'
- * '<S7>'   : 'ENV/Digital Port Read3'
- * '<S8>'   : 'ENV/Digital Port Write2'
- * '<S9>'   : 'ENV/Digital Port Write3'
- * '<S10>'  : 'ENV/Subsystem'
- * '<S11>'  : 'ENV/CAN Rx1/MATLAB Function'
- * '<S12>'  : 'ENV/CAN Tx20/MATLAB Function4'
- * '<S13>'  : 'ENV/Counter Limited/Increment Real World'
- * '<S14>'  : 'ENV/Counter Limited/Wrap To Zero'
- * '<S15>'  : 'ENV/Counter Limited1/Increment Real World'
- * '<S16>'  : 'ENV/Counter Limited1/Wrap To Zero'
- * '<S17>'  : 'ENV/Digital Port Read3/ECSoC'
- * '<S18>'  : 'ENV/Digital Port Read3/ECSoC/ECSimCodegen'
- * '<S19>'  : 'ENV/Digital Port Write2/ECSoC'
- * '<S20>'  : 'ENV/Digital Port Write2/ECSoC/ECSimCodegen'
- * '<S21>'  : 'ENV/Digital Port Write3/ECSoC'
- * '<S22>'  : 'ENV/Digital Port Write3/ECSoC/ECSimCodegen'
- * '<S23>'  : 'ENV/Subsystem/Detect Increase'
- * '<S24>'  : 'ENV/Subsystem/Initialize'
- * '<S25>'  : 'ENV/Subsystem/MCPInit1'
+ * '<S4>'   : 'ENV/Counter Limited'
+ * '<S5>'   : 'ENV/Digital Port Read1'
+ * '<S6>'   : 'ENV/Digital Port Write'
+ * '<S7>'   : 'ENV/Subsystem1'
+ * '<S8>'   : 'ENV/CAN Rx/MATLAB Function1'
+ * '<S9>'   : 'ENV/CAN Rx/MATLAB Function3'
+ * '<S10>'  : 'ENV/CAN Rx/MATLAB Function4'
+ * '<S11>'  : 'ENV/CAN Rx/MATLAB Function5'
+ * '<S12>'  : 'ENV/CAN Rx/MATLAB Function6'
+ * '<S13>'  : 'ENV/CAN Rx/MATLAB Function7'
+ * '<S14>'  : 'ENV/CAN Tx/MATLAB Function'
+ * '<S15>'  : 'ENV/CAN Tx/MATLAB Function1'
+ * '<S16>'  : 'ENV/CAN Tx/MATLAB Function2'
+ * '<S17>'  : 'ENV/CAN Tx/MATLAB Function4'
+ * '<S18>'  : 'ENV/Counter Limited/Increment Real World'
+ * '<S19>'  : 'ENV/Counter Limited/Wrap To Zero'
+ * '<S20>'  : 'ENV/Digital Port Read1/ECSoC'
+ * '<S21>'  : 'ENV/Digital Port Read1/ECSoC/ECSimCodegen'
+ * '<S22>'  : 'ENV/Digital Port Write/ECSoC'
+ * '<S23>'  : 'ENV/Digital Port Write/ECSoC/ECSimCodegen'
+ * '<S24>'  : 'ENV/Subsystem1/Detect Increase'
+ * '<S25>'  : 'ENV/Subsystem1/Initialize'
+ * '<S26>'  : 'ENV/Subsystem1/MCPInit'
  */
 #endif                                 /* ENV_h_ */
 

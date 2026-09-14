@@ -2,7 +2,7 @@
 ## Makefile generated for component 'ENV'. 
 ## 
 ## Makefile     : ENV.mk
-## Generated on : Tue Sep 08 16:28:30 2026
+## Generated on : Mon Sep 14 13:12:06 2026
 ## Final product: $(RELATIVE_PATH_TO_ANCHOR)/ENV.elf
 ## Product type : executable
 ## 
@@ -215,7 +215,7 @@ DEFINES_ = -DMW_SPI1 -D__MW_TARGET_USE_HARDWARE_RESOURCES_H__ -DUSE_FULL_LL_DRIV
 DEFINES_BUILD_ARGS = -DCLASSIC_INTERFACE=0 -DALLOCATIONFCN=0 -DTERMFCN=1 -DONESTEPFCN=1 -DMAT_FILE=0 -DMULTI_INSTANCE_CODE=0 -DINTEGER_CODE=0 -DMT=0
 DEFINES_CUSTOM = 
 DEFINES_OPTS = -DTID01EQ=0
-DEFINES_SKIPFORSIL = -DXCP_CUSTOM_PLATFORM -DXCP_MEM_DAQ_RESERVED_POOL_BLOCKS_NUMBER=10 -D__FPU_PRESENT=1U -D__FPU_USED=1U -DSTACK_SIZE=8192 -DRT
+DEFINES_SKIPFORSIL = -DXCP_CUSTOM_PLATFORM -DXCP_MEM_DAQ_RESERVED_POOL_BLOCKS_NUMBER=10 -D__FPU_PRESENT=1U -D__FPU_USED=1U -DSTACK_SIZE=512 -DRT
 DEFINES_STANDARD = -DMODEL=ENV -DNUMST=1 -DNCSTATES=0 -DHAVESTDIO -DMODEL_HAS_DYNAMICALLY_LOADED_SFCNS=0
 
 DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(DEFINES_SKIPFORSIL) $(DEFINES_STANDARD)
@@ -224,7 +224,7 @@ DEFINES = $(DEFINES_) $(DEFINES_BUILD_ARGS) $(DEFINES_CUSTOM) $(DEFINES_OPTS) $(
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = C:/ProgramData/MATLAB/SupportPackages/R2024b/toolbox/shared/supportpackages/stm32/src/mw_stm32_spi_ll.c $(START_DIR)/ENV_ert_rtw/ENV.c $(START_DIR)/ENV_ert_rtw/ENV_data.c $(START_DIR)/ENV_ert_rtw/can_datatype_ground.c C:/ProgramData/MATLAB/SupportPackages/R2024b/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c C:/ProgramData/MATLAB/SupportPackages/R2024b/toolbox/shared/supportpackages/stm32/src/platform_timer.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/SysTickScheduler.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Core/Src/main.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Core/Src/stm32h7xx_it.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Core/Src/stm32h7xx_hal_msp.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Core/Src/stm32h7xx_hal_timebase_tim.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_exti.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_gpio.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_rcc.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_utils.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_spi.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_dma.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Core/Src/system_stm32h7xx.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/STM32CubeIDE/Application/User/Core/syscalls.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/STM32CubeIDE/Application/User/Core/sysmem.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/STM32CubeIDE/Application/User/Startup/startup_stm32h7a3ritx.s
+SRCS = C:/ProgramData/MATLAB/SupportPackages/R2024b/toolbox/shared/supportpackages/stm32/src/mw_stm32_spi_ll.c $(START_DIR)/ENV_ert_rtw/ENV.c $(START_DIR)/ENV_ert_rtw/ENV_data.c C:/ProgramData/MATLAB/SupportPackages/R2024b/toolbox/shared/supportpackages/stm32/src/overrideHALDelay.c C:/ProgramData/MATLAB/SupportPackages/R2024b/toolbox/shared/supportpackages/stm32/src/platform_timer.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/SysTickScheduler.c $(MATLAB_ROOT)/toolbox/target/shared/armcortexmbase/scheduler/src/m3m4m4f_multitasking.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Core/Src/main.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Core/Src/stm32h7xx_it.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Core/Src/stm32h7xx_hal_msp.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Core/Src/stm32h7xx_hal_timebase_tim.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_exti.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_gpio.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_rcc.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_utils.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_spi.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_ll_dma.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/Core/Src/system_stm32h7xx.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/STM32CubeIDE/Application/User/Core/syscalls.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/STM32CubeIDE/Application/User/Core/sysmem.c C:/Users/Will/Desktop/OBR/Embedded/VCUSTM32/VCUCube/STM32CubeIDE/Application/User/Startup/startup_stm32h7a3ritx.s
 
 MAIN_SRC = $(START_DIR)/ENV_ert_rtw/ert_main.c
 
@@ -234,7 +234,7 @@ ALL_SRCS = $(SRCS) $(MAIN_SRC)
 ## OBJECTS
 ###########################################################################
 
-OBJS = mw_stm32_spi_ll.o ENV.o ENV_data.o can_datatype_ground.o overrideHALDelay.o platform_timer.o SysTickScheduler.o m3m4m4f_multitasking.o main.o stm32h7xx_it.o stm32h7xx_hal_msp.o stm32h7xx_hal_timebase_tim.o stm32h7xx_ll_exti.o stm32h7xx_hal_tim.o stm32h7xx_hal_tim_ex.o stm32h7xx_ll_gpio.o stm32h7xx_ll_rcc.o stm32h7xx_ll_utils.o stm32h7xx_hal_rcc.o stm32h7xx_hal_rcc_ex.o stm32h7xx_hal_flash.o stm32h7xx_hal_flash_ex.o stm32h7xx_hal_gpio.o stm32h7xx_hal_hsem.o stm32h7xx_hal_dma.o stm32h7xx_hal_dma_ex.o stm32h7xx_hal_mdma.o stm32h7xx_hal_pwr.o stm32h7xx_hal_pwr_ex.o stm32h7xx_hal_cortex.o stm32h7xx_hal.o stm32h7xx_hal_i2c.o stm32h7xx_hal_i2c_ex.o stm32h7xx_hal_exti.o stm32h7xx_ll_spi.o stm32h7xx_ll_dma.o system_stm32h7xx.o syscalls.o sysmem.o startup_stm32h7a3ritx.o
+OBJS = mw_stm32_spi_ll.o ENV.o ENV_data.o overrideHALDelay.o platform_timer.o SysTickScheduler.o m3m4m4f_multitasking.o main.o stm32h7xx_it.o stm32h7xx_hal_msp.o stm32h7xx_hal_timebase_tim.o stm32h7xx_ll_exti.o stm32h7xx_hal_tim.o stm32h7xx_hal_tim_ex.o stm32h7xx_ll_gpio.o stm32h7xx_ll_rcc.o stm32h7xx_ll_utils.o stm32h7xx_hal_rcc.o stm32h7xx_hal_rcc_ex.o stm32h7xx_hal_flash.o stm32h7xx_hal_flash_ex.o stm32h7xx_hal_gpio.o stm32h7xx_hal_hsem.o stm32h7xx_hal_dma.o stm32h7xx_hal_dma_ex.o stm32h7xx_hal_mdma.o stm32h7xx_hal_pwr.o stm32h7xx_hal_pwr_ex.o stm32h7xx_hal_cortex.o stm32h7xx_hal.o stm32h7xx_hal_i2c.o stm32h7xx_hal_i2c_ex.o stm32h7xx_hal_exti.o stm32h7xx_ll_spi.o stm32h7xx_ll_dma.o system_stm32h7xx.o syscalls.o sysmem.o startup_stm32h7a3ritx.o
 
 MAIN_OBJ = ert_main.o
 
@@ -284,7 +284,7 @@ CPPFLAGS += $(CPPFLAGS_SKIPFORSIL) $(CPPFLAGS_BASIC)
 # C++ Linker
 #---------------
 
-CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\VCUSTM32\VCUCube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld" --specs=nano.specs
+CPP_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\VCUSTM32\VCUCube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
 
 CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 
@@ -292,7 +292,7 @@ CPP_LDFLAGS += $(CPP_LDFLAGS_SKIPFORSIL)
 # C++ Shared Library Linker
 #------------------------------
 
-CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\VCUSTM32\VCUCube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld" --specs=nano.specs
+CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\VCUSTM32\VCUCube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
 
 CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
@@ -300,7 +300,7 @@ CPP_SHAREDLIB_LDFLAGS += $(CPP_SHAREDLIB_LDFLAGS_SKIPFORSIL)
 # Linker
 #-----------
 
-LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\VCUSTM32\VCUCube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld" --specs=nano.specs
+LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\VCUSTM32\VCUCube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
 
 LDFLAGS += $(LDFLAGS_SKIPFORSIL)
 
@@ -324,7 +324,7 @@ MEX_CFLAGS += $(MEX_Compiler_BASIC)
 # Shared Library Linker
 #--------------------------
 
-SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\VCUSTM32\VCUCube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld" --specs=nano.specs
+SHAREDLIB_LDFLAGS_SKIPFORSIL = -mcpu=cortex-m7 -mthumb -mlittle-endian -mfloat-abi=hard -mfpu=fpv5-d16 --entry Reset_Handler --specs=nosys.specs  -T"C:\Users\Will\Desktop\OBR\Embedded\VCUSTM32\VCUCube\STM32CubeIDE\STM32H7A3RITX_FLASH.ld"
 
 SHAREDLIB_LDFLAGS += $(SHAREDLIB_LDFLAGS_SKIPFORSIL)
 
@@ -620,10 +620,6 @@ ENV.o : $(START_DIR)/ENV_ert_rtw/ENV.c
 
 
 ENV_data.o : $(START_DIR)/ENV_ert_rtw/ENV_data.c
-	$(CC) $(CFLAGS) -o "$@" "$<"
-
-
-can_datatype_ground.o : $(START_DIR)/ENV_ert_rtw/can_datatype_ground.c
 	$(CC) $(CFLAGS) -o "$@" "$<"
 
 

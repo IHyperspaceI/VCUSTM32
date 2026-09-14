@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ENV'.
  *
- * Model version                  : 1.41
+ * Model version                  : 13.227
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Tue Sep  8 17:11:11 2026
+ * C/C++ source code generated on : Mon Sep 14 13:12:00 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -45,7 +45,7 @@ volatile boolean_T runModel;
 int main(int argc, char **argv)
 {
   float modelBaseRate = 0.001;
-  float systemClock = 128.0;
+  float systemClock = 64.0;
 
   /* Initialize variables */
   stopRequested = false;

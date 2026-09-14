@@ -72,12 +72,12 @@ void SystemClock_Config(void)
   /*AXI clock gating */
   RCC->CKGAENR = 0xFFFFFFFF;
 
-  LL_FLASH_SetLatency(LL_FLASH_LATENCY_3);
-  while(LL_FLASH_GetLatency()!= LL_FLASH_LATENCY_3)
+  LL_FLASH_SetLatency(LL_FLASH_LATENCY_2);
+  while(LL_FLASH_GetLatency()!= LL_FLASH_LATENCY_2)
   {
   }
   LL_PWR_ConfigSupply(LL_PWR_LDO_SUPPLY);
-  LL_PWR_SetRegulVoltageScaling(LL_PWR_REGU_VOLTAGE_SCALE2);
+  LL_PWR_SetRegulVoltageScaling(LL_PWR_REGU_VOLTAGE_SCALE3);
   while (LL_PWR_IsActiveFlag_VOS() == 0)
   {
   }
@@ -96,7 +96,7 @@ void SystemClock_Config(void)
   LL_RCC_PLL1_SetVCOInputRange(LL_RCC_PLLINPUTRANGE_8_16);
   LL_RCC_PLL1_SetVCOOutputRange(LL_RCC_PLLVCORANGE_WIDE);
   LL_RCC_PLL1_SetM(4);
-  LL_RCC_PLL1_SetN(16);
+  LL_RCC_PLL1_SetN(8);
   LL_RCC_PLL1_SetP(2);
   LL_RCC_PLL1_SetQ(2);
   LL_RCC_PLL1_SetR(2);
@@ -106,9 +106,6 @@ void SystemClock_Config(void)
   while(LL_RCC_PLL1_IsReady() != 1)
   {
   }
-
-   /* Intermediate AHB prescaler 2 when target frequency clock is higher than 80 MHz */
-   LL_RCC_SetAHBPrescaler(LL_RCC_AHB_DIV_2);
 
   LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_PLL1);
 
@@ -122,7 +119,7 @@ void SystemClock_Config(void)
   LL_RCC_SetAPB2Prescaler(LL_RCC_APB2_DIV_2);
   LL_RCC_SetAPB3Prescaler(LL_RCC_APB3_DIV_2);
   LL_RCC_SetAPB4Prescaler(LL_RCC_APB4_DIV_2);
-  LL_SetSystemCoreClock(128000000);
+  LL_SetSystemCoreClock(64000000);
 
    /* Update the time base */
   if (HAL_InitTick (TICK_INT_PRIORITY) != HAL_OK)
@@ -176,7 +173,7 @@ void MX_SPI1_Init(void)
   SPI_InitStruct.ClockPolarity = LL_SPI_POLARITY_LOW;
   SPI_InitStruct.ClockPhase = LL_SPI_PHASE_1EDGE;
   SPI_InitStruct.NSS = LL_SPI_NSS_SOFT;
-  SPI_InitStruct.BaudRate = LL_SPI_BAUDRATEPRESCALER_DIV16;
+  SPI_InitStruct.BaudRate = LL_SPI_BAUDRATEPRESCALER_DIV8;
   SPI_InitStruct.BitOrder = LL_SPI_MSB_FIRST;
   SPI_InitStruct.CRCCalculation = LL_SPI_CRCCALCULATION_DISABLE;
   SPI_InitStruct.CRCPoly = 0x0;

@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ENV'.
  *
- * Model version                  : 13.275
+ * Model version                  : 13.281
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Wed Sep 16 15:56:24 2026
+ * C/C++ source code generated on : Wed Sep 16 16:45:04 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -42,6 +42,10 @@ RT_MODEL_ENV_T *const ENV_M = &ENV_M_;
  *    '<S1>/MATLAB Function1'
  *    '<S1>/MATLAB Function2'
  *    '<S1>/MATLAB Function4'
+ *    '<S2>/MATLAB Function'
+ *    '<S2>/MATLAB Function1'
+ *    '<S2>/MATLAB Function2'
+ *    '<S2>/MATLAB Function4'
  */
 void ENV_MATLABFunction(uint32_T rtu_ID, uint8_T rtu_Length, const uint8_T
   rtu_Data[8], uint8_T rtu_RTS, uint16_T rtu_period, uint16_T rtu_offset,
@@ -214,16 +218,16 @@ void ENV_SPIControllerTransfer1_Term(DW_SPIControllerTransfer1_ENV_T *localDW)
 
 /*
  * Output and update for atomic system:
- *    '<S2>/MATLAB Function1'
- *    '<S2>/MATLAB Function2'
- *    '<S2>/MATLAB Function3'
- *    '<S2>/MATLAB Function4'
- *    '<S2>/MATLAB Function5'
- *    '<S2>/MATLAB Function6'
- *    '<S2>/MATLAB Function7'
- *    '<S2>/MATLAB Function8'
  *    '<S3>/MATLAB Function1'
  *    '<S3>/MATLAB Function2'
+ *    '<S3>/MATLAB Function3'
+ *    '<S3>/MATLAB Function4'
+ *    '<S3>/MATLAB Function5'
+ *    '<S3>/MATLAB Function6'
+ *    '<S3>/MATLAB Function7'
+ *    '<S3>/MATLAB Function8'
+ *    '<S4>/MATLAB Function1'
+ *    '<S4>/MATLAB Function2'
  *    ...
  */
 void ENV_MATLABFunction1(const uint8_T rtu_RxBytes[15], CANMessage *rty_Message)
@@ -245,7 +249,7 @@ void E_SPIControllerTransfer1_i_Init(DW_SPIControllerTransfer1_E_f_T *localDW)
 {
   STM32_SPI_ModuleStruct_T b;
 
-  /* Start for MATLABSystem: '<S2>/SPI Controller Transfer1' */
+  /* Start for MATLABSystem: '<S3>/SPI Controller Transfer1' */
   localDW->obj.matlabCodegenIsDeleted = false;
   localDW->objisempty = true;
   localDW->obj.isInitialized = 1;
@@ -262,7 +266,7 @@ void ENV_SPIControllerTransfer1_p(const uint8_T rtu_0[15],
 {
   uint8_T status;
 
-  /* MATLABSystem: '<S2>/SPI Controller Transfer1' */
+  /* MATLABSystem: '<S3>/SPI Controller Transfer1' */
   status = MW_STM32_SPI_SetFormat(localDW->obj.MW_SPI_HANDLE, 0U, 1792U,
     MW_SPI_MODE_2);
   if (status == 0) {
@@ -274,13 +278,13 @@ void ENV_SPIControllerTransfer1_p(const uint8_T rtu_0[15],
     LL_GPIO_SetOutputPin(portNameLoc, 2U);
   }
 
-  /* End of MATLABSystem: '<S2>/SPI Controller Transfer1' */
+  /* End of MATLABSystem: '<S3>/SPI Controller Transfer1' */
 }
 
 /* Termination for atomic system: */
 void E_SPIControllerTransfer1_c_Term(DW_SPIControllerTransfer1_E_f_T *localDW)
 {
-  /* Terminate for MATLABSystem: '<S2>/SPI Controller Transfer1' */
+  /* Terminate for MATLABSystem: '<S3>/SPI Controller Transfer1' */
   if (!localDW->obj.matlabCodegenIsDeleted) {
     localDW->obj.matlabCodegenIsDeleted = true;
     if ((localDW->obj.isInitialized == 1) && localDW->obj.isSetupComplete) {
@@ -291,7 +295,7 @@ void E_SPIControllerTransfer1_c_Term(DW_SPIControllerTransfer1_E_f_T *localDW)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S2>/SPI Controller Transfer1' */
+  /* End of Terminate for MATLABSystem: '<S3>/SPI Controller Transfer1' */
 }
 
 /* System initialize for atomic system: */
@@ -299,7 +303,7 @@ void E_SPIControllerTransfer1_h_Init(DW_SPIControllerTransfer1_fw_T *localDW)
 {
   STM32_SPI_ModuleStruct_T b;
 
-  /* Start for MATLABSystem: '<S3>/SPI Controller Transfer1' */
+  /* Start for MATLABSystem: '<S4>/SPI Controller Transfer1' */
   localDW->obj.matlabCodegenIsDeleted = false;
   localDW->objisempty = true;
   localDW->obj.isInitialized = 1;
@@ -316,7 +320,7 @@ void ENV_SPIControllerTransfer1_pn(const uint8_T rtu_0[15],
 {
   uint8_T status;
 
-  /* MATLABSystem: '<S3>/SPI Controller Transfer1' */
+  /* MATLABSystem: '<S4>/SPI Controller Transfer1' */
   status = MW_STM32_SPI_SetFormat(localDW->obj.MW_SPI_HANDLE, 0U, 1792U,
     MW_SPI_MODE_2);
   if (status == 0) {
@@ -328,13 +332,13 @@ void ENV_SPIControllerTransfer1_pn(const uint8_T rtu_0[15],
     LL_GPIO_SetOutputPin(portNameLoc, 1024U);
   }
 
-  /* End of MATLABSystem: '<S3>/SPI Controller Transfer1' */
+  /* End of MATLABSystem: '<S4>/SPI Controller Transfer1' */
 }
 
 /* Termination for atomic system: */
 void E_SPIControllerTransfer1_d_Term(DW_SPIControllerTransfer1_fw_T *localDW)
 {
-  /* Terminate for MATLABSystem: '<S3>/SPI Controller Transfer1' */
+  /* Terminate for MATLABSystem: '<S4>/SPI Controller Transfer1' */
   if (!localDW->obj.matlabCodegenIsDeleted) {
     localDW->obj.matlabCodegenIsDeleted = true;
     if ((localDW->obj.isInitialized == 1) && localDW->obj.isSetupComplete) {
@@ -345,7 +349,7 @@ void E_SPIControllerTransfer1_d_Term(DW_SPIControllerTransfer1_fw_T *localDW)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S3>/SPI Controller Transfer1' */
+  /* End of Terminate for MATLABSystem: '<S4>/SPI Controller Transfer1' */
 }
 
 /* System initialize for atomic system: */
@@ -353,7 +357,7 @@ void E_SPIControllerTransfer1_n_Init(DW_SPIControllerTransfer1_fwu_T *localDW)
 {
   STM32_SPI_ModuleStruct_T b;
 
-  /* Start for MATLABSystem: '<S55>/SPI Controller Transfer1' */
+  /* Start for MATLABSystem: '<S61>/SPI Controller Transfer1' */
   localDW->obj.matlabCodegenIsDeleted = false;
   localDW->objisempty = true;
   localDW->obj.isInitialized = 1;
@@ -370,7 +374,7 @@ void ENV_SPIControllerTransfer1_pna(const uint8_T rtu_0[3],
   uint8_T tmp[3];
   uint8_T status;
 
-  /* MATLABSystem: '<S55>/SPI Controller Transfer1' */
+  /* MATLABSystem: '<S61>/SPI Controller Transfer1' */
   status = MW_STM32_SPI_SetFormat(localDW->obj.MW_SPI_HANDLE, 0U, 1792U,
     MW_SPI_MODE_2);
   if (status == 0) {
@@ -382,13 +386,13 @@ void ENV_SPIControllerTransfer1_pna(const uint8_T rtu_0[3],
     LL_GPIO_SetOutputPin(portNameLoc, 2U);
   }
 
-  /* End of MATLABSystem: '<S55>/SPI Controller Transfer1' */
+  /* End of MATLABSystem: '<S61>/SPI Controller Transfer1' */
 }
 
 /* Termination for atomic system: */
 void E_SPIControllerTransfer1_e_Term(DW_SPIControllerTransfer1_fwu_T *localDW)
 {
-  /* Terminate for MATLABSystem: '<S55>/SPI Controller Transfer1' */
+  /* Terminate for MATLABSystem: '<S61>/SPI Controller Transfer1' */
   if (!localDW->obj.matlabCodegenIsDeleted) {
     localDW->obj.matlabCodegenIsDeleted = true;
     if ((localDW->obj.isInitialized == 1) && localDW->obj.isSetupComplete) {
@@ -399,7 +403,7 @@ void E_SPIControllerTransfer1_e_Term(DW_SPIControllerTransfer1_fwu_T *localDW)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S55>/SPI Controller Transfer1' */
+  /* End of Terminate for MATLABSystem: '<S61>/SPI Controller Transfer1' */
 }
 
 /* System initialize for atomic system: */
@@ -407,7 +411,7 @@ void ENV_SPIControllerTransfer4_Init(DW_SPIControllerTransfer4_ENV_T *localDW)
 {
   STM32_SPI_ModuleStruct_T b;
 
-  /* Start for MATLABSystem: '<S55>/SPI Controller Transfer4' */
+  /* Start for MATLABSystem: '<S61>/SPI Controller Transfer4' */
   localDW->obj.matlabCodegenIsDeleted = false;
   localDW->objisempty = true;
   localDW->obj.isInitialized = 1;
@@ -424,7 +428,7 @@ void ENV_SPIControllerTransfer4(const uint8_T rtu_0[4],
   uint8_T tmp[4];
   uint8_T status;
 
-  /* MATLABSystem: '<S55>/SPI Controller Transfer4' */
+  /* MATLABSystem: '<S61>/SPI Controller Transfer4' */
   status = MW_STM32_SPI_SetFormat(localDW->obj.MW_SPI_HANDLE, 0U, 1792U,
     MW_SPI_MODE_2);
   if (status == 0) {
@@ -436,13 +440,13 @@ void ENV_SPIControllerTransfer4(const uint8_T rtu_0[4],
     LL_GPIO_SetOutputPin(portNameLoc, 2U);
   }
 
-  /* End of MATLABSystem: '<S55>/SPI Controller Transfer4' */
+  /* End of MATLABSystem: '<S61>/SPI Controller Transfer4' */
 }
 
 /* Termination for atomic system: */
 void ENV_SPIControllerTransfer4_Term(DW_SPIControllerTransfer4_ENV_T *localDW)
 {
-  /* Terminate for MATLABSystem: '<S55>/SPI Controller Transfer4' */
+  /* Terminate for MATLABSystem: '<S61>/SPI Controller Transfer4' */
   if (!localDW->obj.matlabCodegenIsDeleted) {
     localDW->obj.matlabCodegenIsDeleted = true;
     if ((localDW->obj.isInitialized == 1) && localDW->obj.isSetupComplete) {
@@ -453,7 +457,7 @@ void ENV_SPIControllerTransfer4_Term(DW_SPIControllerTransfer4_ENV_T *localDW)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S55>/SPI Controller Transfer4' */
+  /* End of Terminate for MATLABSystem: '<S61>/SPI Controller Transfer4' */
 }
 
 /* System initialize for atomic system: */
@@ -461,7 +465,7 @@ void E_SPIControllerTransfer1_j_Init(DW_SPIControllerTransfer_fwu4_T *localDW)
 {
   STM32_SPI_ModuleStruct_T b;
 
-  /* Start for MATLABSystem: '<S57>/SPI Controller Transfer1' */
+  /* Start for MATLABSystem: '<S64>/SPI Controller Transfer1' */
   localDW->obj.matlabCodegenIsDeleted = false;
   localDW->objisempty = true;
   localDW->obj.isInitialized = 1;
@@ -478,7 +482,7 @@ void ENV_SPIControllerTransfer1_pnae(const uint8_T rtu_0[3],
   uint8_T tmp[3];
   uint8_T status;
 
-  /* MATLABSystem: '<S57>/SPI Controller Transfer1' */
+  /* MATLABSystem: '<S64>/SPI Controller Transfer1' */
   status = MW_STM32_SPI_SetFormat(localDW->obj.MW_SPI_HANDLE, 0U, 1792U,
     MW_SPI_MODE_2);
   if (status == 0) {
@@ -490,13 +494,13 @@ void ENV_SPIControllerTransfer1_pnae(const uint8_T rtu_0[3],
     LL_GPIO_SetOutputPin(portNameLoc, 1024U);
   }
 
-  /* End of MATLABSystem: '<S57>/SPI Controller Transfer1' */
+  /* End of MATLABSystem: '<S64>/SPI Controller Transfer1' */
 }
 
 /* Termination for atomic system: */
 void E_SPIControllerTransfer1_k_Term(DW_SPIControllerTransfer_fwu4_T *localDW)
 {
-  /* Terminate for MATLABSystem: '<S57>/SPI Controller Transfer1' */
+  /* Terminate for MATLABSystem: '<S64>/SPI Controller Transfer1' */
   if (!localDW->obj.matlabCodegenIsDeleted) {
     localDW->obj.matlabCodegenIsDeleted = true;
     if ((localDW->obj.isInitialized == 1) && localDW->obj.isSetupComplete) {
@@ -507,7 +511,7 @@ void E_SPIControllerTransfer1_k_Term(DW_SPIControllerTransfer_fwu4_T *localDW)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S57>/SPI Controller Transfer1' */
+  /* End of Terminate for MATLABSystem: '<S64>/SPI Controller Transfer1' */
 }
 
 /* System initialize for atomic system: */
@@ -515,7 +519,7 @@ void E_SPIControllerTransfer4_g_Init(DW_SPIControllerTransfer4_E_f_T *localDW)
 {
   STM32_SPI_ModuleStruct_T b;
 
-  /* Start for MATLABSystem: '<S57>/SPI Controller Transfer4' */
+  /* Start for MATLABSystem: '<S64>/SPI Controller Transfer4' */
   localDW->obj.matlabCodegenIsDeleted = false;
   localDW->objisempty = true;
   localDW->obj.isInitialized = 1;
@@ -532,7 +536,7 @@ void ENV_SPIControllerTransfer4_p(const uint8_T rtu_0[4],
   uint8_T tmp[4];
   uint8_T status;
 
-  /* MATLABSystem: '<S57>/SPI Controller Transfer4' */
+  /* MATLABSystem: '<S64>/SPI Controller Transfer4' */
   status = MW_STM32_SPI_SetFormat(localDW->obj.MW_SPI_HANDLE, 0U, 1792U,
     MW_SPI_MODE_2);
   if (status == 0) {
@@ -544,13 +548,13 @@ void ENV_SPIControllerTransfer4_p(const uint8_T rtu_0[4],
     LL_GPIO_SetOutputPin(portNameLoc, 1024U);
   }
 
-  /* End of MATLABSystem: '<S57>/SPI Controller Transfer4' */
+  /* End of MATLABSystem: '<S64>/SPI Controller Transfer4' */
 }
 
 /* Termination for atomic system: */
 void E_SPIControllerTransfer4_e_Term(DW_SPIControllerTransfer4_E_f_T *localDW)
 {
-  /* Terminate for MATLABSystem: '<S57>/SPI Controller Transfer4' */
+  /* Terminate for MATLABSystem: '<S64>/SPI Controller Transfer4' */
   if (!localDW->obj.matlabCodegenIsDeleted) {
     localDW->obj.matlabCodegenIsDeleted = true;
     if ((localDW->obj.isInitialized == 1) && localDW->obj.isSetupComplete) {
@@ -561,7 +565,38 @@ void E_SPIControllerTransfer4_e_Term(DW_SPIControllerTransfer4_E_f_T *localDW)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S57>/SPI Controller Transfer4' */
+  /* End of Terminate for MATLABSystem: '<S64>/SPI Controller Transfer4' */
+}
+
+/*
+ * System initialize for enable system:
+ *    '<S17>/Initialize'
+ *    '<S18>/Initialize'
+ */
+void ENV_Initialize_Init(boolean_T *rty_MCPInitialized, const
+  ConstB_Initialize_ENV_T *localC)
+{
+  /* SystemInitialize for SignalConversion generated from: '<S66>/MCPInitialized' */
+  *rty_MCPInitialized = localC->Constant;
+}
+
+/*
+ * Output and update for enable system:
+ *    '<S17>/Initialize'
+ *    '<S18>/Initialize'
+ */
+void ENV_Initialize(real_T rtu_Enable, boolean_T *rty_MCPInitialized, const
+                    ConstB_Initialize_ENV_T *localC)
+{
+  /* Outputs for Enabled SubSystem: '<S17>/Initialize' incorporates:
+   *  EnablePort: '<S66>/Enable'
+   */
+  if (rtu_Enable > 0.0) {
+    /* SignalConversion generated from: '<S66>/MCPInitialized' */
+    *rty_MCPInitialized = localC->Constant;
+  }
+
+  /* End of Outputs for SubSystem: '<S17>/Initialize' */
 }
 
 /* System initialize for atomic system: */
@@ -569,7 +604,7 @@ void E_SPIControllerTransfer1_k_Init(DW_SPIControllerTransfe_fwu4s_T *localDW)
 {
   STM32_SPI_ModuleStruct_T b;
 
-  /* Start for MATLABSystem: '<S60>/SPI Controller Transfer1' */
+  /* Start for MATLABSystem: '<S67>/SPI Controller Transfer1' */
   localDW->obj.matlabCodegenIsDeleted = false;
   localDW->objisempty = true;
   localDW->obj.isInitialized = 1;
@@ -586,7 +621,7 @@ void EN_SPIControllerTransfer1_pnaev(const uint8_T rtu_0[3],
   uint8_T tmp[3];
   uint8_T status;
 
-  /* MATLABSystem: '<S60>/SPI Controller Transfer1' */
+  /* MATLABSystem: '<S67>/SPI Controller Transfer1' */
   status = MW_STM32_SPI_SetFormat(localDW->obj.MW_SPI_HANDLE, 0U, 1792U,
     MW_SPI_MODE_2);
   if (status == 0) {
@@ -598,13 +633,13 @@ void EN_SPIControllerTransfer1_pnaev(const uint8_T rtu_0[3],
     LL_GPIO_SetOutputPin(portNameLoc, 2U);
   }
 
-  /* End of MATLABSystem: '<S60>/SPI Controller Transfer1' */
+  /* End of MATLABSystem: '<S67>/SPI Controller Transfer1' */
 }
 
 /* Termination for atomic system: */
 void E_SPIControllerTransfer1_l_Term(DW_SPIControllerTransfe_fwu4s_T *localDW)
 {
-  /* Terminate for MATLABSystem: '<S60>/SPI Controller Transfer1' */
+  /* Terminate for MATLABSystem: '<S67>/SPI Controller Transfer1' */
   if (!localDW->obj.matlabCodegenIsDeleted) {
     localDW->obj.matlabCodegenIsDeleted = true;
     if ((localDW->obj.isInitialized == 1) && localDW->obj.isSetupComplete) {
@@ -615,7 +650,7 @@ void E_SPIControllerTransfer1_l_Term(DW_SPIControllerTransfe_fwu4s_T *localDW)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S60>/SPI Controller Transfer1' */
+  /* End of Terminate for MATLABSystem: '<S67>/SPI Controller Transfer1' */
 }
 
 /* System initialize for atomic system: */
@@ -623,7 +658,7 @@ void ENV_SPIControllerTransfer5_Init(DW_SPIControllerTransfer5_ENV_T *localDW)
 {
   STM32_SPI_ModuleStruct_T b;
 
-  /* Start for MATLABSystem: '<S60>/SPI Controller Transfer5' */
+  /* Start for MATLABSystem: '<S67>/SPI Controller Transfer5' */
   localDW->obj.matlabCodegenIsDeleted = false;
   localDW->objisempty = true;
   localDW->obj.isInitialized = 1;
@@ -640,7 +675,7 @@ void ENV_SPIControllerTransfer5(const uint8_T rtu_0[4],
   uint8_T tmp[4];
   uint8_T status;
 
-  /* MATLABSystem: '<S60>/SPI Controller Transfer5' */
+  /* MATLABSystem: '<S67>/SPI Controller Transfer5' */
   status = MW_STM32_SPI_SetFormat(localDW->obj.MW_SPI_HANDLE, 0U, 1792U,
     MW_SPI_MODE_2);
   if (status == 0) {
@@ -652,13 +687,13 @@ void ENV_SPIControllerTransfer5(const uint8_T rtu_0[4],
     LL_GPIO_SetOutputPin(portNameLoc, 2U);
   }
 
-  /* End of MATLABSystem: '<S60>/SPI Controller Transfer5' */
+  /* End of MATLABSystem: '<S67>/SPI Controller Transfer5' */
 }
 
 /* Termination for atomic system: */
 void ENV_SPIControllerTransfer5_Term(DW_SPIControllerTransfer5_ENV_T *localDW)
 {
-  /* Terminate for MATLABSystem: '<S60>/SPI Controller Transfer5' */
+  /* Terminate for MATLABSystem: '<S67>/SPI Controller Transfer5' */
   if (!localDW->obj.matlabCodegenIsDeleted) {
     localDW->obj.matlabCodegenIsDeleted = true;
     if ((localDW->obj.isInitialized == 1) && localDW->obj.isSetupComplete) {
@@ -669,7 +704,7 @@ void ENV_SPIControllerTransfer5_Term(DW_SPIControllerTransfer5_ENV_T *localDW)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S60>/SPI Controller Transfer5' */
+  /* End of Terminate for MATLABSystem: '<S67>/SPI Controller Transfer5' */
 }
 
 /* System initialize for atomic system: */
@@ -677,7 +712,7 @@ void SPIControllerTransfer1_na_Init(DW_SPIControllerTransf_fwu4sl_T *localDW)
 {
   STM32_SPI_ModuleStruct_T b;
 
-  /* Start for MATLABSystem: '<S62>/SPI Controller Transfer1' */
+  /* Start for MATLABSystem: '<S70>/SPI Controller Transfer1' */
   localDW->obj.matlabCodegenIsDeleted = false;
   localDW->objisempty = true;
   localDW->obj.isInitialized = 1;
@@ -694,7 +729,7 @@ void E_SPIControllerTransfer1_pnaevv(const uint8_T rtu_0[3],
   uint8_T tmp[3];
   uint8_T status;
 
-  /* MATLABSystem: '<S62>/SPI Controller Transfer1' */
+  /* MATLABSystem: '<S70>/SPI Controller Transfer1' */
   status = MW_STM32_SPI_SetFormat(localDW->obj.MW_SPI_HANDLE, 0U, 1792U,
     MW_SPI_MODE_2);
   if (status == 0) {
@@ -706,13 +741,13 @@ void E_SPIControllerTransfer1_pnaevv(const uint8_T rtu_0[3],
     LL_GPIO_SetOutputPin(portNameLoc, 32U);
   }
 
-  /* End of MATLABSystem: '<S62>/SPI Controller Transfer1' */
+  /* End of MATLABSystem: '<S70>/SPI Controller Transfer1' */
 }
 
 /* Termination for atomic system: */
 void E_SPIControllerTransfer1_b_Term(DW_SPIControllerTransf_fwu4sl_T *localDW)
 {
-  /* Terminate for MATLABSystem: '<S62>/SPI Controller Transfer1' */
+  /* Terminate for MATLABSystem: '<S70>/SPI Controller Transfer1' */
   if (!localDW->obj.matlabCodegenIsDeleted) {
     localDW->obj.matlabCodegenIsDeleted = true;
     if ((localDW->obj.isInitialized == 1) && localDW->obj.isSetupComplete) {
@@ -723,7 +758,7 @@ void E_SPIControllerTransfer1_b_Term(DW_SPIControllerTransf_fwu4sl_T *localDW)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S62>/SPI Controller Transfer1' */
+  /* End of Terminate for MATLABSystem: '<S70>/SPI Controller Transfer1' */
 }
 
 /* System initialize for atomic system: */
@@ -731,7 +766,7 @@ void E_SPIControllerTransfer4_e_Init(DW_SPIControllerTransfer4_fw_T *localDW)
 {
   STM32_SPI_ModuleStruct_T b;
 
-  /* Start for MATLABSystem: '<S62>/SPI Controller Transfer4' */
+  /* Start for MATLABSystem: '<S70>/SPI Controller Transfer4' */
   localDW->obj.matlabCodegenIsDeleted = false;
   localDW->objisempty = true;
   localDW->obj.isInitialized = 1;
@@ -748,7 +783,7 @@ void ENV_SPIControllerTransfer4_pn(const uint8_T rtu_0[4],
   uint8_T tmp[4];
   uint8_T status;
 
-  /* MATLABSystem: '<S62>/SPI Controller Transfer4' */
+  /* MATLABSystem: '<S70>/SPI Controller Transfer4' */
   status = MW_STM32_SPI_SetFormat(localDW->obj.MW_SPI_HANDLE, 0U, 1792U,
     MW_SPI_MODE_2);
   if (status == 0) {
@@ -760,13 +795,13 @@ void ENV_SPIControllerTransfer4_pn(const uint8_T rtu_0[4],
     LL_GPIO_SetOutputPin(portNameLoc, 32U);
   }
 
-  /* End of MATLABSystem: '<S62>/SPI Controller Transfer4' */
+  /* End of MATLABSystem: '<S70>/SPI Controller Transfer4' */
 }
 
 /* Termination for atomic system: */
 void E_SPIControllerTransfer4_o_Term(DW_SPIControllerTransfer4_fw_T *localDW)
 {
-  /* Terminate for MATLABSystem: '<S62>/SPI Controller Transfer4' */
+  /* Terminate for MATLABSystem: '<S70>/SPI Controller Transfer4' */
   if (!localDW->obj.matlabCodegenIsDeleted) {
     localDW->obj.matlabCodegenIsDeleted = true;
     if ((localDW->obj.isInitialized == 1) && localDW->obj.isSetupComplete) {
@@ -777,7 +812,7 @@ void E_SPIControllerTransfer4_o_Term(DW_SPIControllerTransfer4_fw_T *localDW)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S62>/SPI Controller Transfer4' */
+  /* End of Terminate for MATLABSystem: '<S70>/SPI Controller Transfer4' */
 }
 
 /* Model step function */
@@ -785,32 +820,31 @@ void ENV_step(void)
 {
   GPIO_TypeDef * portNameLoc;
   CANMessage rtb_Message_i;
-  real_T rtb_UnitDelay1_m;
-  real_T rtb_UnitDelay2_o;
-  real_T rtb_UnitDelay4;
+  real_T rtb_UnitDelay2;
   int32_T c;
   uint32_T pinReadLoc;
   uint8_T rtb_VectorConcatenate[15];
   uint8_T rtb_VectorConcatenate1[15];
+  uint8_T rtb_VectorConcatenate1_d[15];
   uint8_T rtb_VectorConcatenate2[15];
+  uint8_T rtb_VectorConcatenate2_d[15];
   uint8_T rtb_VectorConcatenate3[15];
+  uint8_T rtb_VectorConcatenate3_c[15];
+  uint8_T rtb_VectorConcatenate_k[15];
   uint8_T rtb_RTSByte;
-  uint8_T rtb_RTSByte_eh;
-  uint8_T rtb_RTSByte_g;
+  uint8_T rtb_RTSByte_i;
+  uint8_T rtb_RTSByte_k;
+  uint8_T rtb_RTSByte_mo;
   uint8_T status;
   boolean_T rtb_NOT1;
 
-  /* Outputs for Enabled SubSystem: '<S16>/Initialize' incorporates:
-   *  EnablePort: '<S59>/Enable'
-   */
-  /* UnitDelay: '<S16>/Unit Delay5' */
-  if (ENV_DW.UnitDelay5_DSTATE > 0.0) {
-    /* SignalConversion generated from: '<S59>/MCPInitialized' */
-    ENV_B.OutportBufferForMCPInitialized = ENV_ConstB.Constant;
-  }
+  /* Outputs for Enabled SubSystem: '<S17>/Initialize' */
+  /* UnitDelay: '<S17>/Unit Delay5' */
+  ENV_Initialize(ENV_DW.UnitDelay5_DSTATE,
+                 &ENV_B.OutportBufferForMCPInitialize_k,
+                 &ENV_ConstB.Initialize_m);
 
-  /* End of UnitDelay: '<S16>/Unit Delay5' */
-  /* End of Outputs for SubSystem: '<S16>/Initialize' */
+  /* End of Outputs for SubSystem: '<S17>/Initialize' */
 
   /* MATLAB Function: '<S1>/MATLAB Function' incorporates:
    *  Constant: '<S1>/Offset'
@@ -819,9 +853,9 @@ void ENV_step(void)
    */
   ENV_MATLABFunction(ENV_ConstB.CANPack1.ID, ENV_ConstB.CANPack1.Length,
                      ENV_ConstB.CANPack1.Data, 129, 5, 0,
-                     ENV_B.OutportBufferForMCPInitialized,
+                     ENV_B.OutportBufferForMCPInitialize_k,
                      &rtb_VectorConcatenate[0], &rtb_VectorConcatenate[2],
-                     &rtb_RTSByte_g, &ENV_DW.sf_MATLABFunction);
+                     &rtb_RTSByte_mo, &ENV_DW.sf_MATLABFunction);
 
   /* Constant: '<S1>/TX Buffer 0' */
   rtb_VectorConcatenate[1] = 49U;
@@ -834,9 +868,9 @@ void ENV_step(void)
    */
   ENV_MATLABFunction(ENV_ConstB.CANPack2.ID, ENV_ConstB.CANPack2.Length,
                      ENV_ConstB.CANPack2.Data, 129, 5, 2,
-                     ENV_B.OutportBufferForMCPInitialized,
+                     ENV_B.OutportBufferForMCPInitialize_k,
                      &rtb_VectorConcatenate1[0], &rtb_VectorConcatenate1[2],
-                     &rtb_RTSByte_eh, &ENV_DW.sf_MATLABFunction1);
+                     &rtb_RTSByte_i, &ENV_DW.sf_MATLABFunction1);
 
   /* Constant: '<S1>/TX Buffer 1' */
   rtb_VectorConcatenate1[1] = 49U;
@@ -850,94 +884,94 @@ void ENV_step(void)
    */
   ENV_MATLABFunction(ENV_ConstB.CANPack3.ID, ENV_ConstB.CANPack3.Length,
                      ENV_ConstB.CANPack3.Data, 129, 5, 4,
-                     ENV_B.OutportBufferForMCPInitialized,
+                     ENV_B.OutportBufferForMCPInitialize_k,
                      &rtb_VectorConcatenate2[0], &rtb_VectorConcatenate2[2],
-                     &rtb_RTSByte, &ENV_DW.sf_MATLABFunction2);
+                     &rtb_RTSByte_k, &ENV_DW.sf_MATLABFunction2);
 
   /* Constant: '<S1>/TX Buffer 2' */
   rtb_VectorConcatenate2[1] = 49U;
   ENV_SPIControllerTransfer(rtb_VectorConcatenate2,
     &ENV_DW.SPIControllerTransfer4);
 
-  /* MATLABSystem: '<S49>/Digital Port Read' */
+  /* MATLABSystem: '<S54>/Digital Port Read' */
   pinReadLoc = LL_GPIO_ReadInputPort(GPIOB);
 
   /* Outputs for Enabled SubSystem: '<Root>/CAN1 RX' incorporates:
-   *  EnablePort: '<S2>/Enable'
+   *  EnablePort: '<S3>/Enable'
    */
   /* Logic: '<Root>/NOT3' incorporates:
-   *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH1'
-   *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH2'
-   *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH3'
-   *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH4'
-   *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH5'
-   *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH6'
-   *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH7'
-   *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH8'
-   *  MATLABSystem: '<S49>/Digital Port Read'
+   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH1'
+   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH2'
+   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH3'
+   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH4'
+   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH5'
+   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH6'
+   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH7'
+   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH8'
+   *  MATLABSystem: '<S54>/Digital Port Read'
    * */
   if ((pinReadLoc & 4U) == 0U) {
-    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer8, &ENV_DW.SPIControllerTransfer8);
 
-    /* MATLAB Function: '<S2>/MATLAB Function8' incorporates:
-     *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH8'
+    /* MATLAB Function: '<S3>/MATLAB Function8' incorporates:
+     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH8'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer8.SPIControllerTransfer1,
                         &ENV_B.Message_hw);
-    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer1_p, &ENV_DW.SPIControllerTransfer1_p);
 
-    /* MATLAB Function: '<S2>/MATLAB Function1' incorporates:
-     *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH1'
+    /* MATLAB Function: '<S3>/MATLAB Function1' incorporates:
+     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH1'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer1_p.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer2_p, &ENV_DW.SPIControllerTransfer2_p);
 
-    /* MATLAB Function: '<S2>/MATLAB Function2' incorporates:
-     *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH2'
+    /* MATLAB Function: '<S3>/MATLAB Function2' incorporates:
+     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH2'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer2_p.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer3_p, &ENV_DW.SPIControllerTransfer3_p);
 
-    /* MATLAB Function: '<S2>/MATLAB Function3' incorporates:
-     *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH3'
+    /* MATLAB Function: '<S3>/MATLAB Function3' incorporates:
+     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH3'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer3_p.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer4_p, &ENV_DW.SPIControllerTransfer4_p);
 
-    /* MATLAB Function: '<S2>/MATLAB Function4' incorporates:
-     *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH4'
+    /* MATLAB Function: '<S3>/MATLAB Function4' incorporates:
+     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH4'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer4_p.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer5_p, &ENV_DW.SPIControllerTransfer5_p);
 
-    /* MATLAB Function: '<S2>/MATLAB Function5' incorporates:
-     *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH5'
+    /* MATLAB Function: '<S3>/MATLAB Function5' incorporates:
+     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH5'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer5_p.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer6_p, &ENV_DW.SPIControllerTransfer6_p);
 
-    /* MATLAB Function: '<S2>/MATLAB Function6' incorporates:
-     *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH6'
+    /* MATLAB Function: '<S3>/MATLAB Function6' incorporates:
+     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH6'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer6_p.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_p(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer7_p, &ENV_DW.SPIControllerTransfer7_p);
 
-    /* MATLAB Function: '<S2>/MATLAB Function7' incorporates:
-     *  Constant: '<S2>/Read RX Buffer start at RXB0SIDH7'
+    /* MATLAB Function: '<S3>/MATLAB Function7' incorporates:
+     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH7'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer7_p.SPIControllerTransfer1,
                         &rtb_Message_i);
@@ -949,85 +983,85 @@ void ENV_step(void)
   /* DataTypeConversion: '<Root>/Data Type Conversion6' */
   ENV_B.DataTypeConversion6 = ENV_B.Message_hw.ID;
 
-  /* MATLABSystem: '<S47>/Digital Port Read' */
+  /* MATLABSystem: '<S52>/Digital Port Read' */
   pinReadLoc = LL_GPIO_ReadInputPort(GPIOC);
 
   /* Outputs for Enabled SubSystem: '<Root>/CAN2 RX' incorporates:
-   *  EnablePort: '<S3>/Enable'
+   *  EnablePort: '<S4>/Enable'
    */
   /* Logic: '<Root>/NOT2' incorporates:
-   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH1'
-   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH2'
-   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH3'
-   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH4'
-   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH5'
-   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH6'
-   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH7'
-   *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH8'
-   *  MATLABSystem: '<S47>/Digital Port Read'
+   *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH1'
+   *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH2'
+   *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH3'
+   *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH4'
+   *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH5'
+   *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH6'
+   *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH7'
+   *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH8'
+   *  MATLABSystem: '<S52>/Digital Port Read'
    * */
   if ((pinReadLoc & 4096U) == 0U) {
-    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer8_p, &ENV_DW.SPIControllerTransfer8_p);
 
-    /* MATLAB Function: '<S3>/MATLAB Function8' incorporates:
-     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH8'
+    /* MATLAB Function: '<S4>/MATLAB Function8' incorporates:
+     *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH8'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer8_p.SPIControllerTransfer1,
                         &ENV_B.Message_o);
-    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer1_pn, &ENV_DW.SPIControllerTransfer1_pn);
 
-    /* MATLAB Function: '<S3>/MATLAB Function1' incorporates:
-     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH1'
+    /* MATLAB Function: '<S4>/MATLAB Function1' incorporates:
+     *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH1'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer1_pn.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer2_pn, &ENV_DW.SPIControllerTransfer2_pn);
 
-    /* MATLAB Function: '<S3>/MATLAB Function2' incorporates:
-     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH2'
+    /* MATLAB Function: '<S4>/MATLAB Function2' incorporates:
+     *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH2'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer2_pn.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer3_pn, &ENV_DW.SPIControllerTransfer3_pn);
 
-    /* MATLAB Function: '<S3>/MATLAB Function3' incorporates:
-     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH3'
+    /* MATLAB Function: '<S4>/MATLAB Function3' incorporates:
+     *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH3'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer3_pn.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer4_pn, &ENV_DW.SPIControllerTransfer4_pn);
 
-    /* MATLAB Function: '<S3>/MATLAB Function4' incorporates:
-     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH4'
+    /* MATLAB Function: '<S4>/MATLAB Function4' incorporates:
+     *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH4'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer4_pn.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer5_pn, &ENV_DW.SPIControllerTransfer5_pn);
 
-    /* MATLAB Function: '<S3>/MATLAB Function5' incorporates:
-     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH5'
+    /* MATLAB Function: '<S4>/MATLAB Function5' incorporates:
+     *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH5'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer5_pn.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer6_pn, &ENV_DW.SPIControllerTransfer6_pn);
 
-    /* MATLAB Function: '<S3>/MATLAB Function6' incorporates:
-     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH6'
+    /* MATLAB Function: '<S4>/MATLAB Function6' incorporates:
+     *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH6'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer6_pn.SPIControllerTransfer1,
                         &rtb_Message_i);
-    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled6,
+    ENV_SPIControllerTransfer1_pn(ENV_ConstP.pooled11,
       &ENV_B.SPIControllerTransfer7_pn, &ENV_DW.SPIControllerTransfer7_pn);
 
-    /* MATLAB Function: '<S3>/MATLAB Function7' incorporates:
-     *  Constant: '<S3>/Read RX Buffer start at RXB0SIDH7'
+    /* MATLAB Function: '<S4>/MATLAB Function7' incorporates:
+     *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH7'
      */
     ENV_MATLABFunction1(ENV_B.SPIControllerTransfer7_pn.SPIControllerTransfer1,
                         &rtb_Message_i);
@@ -1039,18 +1073,18 @@ void ENV_step(void)
   /* DataTypeConversion: '<Root>/Data Type Conversion4' */
   ENV_B.DataTypeConversion4 = ENV_B.Message_o.ID;
 
-  /* MATLABSystem: '<S43>/Digital Port Read' */
+  /* MATLABSystem: '<S48>/Digital Port Read' */
   pinReadLoc = LL_GPIO_ReadInputPort(GPIOA);
 
   /* Outputs for Enabled SubSystem: '<Root>/CAN3 RX' incorporates:
-   *  EnablePort: '<S4>/Enable'
+   *  EnablePort: '<S5>/Enable'
    */
   /* Logic: '<Root>/NOT4' incorporates:
-   *  MATLABSystem: '<S43>/Digital Port Read'
+   *  MATLABSystem: '<S48>/Digital Port Read'
    * */
   if ((pinReadLoc & 4U) == 0U) {
-    /* MATLABSystem: '<S4>/SPI Controller Transfer7' incorporates:
-     *  Constant: '<S4>/Read RX Buffer start at RXB0SIDH7'
+    /* MATLABSystem: '<S5>/SPI Controller Transfer7' incorporates:
+     *  Constant: '<S5>/Read RX Buffer start at RXB0SIDH7'
      */
     status = MW_STM32_SPI_SetFormat(ENV_DW.obj_gf.MW_SPI_HANDLE, 0U, 1792U,
       MW_SPI_MODE_2);
@@ -1058,12 +1092,12 @@ void ENV_step(void)
       portNameLoc = GPIOA;
       LL_GPIO_ResetOutputPin(portNameLoc, 2U);
       MW_SPI_MasterWriteRead_Databits(ENV_DW.obj_gf.MW_SPI_HANDLE,
-        &ENV_ConstP.pooled6[0], &rtb_VectorConcatenate[0], 0, 15U, 1, 10U);
+        &ENV_ConstP.pooled11[0], &rtb_VectorConcatenate[0], 0, 15U, 1, 10U);
       LL_GPIO_SetOutputPin(portNameLoc, 2U);
     }
 
-    /* MATLAB Function: '<S4>/MATLAB Function7' incorporates:
-     *  MATLABSystem: '<S4>/SPI Controller Transfer7'
+    /* MATLAB Function: '<S5>/MATLAB Function7' incorporates:
+     *  MATLABSystem: '<S5>/SPI Controller Transfer7'
      */
     ENV_MATLABFunction1(rtb_VectorConcatenate, &ENV_B.Message_h);
   }
@@ -1074,20 +1108,20 @@ void ENV_step(void)
   /* DataTypeConversion: '<Root>/Data Type Conversion' */
   ENV_B.DataTypeConversion = ENV_B.Message_h.ID;
 
-  /* MATLABSystem: '<S45>/Digital Port Read' */
+  /* MATLABSystem: '<S50>/Digital Port Read' */
   pinReadLoc = LL_GPIO_ReadInputPort(GPIOC);
 
   /* Logic: '<Root>/NOT1' incorporates:
-   *  MATLABSystem: '<S45>/Digital Port Read'
+   *  MATLABSystem: '<S50>/Digital Port Read'
    * */
   rtb_NOT1 = ((pinReadLoc & 16U) == 0U);
 
   /* Outputs for Enabled SubSystem: '<Root>/CAN4 RX' incorporates:
-   *  EnablePort: '<S5>/Enable'
+   *  EnablePort: '<S6>/Enable'
    */
   if (rtb_NOT1) {
-    /* MATLABSystem: '<S5>/SPI Controller Transfer7' incorporates:
-     *  Constant: '<S5>/Read RX Buffer start at RXB0SIDH7'
+    /* MATLABSystem: '<S6>/SPI Controller Transfer7' incorporates:
+     *  Constant: '<S6>/Read RX Buffer start at RXB0SIDH7'
      */
     status = MW_STM32_SPI_SetFormat(ENV_DW.obj_g.MW_SPI_HANDLE, 0U, 1792U,
       MW_SPI_MODE_2);
@@ -1095,12 +1129,12 @@ void ENV_step(void)
       portNameLoc = GPIOC;
       LL_GPIO_ResetOutputPin(portNameLoc, 32U);
       MW_SPI_MasterWriteRead_Databits(ENV_DW.obj_g.MW_SPI_HANDLE,
-        &ENV_ConstP.pooled6[0], &rtb_VectorConcatenate[0], 0, 15U, 1, 10U);
+        &ENV_ConstP.pooled11[0], &rtb_VectorConcatenate[0], 0, 15U, 1, 10U);
       LL_GPIO_SetOutputPin(portNameLoc, 32U);
     }
 
-    /* MATLAB Function: '<S5>/MATLAB Function7' incorporates:
-     *  MATLABSystem: '<S5>/SPI Controller Transfer7'
+    /* MATLAB Function: '<S6>/MATLAB Function7' incorporates:
+     *  MATLABSystem: '<S6>/SPI Controller Transfer7'
      */
     ENV_MATLABFunction1(rtb_VectorConcatenate, &ENV_B.Message);
   }
@@ -1343,6 +1377,321 @@ void ENV_step(void)
     }
   }
 
+  /* S-Function (scanpack): '<S2>/CAN Pack4' */
+  /* S-Function (scanpack): '<S2>/CAN Pack4' */
+  ENV_B.CANPack4_e.ID = 0U;
+  ENV_B.CANPack4_e.Length = 8U;
+  ENV_B.CANPack4_e.Extended = 0U;
+  ENV_B.CANPack4_e.Remote = 0;
+  ENV_B.CANPack4_e.Data[0] = 0;
+  ENV_B.CANPack4_e.Data[1] = 0;
+  ENV_B.CANPack4_e.Data[2] = 0;
+  ENV_B.CANPack4_e.Data[3] = 0;
+  ENV_B.CANPack4_e.Data[4] = 0;
+  ENV_B.CANPack4_e.Data[5] = 0;
+  ENV_B.CANPack4_e.Data[6] = 0;
+  ENV_B.CANPack4_e.Data[7] = 0;
+
+  {
+    /* --------------- START Packing signal 0 ------------------
+     *  startBit                = 0
+     *  length                  = 16
+     *  desiredSignalByteLayout = LITTLEENDIAN
+     *  dataType                = SIGNED
+     *  factor                  = 1.0
+     *  offset                  = 0.0
+     *  minimum                 = 0.0
+     *  maximum                 = 0.0
+     * -----------------------------------------------------------------------*/
+    {
+      real_T outValue = 0;
+
+      {
+        real_T result = ENV_B.DataTypeConversion6;
+
+        /* no scaling required */
+        /* round to closest integer value for integer CAN signal */
+        outValue = round(result);
+      }
+
+      {
+        int16_T packedValue;
+        int32_T scaledValue;
+        if (outValue > 2147483647.0) {
+          scaledValue = 2147483647;
+        } else if (outValue < -2147483648.0) {
+          scaledValue = -2147483647 - 1;
+        } else {
+          scaledValue = (int32_T) outValue;
+        }
+
+        if (scaledValue > (int32_T) (32767)) {
+          packedValue = 32767;
+        } else if (scaledValue < (int32_T)((-(32767)-1))) {
+          packedValue = (-(32767)-1);
+        } else {
+          packedValue = (int16_T) (scaledValue);
+        }
+
+        {
+          uint16_T* tempValuePtr = (uint16_T*)&packedValue;
+          uint16_T tempValue = *tempValuePtr;
+
+          {
+            ENV_B.CANPack4_e.Data[0] = ENV_B.CANPack4_e.Data[0] | (uint8_T)
+              ((uint16_T)(tempValue & (uint16_T)0xFFU));
+            ENV_B.CANPack4_e.Data[1] = ENV_B.CANPack4_e.Data[1] | (uint8_T)
+              ((uint16_T)((uint16_T)(tempValue & (uint16_T)0xFF00U) >> 8));
+          }
+        }
+      }
+    }
+
+    /* --------------- START Packing signal 1 ------------------
+     *  startBit                = 16
+     *  length                  = 16
+     *  desiredSignalByteLayout = LITTLEENDIAN
+     *  dataType                = SIGNED
+     *  factor                  = 1.0
+     *  offset                  = 0.0
+     *  minimum                 = 0.0
+     *  maximum                 = 0.0
+     * -----------------------------------------------------------------------*/
+    {
+      real_T outValue = 0;
+
+      {
+        real_T result = ENV_B.DataTypeConversion4;
+
+        /* no scaling required */
+        /* round to closest integer value for integer CAN signal */
+        outValue = round(result);
+      }
+
+      {
+        int16_T packedValue;
+        int32_T scaledValue;
+        if (outValue > 2147483647.0) {
+          scaledValue = 2147483647;
+        } else if (outValue < -2147483648.0) {
+          scaledValue = -2147483647 - 1;
+        } else {
+          scaledValue = (int32_T) outValue;
+        }
+
+        if (scaledValue > (int32_T) (32767)) {
+          packedValue = 32767;
+        } else if (scaledValue < (int32_T)((-(32767)-1))) {
+          packedValue = (-(32767)-1);
+        } else {
+          packedValue = (int16_T) (scaledValue);
+        }
+
+        {
+          uint16_T* tempValuePtr = (uint16_T*)&packedValue;
+          uint16_T tempValue = *tempValuePtr;
+
+          {
+            ENV_B.CANPack4_e.Data[2] = ENV_B.CANPack4_e.Data[2] | (uint8_T)
+              ((uint16_T)(tempValue & (uint16_T)0xFFU));
+            ENV_B.CANPack4_e.Data[3] = ENV_B.CANPack4_e.Data[3] | (uint8_T)
+              ((uint16_T)((uint16_T)(tempValue & (uint16_T)0xFF00U) >> 8));
+          }
+        }
+      }
+    }
+
+    /* --------------- START Packing signal 2 ------------------
+     *  startBit                = 32
+     *  length                  = 16
+     *  desiredSignalByteLayout = LITTLEENDIAN
+     *  dataType                = SIGNED
+     *  factor                  = 1.0
+     *  offset                  = 0.0
+     *  minimum                 = 0.0
+     *  maximum                 = 0.0
+     * -----------------------------------------------------------------------*/
+    {
+      real_T outValue = 0;
+
+      {
+        real_T result = ENV_B.DataTypeConversion;
+
+        /* no scaling required */
+        /* round to closest integer value for integer CAN signal */
+        outValue = round(result);
+      }
+
+      {
+        int16_T packedValue;
+        int32_T scaledValue;
+        if (outValue > 2147483647.0) {
+          scaledValue = 2147483647;
+        } else if (outValue < -2147483648.0) {
+          scaledValue = -2147483647 - 1;
+        } else {
+          scaledValue = (int32_T) outValue;
+        }
+
+        if (scaledValue > (int32_T) (32767)) {
+          packedValue = 32767;
+        } else if (scaledValue < (int32_T)((-(32767)-1))) {
+          packedValue = (-(32767)-1);
+        } else {
+          packedValue = (int16_T) (scaledValue);
+        }
+
+        {
+          uint16_T* tempValuePtr = (uint16_T*)&packedValue;
+          uint16_T tempValue = *tempValuePtr;
+
+          {
+            ENV_B.CANPack4_e.Data[4] = ENV_B.CANPack4_e.Data[4] | (uint8_T)
+              ((uint16_T)(tempValue & (uint16_T)0xFFU));
+            ENV_B.CANPack4_e.Data[5] = ENV_B.CANPack4_e.Data[5] | (uint8_T)
+              ((uint16_T)((uint16_T)(tempValue & (uint16_T)0xFF00U) >> 8));
+          }
+        }
+      }
+    }
+
+    /* --------------- START Packing signal 3 ------------------
+     *  startBit                = 48
+     *  length                  = 16
+     *  desiredSignalByteLayout = LITTLEENDIAN
+     *  dataType                = SIGNED
+     *  factor                  = 1.0
+     *  offset                  = 0.0
+     *  minimum                 = 0.0
+     *  maximum                 = 0.0
+     * -----------------------------------------------------------------------*/
+    {
+      real_T outValue = 0;
+
+      {
+        real_T result = ENV_B.DataTypeConversion2;
+
+        /* no scaling required */
+        /* round to closest integer value for integer CAN signal */
+        outValue = round(result);
+      }
+
+      {
+        int16_T packedValue;
+        int32_T scaledValue;
+        if (outValue > 2147483647.0) {
+          scaledValue = 2147483647;
+        } else if (outValue < -2147483648.0) {
+          scaledValue = -2147483647 - 1;
+        } else {
+          scaledValue = (int32_T) outValue;
+        }
+
+        if (scaledValue > (int32_T) (32767)) {
+          packedValue = 32767;
+        } else if (scaledValue < (int32_T)((-(32767)-1))) {
+          packedValue = (-(32767)-1);
+        } else {
+          packedValue = (int16_T) (scaledValue);
+        }
+
+        {
+          uint16_T* tempValuePtr = (uint16_T*)&packedValue;
+          uint16_T tempValue = *tempValuePtr;
+
+          {
+            ENV_B.CANPack4_e.Data[6] = ENV_B.CANPack4_e.Data[6] | (uint8_T)
+              ((uint16_T)(tempValue & (uint16_T)0xFFU));
+            ENV_B.CANPack4_e.Data[7] = ENV_B.CANPack4_e.Data[7] | (uint8_T)
+              ((uint16_T)((uint16_T)(tempValue & (uint16_T)0xFF00U) >> 8));
+          }
+        }
+      }
+    }
+  }
+
+  /* Outputs for Enabled SubSystem: '<S18>/Initialize' */
+  /* UnitDelay: '<S18>/Unit Delay5' */
+  ENV_Initialize(ENV_DW.UnitDelay5_DSTATE_p,
+                 &ENV_B.OutportBufferForMCPInitialized, &ENV_ConstB.Initialize_h);
+
+  /* End of Outputs for SubSystem: '<S18>/Initialize' */
+
+  /* MATLAB Function: '<S2>/MATLAB Function4' incorporates:
+   *  Constant: '<S2>/Offset3'
+   *  Constant: '<S2>/Period3'
+   *  Constant: '<S2>/RTS3'
+   */
+  ENV_MATLABFunction(ENV_B.CANPack4_e.ID, ENV_B.CANPack4_e.Length,
+                     ENV_B.CANPack4_e.Data, 129, 500, 3,
+                     ENV_B.OutportBufferForMCPInitialized,
+                     &rtb_VectorConcatenate3[0], &rtb_VectorConcatenate3[2],
+                     &rtb_RTSByte, &ENV_DW.sf_MATLABFunction4_e);
+
+  /* Constant: '<S2>/TX Buffer 3' */
+  rtb_VectorConcatenate3[1] = 49U;
+
+  /* MATLABSystem: '<S2>/SPI Controller Transfer6' incorporates:
+   *  Concatenate: '<S2>/Vector Concatenate3'
+   */
+  status = MW_STM32_SPI_SetFormat(ENV_DW.obj_oi.MW_SPI_HANDLE, 0U, 1792U,
+    MW_SPI_MODE_2);
+  if (status == 0) {
+    portNameLoc = GPIOC;
+    LL_GPIO_ResetOutputPin(portNameLoc, 32U);
+    MW_SPI_MasterWriteRead_Databits(ENV_DW.obj_oi.MW_SPI_HANDLE,
+      &rtb_VectorConcatenate3[0], &rtb_VectorConcatenate[0], 0, 15U, 0, 1U);
+    LL_GPIO_SetOutputPin(portNameLoc, 32U);
+  }
+
+  /* End of MATLABSystem: '<S2>/SPI Controller Transfer6' */
+
+  /* MATLABSystem: '<S2>/SPI Controller Transfer7' */
+  status = MW_STM32_SPI_SetFormat(ENV_DW.obj_f.MW_SPI_HANDLE, 0U, 1792U,
+    MW_SPI_MODE_2);
+  if (status == 0) {
+    portNameLoc = GPIOC;
+    LL_GPIO_ResetOutputPin(portNameLoc, 32U);
+    MW_SPI_MasterWriteRead_Databits(ENV_DW.obj_f.MW_SPI_HANDLE, &rtb_RTSByte,
+      &status, 0, 1U, 0, 1U);
+    LL_GPIO_SetOutputPin(portNameLoc, 32U);
+  }
+
+  /* End of MATLABSystem: '<S2>/SPI Controller Transfer7' */
+
+  /* MATLAB Function: '<S2>/MATLAB Function' incorporates:
+   *  Constant: '<S2>/Offset'
+   *  Constant: '<S2>/Period'
+   *  Constant: '<S2>/RTS'
+   */
+  ENV_MATLABFunction(ENV_ConstB.CANPack1_p.ID, ENV_ConstB.CANPack1_p.Length,
+                     ENV_ConstB.CANPack1_p.Data, 129, 5, 0,
+                     ENV_B.OutportBufferForMCPInitialized,
+                     &rtb_VectorConcatenate_k[0], &rtb_VectorConcatenate_k[2],
+                     &rtb_RTSByte, &ENV_DW.sf_MATLABFunction_c);
+
+  /* MATLAB Function: '<S2>/MATLAB Function1' incorporates:
+   *  Constant: '<S2>/Offset1'
+   *  Constant: '<S2>/Period1'
+   *  Constant: '<S2>/RTS1'
+   */
+  ENV_MATLABFunction(ENV_ConstB.CANPack2_g.ID, ENV_ConstB.CANPack2_g.Length,
+                     ENV_ConstB.CANPack2_g.Data, 129, 5, 2,
+                     ENV_B.OutportBufferForMCPInitialized,
+                     &rtb_VectorConcatenate1_d[0], &rtb_VectorConcatenate1_d[2],
+                     &rtb_RTSByte, &ENV_DW.sf_MATLABFunction1_n);
+
+  /* MATLAB Function: '<S2>/MATLAB Function2' incorporates:
+   *  Constant: '<S2>/Offset2'
+   *  Constant: '<S2>/Period2'
+   *  Constant: '<S2>/RTS2'
+   */
+  ENV_MATLABFunction(ENV_ConstB.CANPack3_g.ID, ENV_ConstB.CANPack3_g.Length,
+                     ENV_ConstB.CANPack3_g.Data, 129, 5, 4,
+                     ENV_B.OutportBufferForMCPInitialized,
+                     &rtb_VectorConcatenate2_d[0], &rtb_VectorConcatenate2_d[2],
+                     &rtb_RTSByte, &ENV_DW.sf_MATLABFunction2_k);
+
   /* MATLAB Function: '<S1>/MATLAB Function4' incorporates:
    *  Constant: '<S1>/Offset3'
    *  Constant: '<S1>/Period3'
@@ -1350,20 +1699,11 @@ void ENV_step(void)
    */
   ENV_MATLABFunction(ENV_B.CANPack4.ID, ENV_B.CANPack4.Length,
                      ENV_B.CANPack4.Data, 129, 5, 3,
-                     ENV_B.OutportBufferForMCPInitialized,
-                     &rtb_VectorConcatenate3[0], &rtb_VectorConcatenate3[2],
-                     &status, &ENV_DW.sf_MATLABFunction4);
+                     ENV_B.OutportBufferForMCPInitialize_k,
+                     &rtb_VectorConcatenate3_c[0], &rtb_VectorConcatenate3_c[2],
+                     &rtb_RTSByte, &ENV_DW.sf_MATLABFunction4);
 
-  /* Constant: '<S1>/TX Buffer 3' */
-  rtb_VectorConcatenate3[1] = 49U;
-  ENV_SPIControllerTransfer(rtb_VectorConcatenate3,
-    &ENV_DW.SPIControllerTransfer6);
-  ENV_SPIControllerTransfer1(rtb_RTSByte_g, &ENV_DW.SPIControllerTransfer1);
-  ENV_SPIControllerTransfer1(rtb_RTSByte_eh, &ENV_DW.SPIControllerTransfer3);
-  ENV_SPIControllerTransfer1(rtb_RTSByte, &ENV_DW.SPIControllerTransfer5);
-  ENV_SPIControllerTransfer1(status, &ENV_DW.SPIControllerTransfer7);
-
-  /* MATLABSystem: '<S53>/Digital Port Write' */
+  /* MATLABSystem: '<S58>/Digital Port Write' */
   portNameLoc = GPIOB;
   if (rtb_NOT1) {
     c = 32;
@@ -1374,32 +1714,37 @@ void ENV_step(void)
   LL_GPIO_SetOutputPin(portNameLoc, (uint32_T)c);
   LL_GPIO_ResetOutputPin(portNameLoc, ~(uint32_T)c & 32U);
 
-  /* End of MATLABSystem: '<S53>/Digital Port Write' */
+  /* End of MATLABSystem: '<S58>/Digital Port Write' */
+  ENV_SPIControllerTransfer1(rtb_RTSByte_mo, &ENV_DW.SPIControllerTransfer1);
+  ENV_SPIControllerTransfer1(rtb_RTSByte_i, &ENV_DW.SPIControllerTransfer3);
+  ENV_SPIControllerTransfer1(rtb_RTSByte_k, &ENV_DW.SPIControllerTransfer5);
 
-  /* UnitDelay: '<S16>/Unit Delay4' */
-  rtb_UnitDelay4 = ENV_DW.UnitDelay4_DSTATE;
-
-  /* Outputs for Enabled SubSystem: '<S16>/MCPInit' incorporates:
-   *  EnablePort: '<S60>/Enable'
+  /* Step: '<S17>/Step2' incorporates:
+   *  UnitDelay: '<S17>/Unit Delay5'
    */
-  /* RelationalOperator: '<S58>/FixPt Relational Operator' incorporates:
-   *  Constant: '<S60>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
-   *  Constant: '<S60>/CANINTE'
-   *  Constant: '<S60>/CNF1'
-   *  Constant: '<S60>/CNF2'
-   *  Constant: '<S60>/CNF3'
-   *  Constant: '<S60>/Clear flags'
-   *  Constant: '<S60>/Set acceptance filters'
-   *  UnitDelay: '<S16>/Unit Delay4'
-   *  UnitDelay: '<S58>/Delay Input1'
+  rtb_NOT1 = !(((ENV_M->Timing.clockTick0) * 0.001) < 1.0);
+  ENV_DW.UnitDelay5_DSTATE = rtb_NOT1;
+
+  /* Outputs for Enabled SubSystem: '<S17>/MCPInit' incorporates:
+   *  EnablePort: '<S67>/Enable'
+   */
+  /* RelationalOperator: '<S65>/FixPt Relational Operator' incorporates:
+   *  Constant: '<S67>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
+   *  Constant: '<S67>/CANINTE'
+   *  Constant: '<S67>/CNF1'
+   *  Constant: '<S67>/CNF2'
+   *  Constant: '<S67>/CNF3'
+   *  Constant: '<S67>/Clear flags'
+   *  Constant: '<S67>/Set acceptance filters'
+   *  UnitDelay: '<S65>/Delay Input1'
    *
-   * Block description for '<S58>/Delay Input1':
+   * Block description for '<S65>/Delay Input1':
    *
    *  Store in Global RAM
    */
-  if (ENV_DW.UnitDelay4_DSTATE > ENV_DW.DelayInput1_DSTATE) {
-    /* MATLABSystem: '<S60>/SPI Controller Transfer' incorporates:
-     *  Constant: '<S60>/Enter Configuration Mode'
+  if ((real_T)rtb_NOT1 > ENV_DW.DelayInput1_DSTATE) {
+    /* MATLABSystem: '<S67>/SPI Controller Transfer' incorporates:
+     *  Constant: '<S67>/Enter Configuration Mode'
      */
     status = MW_STM32_SPI_SetFormat(ENV_DW.obj_l.MW_SPI_HANDLE, 0U, 1792U,
       MW_SPI_MODE_2);
@@ -1407,45 +1752,99 @@ void ENV_step(void)
       portNameLoc = GPIOA;
       LL_GPIO_ResetOutputPin(portNameLoc, 2U);
       MW_SPI_MasterWriteRead_Databits(ENV_DW.obj_l.MW_SPI_HANDLE,
-        &ENV_ConstP.pooled7, &rtb_RTSByte_g, 0, 1U, 1, 10U);
+        &ENV_ConstP.pooled12, &status, 0, 1U, 1, 10U);
       LL_GPIO_SetOutputPin(portNameLoc, 2U);
     }
 
-    /* End of MATLABSystem: '<S60>/SPI Controller Transfer' */
-    EN_SPIControllerTransfer1_pnaev(ENV_ConstP.pooled8,
+    /* End of MATLABSystem: '<S67>/SPI Controller Transfer' */
+    EN_SPIControllerTransfer1_pnaev(ENV_ConstP.pooled13,
       &ENV_DW.SPIControllerTransfer1_pnaev);
-    EN_SPIControllerTransfer1_pnaev(ENV_ConstP.pooled9,
-      &ENV_DW.SPIControllerTransfer2_pnaev);
-    EN_SPIControllerTransfer1_pnaev(ENV_ConstP.pooled10,
-      &ENV_DW.SPIControllerTransfer3_pnaev);
-    ENV_SPIControllerTransfer5(ENV_ConstP.pooled11,
-      &ENV_DW.SPIControllerTransfer5_pnaev);
-    EN_SPIControllerTransfer1_pnaev(ENV_ConstP.pooled12,
-      &ENV_DW.SPIControllerTransfer6_pnaev);
-    ENV_SPIControllerTransfer5(ENV_ConstP.pooled13,
-      &ENV_DW.SPIControllerTransfer7_pnaevvf);
     EN_SPIControllerTransfer1_pnaev(ENV_ConstP.pooled14,
+      &ENV_DW.SPIControllerTransfer2_pnaev);
+    EN_SPIControllerTransfer1_pnaev(ENV_ConstP.pooled15,
+      &ENV_DW.SPIControllerTransfer3_pnaev);
+    ENV_SPIControllerTransfer5(ENV_ConstP.pooled16,
+      &ENV_DW.SPIControllerTransfer5_pnaev);
+    EN_SPIControllerTransfer1_pnaev(ENV_ConstP.pooled17,
+      &ENV_DW.SPIControllerTransfer6_pnaev);
+    ENV_SPIControllerTransfer5(ENV_ConstP.pooled18,
+      &ENV_DW.SPIControllerTransfer7_pnaevvf);
+    EN_SPIControllerTransfer1_pnaev(ENV_ConstP.pooled19,
       &ENV_DW.SPIControllerTransfer4_pnaev);
   }
 
-  /* End of RelationalOperator: '<S58>/FixPt Relational Operator' */
-  /* End of Outputs for SubSystem: '<S16>/MCPInit' */
+  /* End of RelationalOperator: '<S65>/FixPt Relational Operator' */
+  /* End of Outputs for SubSystem: '<S17>/MCPInit' */
 
-  /* Update for UnitDelay: '<S16>/Unit Delay4' incorporates:
-   *  UnitDelay: '<S16>/Unit Delay3'
+  /* UnitDelay: '<S18>/Unit Delay1' incorporates:
+   *  UnitDelay: '<S18>/Unit Delay5'
    */
-  ENV_DW.UnitDelay4_DSTATE = ENV_DW.UnitDelay3_DSTATE;
+  ENV_DW.UnitDelay5_DSTATE_p = ENV_DW.UnitDelay1_DSTATE;
 
-  /* Step: '<S16>/Step1' incorporates:
-   *  UnitDelay: '<S16>/Unit Delay3'
+  /* Step: '<S18>/Step2' incorporates:
+   *  UnitDelay: '<S18>/Unit Delay1'
    */
-  rtb_NOT1 = !(((ENV_M->Timing.clockTick0) * 0.001) < 1.0);
-  ENV_DW.UnitDelay3_DSTATE = rtb_NOT1;
+  ENV_DW.UnitDelay1_DSTATE = rtb_NOT1;
 
-  /* MATLABSystem: '<S51>/Digital Port Write' incorporates:
-   *  Constant: '<S6>/Constant'
-   *  RelationalOperator: '<S6>/Compare'
-   *  UnitDelay: '<S7>/Output'
+  /* UnitDelay: '<S18>/Unit Delay2' */
+  rtb_UnitDelay2 = ENV_DW.UnitDelay2_DSTATE;
+
+  /* Outputs for Enabled SubSystem: '<S18>/MCPInit' incorporates:
+   *  EnablePort: '<S70>/Enable'
+   */
+  /* RelationalOperator: '<S68>/FixPt Relational Operator' incorporates:
+   *  Constant: '<S70>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
+   *  Constant: '<S70>/CANINTE'
+   *  Constant: '<S70>/CNF1'
+   *  Constant: '<S70>/CNF2'
+   *  Constant: '<S70>/CNF3'
+   *  Constant: '<S70>/Clear flags'
+   *  Constant: '<S70>/Set acceptance filters'
+   *  UnitDelay: '<S18>/Unit Delay2'
+   *  UnitDelay: '<S68>/Delay Input1'
+   *
+   * Block description for '<S68>/Delay Input1':
+   *
+   *  Store in Global RAM
+   */
+  if (ENV_DW.UnitDelay2_DSTATE > ENV_DW.DelayInput1_DSTATE_e) {
+    /* MATLABSystem: '<S70>/SPI Controller Transfer' incorporates:
+     *  Constant: '<S70>/Enter Configuration Mode'
+     */
+    status = MW_STM32_SPI_SetFormat(ENV_DW.obj.MW_SPI_HANDLE, 0U, 1792U,
+      MW_SPI_MODE_2);
+    if (status == 0) {
+      portNameLoc = GPIOC;
+      LL_GPIO_ResetOutputPin(portNameLoc, 32U);
+      MW_SPI_MasterWriteRead_Databits(ENV_DW.obj.MW_SPI_HANDLE,
+        &ENV_ConstP.pooled12, &status, 0, 1U, 1, 10U);
+      LL_GPIO_SetOutputPin(portNameLoc, 32U);
+    }
+
+    /* End of MATLABSystem: '<S70>/SPI Controller Transfer' */
+    E_SPIControllerTransfer1_pnaevv(ENV_ConstP.pooled13,
+      &ENV_DW.SPIControllerTransfer1_pnaevv);
+    E_SPIControllerTransfer1_pnaevv(ENV_ConstP.pooled14,
+      &ENV_DW.SPIControllerTransfer2_pnaevv);
+    E_SPIControllerTransfer1_pnaevv(ENV_ConstP.pooled15,
+      &ENV_DW.SPIControllerTransfer3_pnaevv);
+    ENV_SPIControllerTransfer4_pn(ENV_ConstP.pooled16,
+      &ENV_DW.SPIControllerTransfer4_pnaevv);
+    E_SPIControllerTransfer1_pnaevv(ENV_ConstP.pooled17,
+      &ENV_DW.SPIControllerTransfer5_pnaevv);
+    ENV_SPIControllerTransfer4_pn(ENV_ConstP.pooled18,
+      &ENV_DW.SPIControllerTransfer6_pnaevv);
+    E_SPIControllerTransfer1_pnaevv(ENV_ConstP.pooled19,
+      &ENV_DW.SPIControllerTransfer7_pnaevvfp);
+  }
+
+  /* End of RelationalOperator: '<S68>/FixPt Relational Operator' */
+  /* End of Outputs for SubSystem: '<S18>/MCPInit' */
+
+  /* MATLABSystem: '<S56>/Digital Port Write' incorporates:
+   *  Constant: '<S7>/Constant'
+   *  RelationalOperator: '<S7>/Compare'
+   *  UnitDelay: '<S8>/Output'
    */
   portNameLoc = GPIOB;
   if (ENV_DW.Output_DSTATE >= 125) {
@@ -1457,13 +1856,13 @@ void ENV_step(void)
   LL_GPIO_SetOutputPin(portNameLoc, (uint32_T)c);
   LL_GPIO_ResetOutputPin(portNameLoc, ~(uint32_T)c & 16U);
 
-  /* End of MATLABSystem: '<S51>/Digital Port Write' */
+  /* End of MATLABSystem: '<S56>/Digital Port Write' */
 
-  /* Switch: '<S41>/FixPt Switch' incorporates:
-   *  Constant: '<S40>/FixPt Constant'
-   *  Constant: '<S41>/Constant'
-   *  Sum: '<S40>/FixPt Sum1'
-   *  UnitDelay: '<S7>/Output'
+  /* Switch: '<S46>/FixPt Switch' incorporates:
+   *  Constant: '<S45>/FixPt Constant'
+   *  Constant: '<S46>/Constant'
+   *  Sum: '<S45>/FixPt Sum1'
+   *  UnitDelay: '<S8>/Output'
    */
   if ((uint8_T)(ENV_DW.Output_DSTATE + 1) > 250) {
     ENV_DW.Output_DSTATE = 0U;
@@ -1471,28 +1870,28 @@ void ENV_step(void)
     ENV_DW.Output_DSTATE++;
   }
 
-  /* End of Switch: '<S41>/FixPt Switch' */
+  /* End of Switch: '<S46>/FixPt Switch' */
 
-  /* Outputs for Enabled SubSystem: '<S14>/MCPInit' incorporates:
-   *  EnablePort: '<S55>/Enable'
+  /* Outputs for Enabled SubSystem: '<S15>/MCPInit' incorporates:
+   *  EnablePort: '<S61>/Enable'
    */
-  /* RelationalOperator: '<S54>/FixPt Relational Operator' incorporates:
-   *  Constant: '<S55>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
-   *  Constant: '<S55>/CANINTE'
-   *  Constant: '<S55>/CNF1'
-   *  Constant: '<S55>/CNF2'
-   *  Constant: '<S55>/CNF3'
-   *  Constant: '<S55>/Clear flags'
-   *  Constant: '<S55>/Set acceptance filters'
-   *  UnitDelay: '<S54>/Delay Input1'
+  /* RelationalOperator: '<S59>/FixPt Relational Operator' incorporates:
+   *  Constant: '<S61>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
+   *  Constant: '<S61>/CANINTE'
+   *  Constant: '<S61>/CNF1'
+   *  Constant: '<S61>/CNF2'
+   *  Constant: '<S61>/CNF3'
+   *  Constant: '<S61>/Clear flags'
+   *  Constant: '<S61>/Set acceptance filters'
+   *  UnitDelay: '<S59>/Delay Input1'
    *
-   * Block description for '<S54>/Delay Input1':
+   * Block description for '<S59>/Delay Input1':
    *
    *  Store in Global RAM
    */
   if ((real_T)rtb_NOT1 > ENV_DW.DelayInput1_DSTATE_a) {
-    /* MATLABSystem: '<S55>/SPI Controller Transfer' incorporates:
-     *  Constant: '<S55>/Enter Configuration Mode'
+    /* MATLABSystem: '<S61>/SPI Controller Transfer' incorporates:
+     *  Constant: '<S61>/Enter Configuration Mode'
      */
     status = MW_STM32_SPI_SetFormat(ENV_DW.obj_o.MW_SPI_HANDLE, 0U, 1792U,
       MW_SPI_MODE_2);
@@ -1500,54 +1899,50 @@ void ENV_step(void)
       portNameLoc = GPIOB;
       LL_GPIO_ResetOutputPin(portNameLoc, 2U);
       MW_SPI_MasterWriteRead_Databits(ENV_DW.obj_o.MW_SPI_HANDLE,
-        &ENV_ConstP.pooled7, &rtb_RTSByte_g, 0, 1U, 1, 10U);
+        &ENV_ConstP.pooled12, &status, 0, 1U, 1, 10U);
       LL_GPIO_SetOutputPin(portNameLoc, 2U);
     }
 
-    /* End of MATLABSystem: '<S55>/SPI Controller Transfer' */
-    ENV_SPIControllerTransfer1_pna(ENV_ConstP.pooled8,
+    /* End of MATLABSystem: '<S61>/SPI Controller Transfer' */
+    ENV_SPIControllerTransfer1_pna(ENV_ConstP.pooled13,
       &ENV_DW.SPIControllerTransfer1_pna);
-    ENV_SPIControllerTransfer1_pna(ENV_ConstP.pooled9,
-      &ENV_DW.SPIControllerTransfer2_pna);
-    ENV_SPIControllerTransfer1_pna(ENV_ConstP.pooled10,
-      &ENV_DW.SPIControllerTransfer3_pna);
-    ENV_SPIControllerTransfer4(ENV_ConstP.pooled11,
-      &ENV_DW.SPIControllerTransfer4_pna);
-    ENV_SPIControllerTransfer1_pna(ENV_ConstP.pooled12,
-      &ENV_DW.SPIControllerTransfer5_pna);
-    ENV_SPIControllerTransfer4(ENV_ConstP.pooled13,
-      &ENV_DW.SPIControllerTransfer6_pna);
     ENV_SPIControllerTransfer1_pna(ENV_ConstP.pooled14,
+      &ENV_DW.SPIControllerTransfer2_pna);
+    ENV_SPIControllerTransfer1_pna(ENV_ConstP.pooled15,
+      &ENV_DW.SPIControllerTransfer3_pna);
+    ENV_SPIControllerTransfer4(ENV_ConstP.pooled16,
+      &ENV_DW.SPIControllerTransfer4_pna);
+    ENV_SPIControllerTransfer1_pna(ENV_ConstP.pooled17,
+      &ENV_DW.SPIControllerTransfer5_pna);
+    ENV_SPIControllerTransfer4(ENV_ConstP.pooled18,
+      &ENV_DW.SPIControllerTransfer6_pna);
+    ENV_SPIControllerTransfer1_pna(ENV_ConstP.pooled19,
       &ENV_DW.SPIControllerTransfer7_pnaev);
   }
 
-  /* End of RelationalOperator: '<S54>/FixPt Relational Operator' */
-  /* End of Outputs for SubSystem: '<S14>/MCPInit' */
+  /* End of RelationalOperator: '<S59>/FixPt Relational Operator' */
+  /* End of Outputs for SubSystem: '<S15>/MCPInit' */
 
-  /* UnitDelay: '<S15>/Unit Delay1' */
-  rtb_UnitDelay1_m = ENV_DW.UnitDelay1_DSTATE_e;
-
-  /* Outputs for Enabled SubSystem: '<S15>/MCPInit' incorporates:
-   *  EnablePort: '<S57>/Enable'
+  /* Outputs for Enabled SubSystem: '<S16>/MCPInit' incorporates:
+   *  EnablePort: '<S64>/Enable'
    */
-  /* RelationalOperator: '<S56>/FixPt Relational Operator' incorporates:
-   *  Constant: '<S57>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
-   *  Constant: '<S57>/CANINTE'
-   *  Constant: '<S57>/CNF1'
-   *  Constant: '<S57>/CNF2'
-   *  Constant: '<S57>/CNF3'
-   *  Constant: '<S57>/Clear flags'
-   *  Constant: '<S57>/Set acceptance filters'
-   *  UnitDelay: '<S15>/Unit Delay1'
-   *  UnitDelay: '<S56>/Delay Input1'
+  /* RelationalOperator: '<S62>/FixPt Relational Operator' incorporates:
+   *  Constant: '<S64>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
+   *  Constant: '<S64>/CANINTE'
+   *  Constant: '<S64>/CNF1'
+   *  Constant: '<S64>/CNF2'
+   *  Constant: '<S64>/CNF3'
+   *  Constant: '<S64>/Clear flags'
+   *  Constant: '<S64>/Set acceptance filters'
+   *  UnitDelay: '<S62>/Delay Input1'
    *
-   * Block description for '<S56>/Delay Input1':
+   * Block description for '<S62>/Delay Input1':
    *
    *  Store in Global RAM
    */
-  if (ENV_DW.UnitDelay1_DSTATE_e > ENV_DW.DelayInput1_DSTATE_o) {
-    /* MATLABSystem: '<S57>/SPI Controller Transfer' incorporates:
-     *  Constant: '<S57>/Enter Configuration Mode'
+  if ((real_T)rtb_NOT1 > ENV_DW.DelayInput1_DSTATE_o) {
+    /* MATLABSystem: '<S64>/SPI Controller Transfer' incorporates:
+     *  Constant: '<S64>/Enter Configuration Mode'
      */
     status = MW_STM32_SPI_SetFormat(ENV_DW.obj_p.MW_SPI_HANDLE, 0U, 1792U,
       MW_SPI_MODE_2);
@@ -1555,145 +1950,64 @@ void ENV_step(void)
       portNameLoc = GPIOC;
       LL_GPIO_ResetOutputPin(portNameLoc, 1024U);
       MW_SPI_MasterWriteRead_Databits(ENV_DW.obj_p.MW_SPI_HANDLE,
-        &ENV_ConstP.pooled7, &rtb_RTSByte_g, 0, 1U, 1, 10U);
+        &ENV_ConstP.pooled12, &status, 0, 1U, 1, 10U);
       LL_GPIO_SetOutputPin(portNameLoc, 1024U);
     }
 
-    /* End of MATLABSystem: '<S57>/SPI Controller Transfer' */
-    ENV_SPIControllerTransfer1_pnae(ENV_ConstP.pooled8,
+    /* End of MATLABSystem: '<S64>/SPI Controller Transfer' */
+    ENV_SPIControllerTransfer1_pnae(ENV_ConstP.pooled13,
       &ENV_DW.SPIControllerTransfer1_pnae);
-    ENV_SPIControllerTransfer1_pnae(ENV_ConstP.pooled9,
-      &ENV_DW.SPIControllerTransfer2_pnae);
-    ENV_SPIControllerTransfer1_pnae(ENV_ConstP.pooled10,
-      &ENV_DW.SPIControllerTransfer3_pnae);
-    ENV_SPIControllerTransfer4_p(ENV_ConstP.pooled11,
-      &ENV_DW.SPIControllerTransfer4_pnae);
-    ENV_SPIControllerTransfer1_pnae(ENV_ConstP.pooled12,
-      &ENV_DW.SPIControllerTransfer5_pnae);
-    ENV_SPIControllerTransfer4_p(ENV_ConstP.pooled13,
-      &ENV_DW.SPIControllerTransfer6_pnae);
     ENV_SPIControllerTransfer1_pnae(ENV_ConstP.pooled14,
+      &ENV_DW.SPIControllerTransfer2_pnae);
+    ENV_SPIControllerTransfer1_pnae(ENV_ConstP.pooled15,
+      &ENV_DW.SPIControllerTransfer3_pnae);
+    ENV_SPIControllerTransfer4_p(ENV_ConstP.pooled16,
+      &ENV_DW.SPIControllerTransfer4_pnae);
+    ENV_SPIControllerTransfer1_pnae(ENV_ConstP.pooled17,
+      &ENV_DW.SPIControllerTransfer5_pnae);
+    ENV_SPIControllerTransfer4_p(ENV_ConstP.pooled18,
+      &ENV_DW.SPIControllerTransfer6_pnae);
+    ENV_SPIControllerTransfer1_pnae(ENV_ConstP.pooled19,
       &ENV_DW.SPIControllerTransfer7_pnaevv);
   }
 
-  /* End of RelationalOperator: '<S56>/FixPt Relational Operator' */
-  /* End of Outputs for SubSystem: '<S15>/MCPInit' */
+  /* End of RelationalOperator: '<S62>/FixPt Relational Operator' */
+  /* End of Outputs for SubSystem: '<S16>/MCPInit' */
 
-  /* UnitDelay: '<S17>/Unit Delay2' */
-  rtb_UnitDelay2_o = ENV_DW.UnitDelay2_DSTATE_f;
-
-  /* Outputs for Enabled SubSystem: '<S17>/MCPInit' incorporates:
-   *  EnablePort: '<S62>/Enable'
-   */
-  /* RelationalOperator: '<S61>/FixPt Relational Operator' incorporates:
-   *  Constant: '<S62>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
-   *  Constant: '<S62>/CANINTE'
-   *  Constant: '<S62>/CNF1'
-   *  Constant: '<S62>/CNF2'
-   *  Constant: '<S62>/CNF3'
-   *  Constant: '<S62>/Clear flags'
-   *  Constant: '<S62>/Set acceptance filters'
-   *  UnitDelay: '<S17>/Unit Delay2'
-   *  UnitDelay: '<S61>/Delay Input1'
+  /* Update for UnitDelay: '<S65>/Delay Input1'
    *
-   * Block description for '<S61>/Delay Input1':
+   * Block description for '<S65>/Delay Input1':
    *
    *  Store in Global RAM
    */
-  if (ENV_DW.UnitDelay2_DSTATE_f > ENV_DW.DelayInput1_DSTATE_e) {
-    /* MATLABSystem: '<S62>/SPI Controller Transfer' incorporates:
-     *  Constant: '<S62>/Enter Configuration Mode'
-     */
-    status = MW_STM32_SPI_SetFormat(ENV_DW.obj.MW_SPI_HANDLE, 0U, 1792U,
-      MW_SPI_MODE_2);
-    if (status == 0) {
-      portNameLoc = GPIOC;
-      LL_GPIO_ResetOutputPin(portNameLoc, 32U);
-      MW_SPI_MasterWriteRead_Databits(ENV_DW.obj.MW_SPI_HANDLE,
-        &ENV_ConstP.pooled7, &rtb_RTSByte_g, 0, 1U, 1, 10U);
-      LL_GPIO_SetOutputPin(portNameLoc, 32U);
-    }
+  ENV_DW.DelayInput1_DSTATE = rtb_NOT1;
 
-    /* End of MATLABSystem: '<S62>/SPI Controller Transfer' */
-    E_SPIControllerTransfer1_pnaevv(ENV_ConstP.pooled8,
-      &ENV_DW.SPIControllerTransfer1_pnaevv);
-    E_SPIControllerTransfer1_pnaevv(ENV_ConstP.pooled9,
-      &ENV_DW.SPIControllerTransfer2_pnaevv);
-    E_SPIControllerTransfer1_pnaevv(ENV_ConstP.pooled10,
-      &ENV_DW.SPIControllerTransfer3_pnaevv);
-    ENV_SPIControllerTransfer4_pn(ENV_ConstP.pooled11,
-      &ENV_DW.SPIControllerTransfer4_pnaevv);
-    E_SPIControllerTransfer1_pnaevv(ENV_ConstP.pooled12,
-      &ENV_DW.SPIControllerTransfer5_pnaevv);
-    ENV_SPIControllerTransfer4_pn(ENV_ConstP.pooled13,
-      &ENV_DW.SPIControllerTransfer6_pnaevv);
-    E_SPIControllerTransfer1_pnaevv(ENV_ConstP.pooled14,
-      &ENV_DW.SPIControllerTransfer7_pnaevvfp);
-  }
+  /* Update for UnitDelay: '<S18>/Unit Delay2' */
+  ENV_DW.UnitDelay2_DSTATE = rtb_NOT1;
 
-  /* End of RelationalOperator: '<S61>/FixPt Relational Operator' */
-  /* End of Outputs for SubSystem: '<S17>/MCPInit' */
-
-  /* Update for UnitDelay: '<S16>/Unit Delay5' incorporates:
-   *  UnitDelay: '<S16>/Unit Delay2'
-   */
-  ENV_DW.UnitDelay5_DSTATE = ENV_DW.UnitDelay2_DSTATE;
-
-  /* Update for UnitDelay: '<S16>/Unit Delay2' incorporates:
-   *  UnitDelay: '<S16>/Unit Delay1'
-   */
-  ENV_DW.UnitDelay2_DSTATE = ENV_DW.UnitDelay1_DSTATE;
-
-  /* Update for UnitDelay: '<S16>/Unit Delay1' */
-  ENV_DW.UnitDelay1_DSTATE = rtb_NOT1;
-
-  /* Update for UnitDelay: '<S58>/Delay Input1'
+  /* Update for UnitDelay: '<S68>/Delay Input1'
    *
-   * Block description for '<S58>/Delay Input1':
+   * Block description for '<S68>/Delay Input1':
    *
    *  Store in Global RAM
    */
-  ENV_DW.DelayInput1_DSTATE = rtb_UnitDelay4;
+  ENV_DW.DelayInput1_DSTATE_e = rtb_UnitDelay2;
 
-  /* Update for UnitDelay: '<S54>/Delay Input1'
+  /* Update for UnitDelay: '<S59>/Delay Input1'
    *
-   * Block description for '<S54>/Delay Input1':
+   * Block description for '<S59>/Delay Input1':
    *
    *  Store in Global RAM
    */
   ENV_DW.DelayInput1_DSTATE_a = rtb_NOT1;
 
-  /* Update for UnitDelay: '<S15>/Unit Delay1' */
-  ENV_DW.UnitDelay1_DSTATE_e = rtb_NOT1;
-
-  /* Update for UnitDelay: '<S56>/Delay Input1'
+  /* Update for UnitDelay: '<S62>/Delay Input1'
    *
-   * Block description for '<S56>/Delay Input1':
+   * Block description for '<S62>/Delay Input1':
    *
    *  Store in Global RAM
    */
-  ENV_DW.DelayInput1_DSTATE_o = rtb_UnitDelay1_m;
-
-  /* Update for UnitDelay: '<S17>/Unit Delay2' incorporates:
-   *  UnitDelay: '<S17>/Unit Delay1'
-   */
-  ENV_DW.UnitDelay2_DSTATE_f = ENV_DW.UnitDelay1_DSTATE_h;
-
-  /* Update for UnitDelay: '<S61>/Delay Input1'
-   *
-   * Block description for '<S61>/Delay Input1':
-   *
-   *  Store in Global RAM
-   */
-  ENV_DW.DelayInput1_DSTATE_e = rtb_UnitDelay2_o;
-
-  /* Update for UnitDelay: '<S17>/Unit Delay1' incorporates:
-   *  UnitDelay: '<S17>/Unit Delay3'
-   */
-  ENV_DW.UnitDelay1_DSTATE_h = ENV_DW.UnitDelay3_DSTATE_k;
-
-  /* Update for UnitDelay: '<S17>/Unit Delay3' */
-  ENV_DW.UnitDelay3_DSTATE_k = rtb_NOT1;
+  ENV_DW.DelayInput1_DSTATE_o = rtb_NOT1;
 
   /* Update absolute time for base rate */
   /* The "clockTick0" counts the number of times the code of this task has
@@ -1714,12 +2028,14 @@ void ENV_initialize(void)
     STM32_SPI_ModuleStruct_T b_2;
     STM32_SPI_ModuleStruct_T b_3;
     STM32_SPI_ModuleStruct_T b_4;
+    STM32_SPI_ModuleStruct_T b_5;
+    STM32_SPI_ModuleStruct_T b_6;
 
-    /* SystemInitialize for Enabled SubSystem: '<S16>/Initialize' */
-    /* SystemInitialize for SignalConversion generated from: '<S59>/MCPInitialized' */
-    ENV_B.OutportBufferForMCPInitialized = ENV_ConstB.Constant;
+    /* SystemInitialize for Enabled SubSystem: '<S17>/Initialize' */
+    ENV_Initialize_Init(&ENV_B.OutportBufferForMCPInitialize_k,
+                        &ENV_ConstB.Initialize_m);
 
-    /* End of SystemInitialize for SubSystem: '<S16>/Initialize' */
+    /* End of SystemInitialize for SubSystem: '<S17>/Initialize' */
 
     /* SystemInitialize for Enabled SubSystem: '<Root>/CAN1 RX' */
     E_SPIControllerTransfer1_i_Init(&ENV_DW.SPIControllerTransfer8);
@@ -1746,33 +2062,39 @@ void ENV_initialize(void)
     /* End of SystemInitialize for SubSystem: '<Root>/CAN2 RX' */
 
     /* SystemInitialize for Enabled SubSystem: '<Root>/CAN3 RX' */
-    /* Start for MATLABSystem: '<S4>/SPI Controller Transfer7' */
+    /* Start for MATLABSystem: '<S5>/SPI Controller Transfer7' */
     ENV_DW.obj_gf.matlabCodegenIsDeleted = false;
     ENV_DW.obj_gf.isInitialized = 1;
-    b.PeripheralPtr = SPI1;
-    ENV_DW.obj_gf.MW_SPI_HANDLE = SPI_STM32_Init(&b);
+    b_1.PeripheralPtr = SPI1;
+    ENV_DW.obj_gf.MW_SPI_HANDLE = SPI_STM32_Init(&b_1);
     MW_STM32_SPI_SetFormat(ENV_DW.obj_gf.MW_SPI_HANDLE, 0U, 1792U, MW_SPI_MODE_2);
     ENV_DW.obj_gf.isSetupComplete = true;
 
     /* End of SystemInitialize for SubSystem: '<Root>/CAN3 RX' */
 
     /* SystemInitialize for Enabled SubSystem: '<Root>/CAN4 RX' */
-    /* Start for MATLABSystem: '<S5>/SPI Controller Transfer7' */
+    /* Start for MATLABSystem: '<S6>/SPI Controller Transfer7' */
     ENV_DW.obj_g.matlabCodegenIsDeleted = false;
     ENV_DW.obj_g.isInitialized = 1;
-    b_0.PeripheralPtr = SPI1;
-    ENV_DW.obj_g.MW_SPI_HANDLE = SPI_STM32_Init(&b_0);
+    b_2.PeripheralPtr = SPI1;
+    ENV_DW.obj_g.MW_SPI_HANDLE = SPI_STM32_Init(&b_2);
     MW_STM32_SPI_SetFormat(ENV_DW.obj_g.MW_SPI_HANDLE, 0U, 1792U, MW_SPI_MODE_2);
     ENV_DW.obj_g.isSetupComplete = true;
 
     /* End of SystemInitialize for SubSystem: '<Root>/CAN4 RX' */
 
-    /* SystemInitialize for Enabled SubSystem: '<S16>/MCPInit' */
-    /* Start for MATLABSystem: '<S60>/SPI Controller Transfer' */
+    /* SystemInitialize for Enabled SubSystem: '<S18>/Initialize' */
+    ENV_Initialize_Init(&ENV_B.OutportBufferForMCPInitialized,
+                        &ENV_ConstB.Initialize_h);
+
+    /* End of SystemInitialize for SubSystem: '<S18>/Initialize' */
+
+    /* SystemInitialize for Enabled SubSystem: '<S17>/MCPInit' */
+    /* Start for MATLABSystem: '<S67>/SPI Controller Transfer' */
     ENV_DW.obj_l.matlabCodegenIsDeleted = false;
     ENV_DW.obj_l.isInitialized = 1;
-    b_1.PeripheralPtr = SPI1;
-    ENV_DW.obj_l.MW_SPI_HANDLE = SPI_STM32_Init(&b_1);
+    b_3.PeripheralPtr = SPI1;
+    ENV_DW.obj_l.MW_SPI_HANDLE = SPI_STM32_Init(&b_3);
     MW_STM32_SPI_SetFormat(ENV_DW.obj_l.MW_SPI_HANDLE, 0U, 1792U, MW_SPI_MODE_2);
     ENV_DW.obj_l.isSetupComplete = true;
     E_SPIControllerTransfer1_k_Init(&ENV_DW.SPIControllerTransfer1_pnaev);
@@ -1783,46 +2105,10 @@ void ENV_initialize(void)
     ENV_SPIControllerTransfer5_Init(&ENV_DW.SPIControllerTransfer7_pnaevvf);
     E_SPIControllerTransfer1_k_Init(&ENV_DW.SPIControllerTransfer4_pnaev);
 
-    /* End of SystemInitialize for SubSystem: '<S16>/MCPInit' */
+    /* End of SystemInitialize for SubSystem: '<S17>/MCPInit' */
 
-    /* SystemInitialize for Enabled SubSystem: '<S14>/MCPInit' */
-    /* Start for MATLABSystem: '<S55>/SPI Controller Transfer' */
-    ENV_DW.obj_o.matlabCodegenIsDeleted = false;
-    ENV_DW.obj_o.isInitialized = 1;
-    b_2.PeripheralPtr = SPI1;
-    ENV_DW.obj_o.MW_SPI_HANDLE = SPI_STM32_Init(&b_2);
-    MW_STM32_SPI_SetFormat(ENV_DW.obj_o.MW_SPI_HANDLE, 0U, 1792U, MW_SPI_MODE_2);
-    ENV_DW.obj_o.isSetupComplete = true;
-    E_SPIControllerTransfer1_n_Init(&ENV_DW.SPIControllerTransfer1_pna);
-    E_SPIControllerTransfer1_n_Init(&ENV_DW.SPIControllerTransfer2_pna);
-    E_SPIControllerTransfer1_n_Init(&ENV_DW.SPIControllerTransfer3_pna);
-    ENV_SPIControllerTransfer4_Init(&ENV_DW.SPIControllerTransfer4_pna);
-    E_SPIControllerTransfer1_n_Init(&ENV_DW.SPIControllerTransfer5_pna);
-    ENV_SPIControllerTransfer4_Init(&ENV_DW.SPIControllerTransfer6_pna);
-    E_SPIControllerTransfer1_n_Init(&ENV_DW.SPIControllerTransfer7_pnaev);
-
-    /* End of SystemInitialize for SubSystem: '<S14>/MCPInit' */
-
-    /* SystemInitialize for Enabled SubSystem: '<S15>/MCPInit' */
-    /* Start for MATLABSystem: '<S57>/SPI Controller Transfer' */
-    ENV_DW.obj_p.matlabCodegenIsDeleted = false;
-    ENV_DW.obj_p.isInitialized = 1;
-    b_3.PeripheralPtr = SPI1;
-    ENV_DW.obj_p.MW_SPI_HANDLE = SPI_STM32_Init(&b_3);
-    MW_STM32_SPI_SetFormat(ENV_DW.obj_p.MW_SPI_HANDLE, 0U, 1792U, MW_SPI_MODE_2);
-    ENV_DW.obj_p.isSetupComplete = true;
-    E_SPIControllerTransfer1_j_Init(&ENV_DW.SPIControllerTransfer1_pnae);
-    E_SPIControllerTransfer1_j_Init(&ENV_DW.SPIControllerTransfer2_pnae);
-    E_SPIControllerTransfer1_j_Init(&ENV_DW.SPIControllerTransfer3_pnae);
-    E_SPIControllerTransfer4_g_Init(&ENV_DW.SPIControllerTransfer4_pnae);
-    E_SPIControllerTransfer1_j_Init(&ENV_DW.SPIControllerTransfer5_pnae);
-    E_SPIControllerTransfer4_g_Init(&ENV_DW.SPIControllerTransfer6_pnae);
-    E_SPIControllerTransfer1_j_Init(&ENV_DW.SPIControllerTransfer7_pnaevv);
-
-    /* End of SystemInitialize for SubSystem: '<S15>/MCPInit' */
-
-    /* SystemInitialize for Enabled SubSystem: '<S17>/MCPInit' */
-    /* Start for MATLABSystem: '<S62>/SPI Controller Transfer' */
+    /* SystemInitialize for Enabled SubSystem: '<S18>/MCPInit' */
+    /* Start for MATLABSystem: '<S70>/SPI Controller Transfer' */
     ENV_DW.obj.matlabCodegenIsDeleted = false;
     ENV_DW.obj.isInitialized = 1;
     b_4.PeripheralPtr = SPI1;
@@ -1837,15 +2123,65 @@ void ENV_initialize(void)
     E_SPIControllerTransfer4_e_Init(&ENV_DW.SPIControllerTransfer6_pnaevv);
     SPIControllerTransfer1_na_Init(&ENV_DW.SPIControllerTransfer7_pnaevvfp);
 
-    /* End of SystemInitialize for SubSystem: '<S17>/MCPInit' */
+    /* End of SystemInitialize for SubSystem: '<S18>/MCPInit' */
+
+    /* SystemInitialize for Enabled SubSystem: '<S15>/MCPInit' */
+    /* Start for MATLABSystem: '<S61>/SPI Controller Transfer' */
+    ENV_DW.obj_o.matlabCodegenIsDeleted = false;
+    ENV_DW.obj_o.isInitialized = 1;
+    b_5.PeripheralPtr = SPI1;
+    ENV_DW.obj_o.MW_SPI_HANDLE = SPI_STM32_Init(&b_5);
+    MW_STM32_SPI_SetFormat(ENV_DW.obj_o.MW_SPI_HANDLE, 0U, 1792U, MW_SPI_MODE_2);
+    ENV_DW.obj_o.isSetupComplete = true;
+    E_SPIControllerTransfer1_n_Init(&ENV_DW.SPIControllerTransfer1_pna);
+    E_SPIControllerTransfer1_n_Init(&ENV_DW.SPIControllerTransfer2_pna);
+    E_SPIControllerTransfer1_n_Init(&ENV_DW.SPIControllerTransfer3_pna);
+    ENV_SPIControllerTransfer4_Init(&ENV_DW.SPIControllerTransfer4_pna);
+    E_SPIControllerTransfer1_n_Init(&ENV_DW.SPIControllerTransfer5_pna);
+    ENV_SPIControllerTransfer4_Init(&ENV_DW.SPIControllerTransfer6_pna);
+    E_SPIControllerTransfer1_n_Init(&ENV_DW.SPIControllerTransfer7_pnaev);
+
+    /* End of SystemInitialize for SubSystem: '<S15>/MCPInit' */
+
+    /* SystemInitialize for Enabled SubSystem: '<S16>/MCPInit' */
+    /* Start for MATLABSystem: '<S64>/SPI Controller Transfer' */
+    ENV_DW.obj_p.matlabCodegenIsDeleted = false;
+    ENV_DW.obj_p.isInitialized = 1;
+    b_6.PeripheralPtr = SPI1;
+    ENV_DW.obj_p.MW_SPI_HANDLE = SPI_STM32_Init(&b_6);
+    MW_STM32_SPI_SetFormat(ENV_DW.obj_p.MW_SPI_HANDLE, 0U, 1792U, MW_SPI_MODE_2);
+    ENV_DW.obj_p.isSetupComplete = true;
+    E_SPIControllerTransfer1_j_Init(&ENV_DW.SPIControllerTransfer1_pnae);
+    E_SPIControllerTransfer1_j_Init(&ENV_DW.SPIControllerTransfer2_pnae);
+    E_SPIControllerTransfer1_j_Init(&ENV_DW.SPIControllerTransfer3_pnae);
+    E_SPIControllerTransfer4_g_Init(&ENV_DW.SPIControllerTransfer4_pnae);
+    E_SPIControllerTransfer1_j_Init(&ENV_DW.SPIControllerTransfer5_pnae);
+    E_SPIControllerTransfer4_g_Init(&ENV_DW.SPIControllerTransfer6_pnae);
+    E_SPIControllerTransfer1_j_Init(&ENV_DW.SPIControllerTransfer7_pnaevv);
+
+    /* End of SystemInitialize for SubSystem: '<S16>/MCPInit' */
     ENV_SPIControllerTransfer_Init(&ENV_DW.SPIControllerTransfer);
     ENV_SPIControllerTransfer_Init(&ENV_DW.SPIControllerTransfer2);
     ENV_SPIControllerTransfer_Init(&ENV_DW.SPIControllerTransfer4);
-    ENV_SPIControllerTransfer_Init(&ENV_DW.SPIControllerTransfer6);
+
+    /* Start for MATLABSystem: '<S2>/SPI Controller Transfer6' */
+    ENV_DW.obj_oi.matlabCodegenIsDeleted = false;
+    ENV_DW.obj_oi.isInitialized = 1;
+    b.PeripheralPtr = SPI1;
+    ENV_DW.obj_oi.MW_SPI_HANDLE = SPI_STM32_Init(&b);
+    MW_STM32_SPI_SetFormat(ENV_DW.obj_oi.MW_SPI_HANDLE, 0U, 1792U, MW_SPI_MODE_2);
+    ENV_DW.obj_oi.isSetupComplete = true;
+
+    /* Start for MATLABSystem: '<S2>/SPI Controller Transfer7' */
+    ENV_DW.obj_f.matlabCodegenIsDeleted = false;
+    ENV_DW.obj_f.isInitialized = 1;
+    b_0.PeripheralPtr = SPI1;
+    ENV_DW.obj_f.MW_SPI_HANDLE = SPI_STM32_Init(&b_0);
+    MW_STM32_SPI_SetFormat(ENV_DW.obj_f.MW_SPI_HANDLE, 0U, 1792U, MW_SPI_MODE_2);
+    ENV_DW.obj_f.isSetupComplete = true;
     ENV_SPIControllerTransfer1_Init(&ENV_DW.SPIControllerTransfer1);
     ENV_SPIControllerTransfer1_Init(&ENV_DW.SPIControllerTransfer3);
     ENV_SPIControllerTransfer1_Init(&ENV_DW.SPIControllerTransfer5);
-    ENV_SPIControllerTransfer1_Init(&ENV_DW.SPIControllerTransfer7);
 
     /* ConstCode for Outport: '<Root>/MTotalFinal' */
     ENV_Y.MTotalFinal = 0.0;
@@ -2713,7 +3049,7 @@ void ENV_terminate(void)
   /* End of Terminate for SubSystem: '<Root>/CAN2 RX' */
 
   /* Terminate for Enabled SubSystem: '<Root>/CAN3 RX' */
-  /* Terminate for MATLABSystem: '<S4>/SPI Controller Transfer7' */
+  /* Terminate for MATLABSystem: '<S5>/SPI Controller Transfer7' */
   if (!ENV_DW.obj_gf.matlabCodegenIsDeleted) {
     ENV_DW.obj_gf.matlabCodegenIsDeleted = true;
     if ((ENV_DW.obj_gf.isInitialized == 1) && ENV_DW.obj_gf.isSetupComplete) {
@@ -2723,11 +3059,11 @@ void ENV_terminate(void)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S4>/SPI Controller Transfer7' */
+  /* End of Terminate for MATLABSystem: '<S5>/SPI Controller Transfer7' */
   /* End of Terminate for SubSystem: '<Root>/CAN3 RX' */
 
   /* Terminate for Enabled SubSystem: '<Root>/CAN4 RX' */
-  /* Terminate for MATLABSystem: '<S5>/SPI Controller Transfer7' */
+  /* Terminate for MATLABSystem: '<S6>/SPI Controller Transfer7' */
   if (!ENV_DW.obj_g.matlabCodegenIsDeleted) {
     ENV_DW.obj_g.matlabCodegenIsDeleted = true;
     if ((ENV_DW.obj_g.isInitialized == 1) && ENV_DW.obj_g.isSetupComplete) {
@@ -2737,16 +3073,38 @@ void ENV_terminate(void)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S5>/SPI Controller Transfer7' */
+  /* End of Terminate for MATLABSystem: '<S6>/SPI Controller Transfer7' */
   /* End of Terminate for SubSystem: '<Root>/CAN4 RX' */
-  ENV_SPIControllerTransfer_Term(&ENV_DW.SPIControllerTransfer6);
+
+  /* Terminate for MATLABSystem: '<S2>/SPI Controller Transfer6' */
+  if (!ENV_DW.obj_oi.matlabCodegenIsDeleted) {
+    ENV_DW.obj_oi.matlabCodegenIsDeleted = true;
+    if ((ENV_DW.obj_oi.isInitialized == 1) && ENV_DW.obj_oi.isSetupComplete) {
+      SPIPinsLoc = MW_UNDEFINED_VALUE;
+      MW_SPI_Close(ENV_DW.obj_oi.MW_SPI_HANDLE, SPIPinsLoc, SPIPinsLoc,
+                   SPIPinsLoc, 5U);
+    }
+  }
+
+  /* End of Terminate for MATLABSystem: '<S2>/SPI Controller Transfer6' */
+
+  /* Terminate for MATLABSystem: '<S2>/SPI Controller Transfer7' */
+  if (!ENV_DW.obj_f.matlabCodegenIsDeleted) {
+    ENV_DW.obj_f.matlabCodegenIsDeleted = true;
+    if ((ENV_DW.obj_f.isInitialized == 1) && ENV_DW.obj_f.isSetupComplete) {
+      SPIPinsLoc = MW_UNDEFINED_VALUE;
+      MW_SPI_Close(ENV_DW.obj_f.MW_SPI_HANDLE, SPIPinsLoc, SPIPinsLoc,
+                   SPIPinsLoc, 5U);
+    }
+  }
+
+  /* End of Terminate for MATLABSystem: '<S2>/SPI Controller Transfer7' */
   ENV_SPIControllerTransfer1_Term(&ENV_DW.SPIControllerTransfer1);
   ENV_SPIControllerTransfer1_Term(&ENV_DW.SPIControllerTransfer3);
   ENV_SPIControllerTransfer1_Term(&ENV_DW.SPIControllerTransfer5);
-  ENV_SPIControllerTransfer1_Term(&ENV_DW.SPIControllerTransfer7);
 
-  /* Terminate for Enabled SubSystem: '<S16>/MCPInit' */
-  /* Terminate for MATLABSystem: '<S60>/SPI Controller Transfer' */
+  /* Terminate for Enabled SubSystem: '<S17>/MCPInit' */
+  /* Terminate for MATLABSystem: '<S67>/SPI Controller Transfer' */
   if (!ENV_DW.obj_l.matlabCodegenIsDeleted) {
     ENV_DW.obj_l.matlabCodegenIsDeleted = true;
     if ((ENV_DW.obj_l.isInitialized == 1) && ENV_DW.obj_l.isSetupComplete) {
@@ -2756,7 +3114,7 @@ void ENV_terminate(void)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S60>/SPI Controller Transfer' */
+  /* End of Terminate for MATLABSystem: '<S67>/SPI Controller Transfer' */
   E_SPIControllerTransfer1_l_Term(&ENV_DW.SPIControllerTransfer1_pnaev);
   E_SPIControllerTransfer1_l_Term(&ENV_DW.SPIControllerTransfer2_pnaev);
   E_SPIControllerTransfer1_l_Term(&ENV_DW.SPIControllerTransfer3_pnaev);
@@ -2765,54 +3123,10 @@ void ENV_terminate(void)
   ENV_SPIControllerTransfer5_Term(&ENV_DW.SPIControllerTransfer7_pnaevvf);
   E_SPIControllerTransfer1_l_Term(&ENV_DW.SPIControllerTransfer4_pnaev);
 
-  /* End of Terminate for SubSystem: '<S16>/MCPInit' */
+  /* End of Terminate for SubSystem: '<S17>/MCPInit' */
 
-  /* Terminate for Enabled SubSystem: '<S14>/MCPInit' */
-  /* Terminate for MATLABSystem: '<S55>/SPI Controller Transfer' */
-  if (!ENV_DW.obj_o.matlabCodegenIsDeleted) {
-    ENV_DW.obj_o.matlabCodegenIsDeleted = true;
-    if ((ENV_DW.obj_o.isInitialized == 1) && ENV_DW.obj_o.isSetupComplete) {
-      SPIPinsLoc = MW_UNDEFINED_VALUE;
-      MW_SPI_Close(ENV_DW.obj_o.MW_SPI_HANDLE, SPIPinsLoc, SPIPinsLoc,
-                   SPIPinsLoc, 1U);
-    }
-  }
-
-  /* End of Terminate for MATLABSystem: '<S55>/SPI Controller Transfer' */
-  E_SPIControllerTransfer1_e_Term(&ENV_DW.SPIControllerTransfer1_pna);
-  E_SPIControllerTransfer1_e_Term(&ENV_DW.SPIControllerTransfer2_pna);
-  E_SPIControllerTransfer1_e_Term(&ENV_DW.SPIControllerTransfer3_pna);
-  ENV_SPIControllerTransfer4_Term(&ENV_DW.SPIControllerTransfer4_pna);
-  E_SPIControllerTransfer1_e_Term(&ENV_DW.SPIControllerTransfer5_pna);
-  ENV_SPIControllerTransfer4_Term(&ENV_DW.SPIControllerTransfer6_pna);
-  E_SPIControllerTransfer1_e_Term(&ENV_DW.SPIControllerTransfer7_pnaev);
-
-  /* End of Terminate for SubSystem: '<S14>/MCPInit' */
-
-  /* Terminate for Enabled SubSystem: '<S15>/MCPInit' */
-  /* Terminate for MATLABSystem: '<S57>/SPI Controller Transfer' */
-  if (!ENV_DW.obj_p.matlabCodegenIsDeleted) {
-    ENV_DW.obj_p.matlabCodegenIsDeleted = true;
-    if ((ENV_DW.obj_p.isInitialized == 1) && ENV_DW.obj_p.isSetupComplete) {
-      SPIPinsLoc = MW_UNDEFINED_VALUE;
-      MW_SPI_Close(ENV_DW.obj_p.MW_SPI_HANDLE, SPIPinsLoc, SPIPinsLoc,
-                   SPIPinsLoc, 10U);
-    }
-  }
-
-  /* End of Terminate for MATLABSystem: '<S57>/SPI Controller Transfer' */
-  E_SPIControllerTransfer1_k_Term(&ENV_DW.SPIControllerTransfer1_pnae);
-  E_SPIControllerTransfer1_k_Term(&ENV_DW.SPIControllerTransfer2_pnae);
-  E_SPIControllerTransfer1_k_Term(&ENV_DW.SPIControllerTransfer3_pnae);
-  E_SPIControllerTransfer4_e_Term(&ENV_DW.SPIControllerTransfer4_pnae);
-  E_SPIControllerTransfer1_k_Term(&ENV_DW.SPIControllerTransfer5_pnae);
-  E_SPIControllerTransfer4_e_Term(&ENV_DW.SPIControllerTransfer6_pnae);
-  E_SPIControllerTransfer1_k_Term(&ENV_DW.SPIControllerTransfer7_pnaevv);
-
-  /* End of Terminate for SubSystem: '<S15>/MCPInit' */
-
-  /* Terminate for Enabled SubSystem: '<S17>/MCPInit' */
-  /* Terminate for MATLABSystem: '<S62>/SPI Controller Transfer' */
+  /* Terminate for Enabled SubSystem: '<S18>/MCPInit' */
+  /* Terminate for MATLABSystem: '<S70>/SPI Controller Transfer' */
   if (!ENV_DW.obj.matlabCodegenIsDeleted) {
     ENV_DW.obj.matlabCodegenIsDeleted = true;
     if ((ENV_DW.obj.isInitialized == 1) && ENV_DW.obj.isSetupComplete) {
@@ -2822,7 +3136,7 @@ void ENV_terminate(void)
     }
   }
 
-  /* End of Terminate for MATLABSystem: '<S62>/SPI Controller Transfer' */
+  /* End of Terminate for MATLABSystem: '<S70>/SPI Controller Transfer' */
   E_SPIControllerTransfer1_b_Term(&ENV_DW.SPIControllerTransfer1_pnaevv);
   E_SPIControllerTransfer1_b_Term(&ENV_DW.SPIControllerTransfer2_pnaevv);
   E_SPIControllerTransfer1_b_Term(&ENV_DW.SPIControllerTransfer3_pnaevv);
@@ -2831,7 +3145,51 @@ void ENV_terminate(void)
   E_SPIControllerTransfer4_o_Term(&ENV_DW.SPIControllerTransfer6_pnaevv);
   E_SPIControllerTransfer1_b_Term(&ENV_DW.SPIControllerTransfer7_pnaevvfp);
 
-  /* End of Terminate for SubSystem: '<S17>/MCPInit' */
+  /* End of Terminate for SubSystem: '<S18>/MCPInit' */
+
+  /* Terminate for Enabled SubSystem: '<S15>/MCPInit' */
+  /* Terminate for MATLABSystem: '<S61>/SPI Controller Transfer' */
+  if (!ENV_DW.obj_o.matlabCodegenIsDeleted) {
+    ENV_DW.obj_o.matlabCodegenIsDeleted = true;
+    if ((ENV_DW.obj_o.isInitialized == 1) && ENV_DW.obj_o.isSetupComplete) {
+      SPIPinsLoc = MW_UNDEFINED_VALUE;
+      MW_SPI_Close(ENV_DW.obj_o.MW_SPI_HANDLE, SPIPinsLoc, SPIPinsLoc,
+                   SPIPinsLoc, 1U);
+    }
+  }
+
+  /* End of Terminate for MATLABSystem: '<S61>/SPI Controller Transfer' */
+  E_SPIControllerTransfer1_e_Term(&ENV_DW.SPIControllerTransfer1_pna);
+  E_SPIControllerTransfer1_e_Term(&ENV_DW.SPIControllerTransfer2_pna);
+  E_SPIControllerTransfer1_e_Term(&ENV_DW.SPIControllerTransfer3_pna);
+  ENV_SPIControllerTransfer4_Term(&ENV_DW.SPIControllerTransfer4_pna);
+  E_SPIControllerTransfer1_e_Term(&ENV_DW.SPIControllerTransfer5_pna);
+  ENV_SPIControllerTransfer4_Term(&ENV_DW.SPIControllerTransfer6_pna);
+  E_SPIControllerTransfer1_e_Term(&ENV_DW.SPIControllerTransfer7_pnaev);
+
+  /* End of Terminate for SubSystem: '<S15>/MCPInit' */
+
+  /* Terminate for Enabled SubSystem: '<S16>/MCPInit' */
+  /* Terminate for MATLABSystem: '<S64>/SPI Controller Transfer' */
+  if (!ENV_DW.obj_p.matlabCodegenIsDeleted) {
+    ENV_DW.obj_p.matlabCodegenIsDeleted = true;
+    if ((ENV_DW.obj_p.isInitialized == 1) && ENV_DW.obj_p.isSetupComplete) {
+      SPIPinsLoc = MW_UNDEFINED_VALUE;
+      MW_SPI_Close(ENV_DW.obj_p.MW_SPI_HANDLE, SPIPinsLoc, SPIPinsLoc,
+                   SPIPinsLoc, 10U);
+    }
+  }
+
+  /* End of Terminate for MATLABSystem: '<S64>/SPI Controller Transfer' */
+  E_SPIControllerTransfer1_k_Term(&ENV_DW.SPIControllerTransfer1_pnae);
+  E_SPIControllerTransfer1_k_Term(&ENV_DW.SPIControllerTransfer2_pnae);
+  E_SPIControllerTransfer1_k_Term(&ENV_DW.SPIControllerTransfer3_pnae);
+  E_SPIControllerTransfer4_e_Term(&ENV_DW.SPIControllerTransfer4_pnae);
+  E_SPIControllerTransfer1_k_Term(&ENV_DW.SPIControllerTransfer5_pnae);
+  E_SPIControllerTransfer4_e_Term(&ENV_DW.SPIControllerTransfer6_pnae);
+  E_SPIControllerTransfer1_k_Term(&ENV_DW.SPIControllerTransfer7_pnaevv);
+
+  /* End of Terminate for SubSystem: '<S16>/MCPInit' */
 }
 
 /*

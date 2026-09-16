@@ -13,3 +13,5 @@ Before running a build, run `LoadAllModels("ENV")` otherwise it will produce unk
 After a git pull or on initial setup, ENV's Configuration Parameters -> Hardware Implementation -> Target Hardware Resources and update the STM32CubeMX file path to match the path on your computer
 
 After a change to ENV model configuration, run `SetConfigFromModel("ENV")`. This will make all submodel configurations match ENV
+
+CAN RX gives nonsense data when the MCPInit initialized flag is set without the enabled subsystem (probably datatype mismatch)

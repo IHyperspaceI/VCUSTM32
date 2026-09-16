@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ENV'.
  *
- * Model version                  : 13.275
+ * Model version                  : 13.281
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Wed Sep 16 15:56:24 2026
+ * C/C++ source code generated on : Wed Sep 16 16:45:04 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -63,6 +63,10 @@ extern void E_SPIControllerTransfer4_g_Init(DW_SPIControllerTransfer4_E_f_T
   *localDW);
 extern void ENV_SPIControllerTransfer4_p(const uint8_T rtu_0[4],
   DW_SPIControllerTransfer4_E_f_T *localDW);
+extern void ENV_Initialize_Init(boolean_T *rty_MCPInitialized, const
+  ConstB_Initialize_ENV_T *localC);
+extern void ENV_Initialize(real_T rtu_Enable, boolean_T *rty_MCPInitialized,
+  const ConstB_Initialize_ENV_T *localC);
 extern void E_SPIControllerTransfer1_k_Init(DW_SPIControllerTransfe_fwu4s_T
   *localDW);
 extern void EN_SPIControllerTransfer1_pnaev(const uint8_T rtu_0[3],

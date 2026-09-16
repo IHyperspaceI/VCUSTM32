@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ENV'.
  *
- * Model version                  : 13.231
+ * Model version                  : 13.275
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Mon Sep 14 14:14:10 2026
+ * C/C++ source code generated on : Wed Sep 16 15:56:24 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -44,12 +44,41 @@ extern void ENV_SPIControllerTransfer1_p(const uint8_T rtu_0[15],
   *localDW);
 extern void E_SPIControllerTransfer1_h_Init(DW_SPIControllerTransfer1_fw_T
   *localDW);
-extern void ENV_SPIControllerTransfer1_pn(const uint8_T rtu_0[3],
-  DW_SPIControllerTransfer1_fw_T *localDW);
+extern void ENV_SPIControllerTransfer1_pn(const uint8_T rtu_0[15],
+  B_SPIControllerTransfer1_E_ca_T *localB, DW_SPIControllerTransfer1_fw_T
+  *localDW);
+extern void E_SPIControllerTransfer1_n_Init(DW_SPIControllerTransfer1_fwu_T
+  *localDW);
+extern void ENV_SPIControllerTransfer1_pna(const uint8_T rtu_0[3],
+  DW_SPIControllerTransfer1_fwu_T *localDW);
+extern void ENV_SPIControllerTransfer4_Init(DW_SPIControllerTransfer4_ENV_T
+  *localDW);
+extern void ENV_SPIControllerTransfer4(const uint8_T rtu_0[4],
+  DW_SPIControllerTransfer4_ENV_T *localDW);
+extern void E_SPIControllerTransfer1_j_Init(DW_SPIControllerTransfer_fwu4_T
+  *localDW);
+extern void ENV_SPIControllerTransfer1_pnae(const uint8_T rtu_0[3],
+  DW_SPIControllerTransfer_fwu4_T *localDW);
+extern void E_SPIControllerTransfer4_g_Init(DW_SPIControllerTransfer4_E_f_T
+  *localDW);
+extern void ENV_SPIControllerTransfer4_p(const uint8_T rtu_0[4],
+  DW_SPIControllerTransfer4_E_f_T *localDW);
+extern void E_SPIControllerTransfer1_k_Init(DW_SPIControllerTransfe_fwu4s_T
+  *localDW);
+extern void EN_SPIControllerTransfer1_pnaev(const uint8_T rtu_0[3],
+  DW_SPIControllerTransfe_fwu4s_T *localDW);
 extern void ENV_SPIControllerTransfer5_Init(DW_SPIControllerTransfer5_ENV_T
   *localDW);
 extern void ENV_SPIControllerTransfer5(const uint8_T rtu_0[4],
   DW_SPIControllerTransfer5_ENV_T *localDW);
+extern void SPIControllerTransfer1_na_Init(DW_SPIControllerTransf_fwu4sl_T
+  *localDW);
+extern void E_SPIControllerTransfer1_pnaevv(const uint8_T rtu_0[3],
+  DW_SPIControllerTransf_fwu4sl_T *localDW);
+extern void E_SPIControllerTransfer4_e_Init(DW_SPIControllerTransfer4_fw_T
+  *localDW);
+extern void ENV_SPIControllerTransfer4_pn(const uint8_T rtu_0[4],
+  DW_SPIControllerTransfer4_fw_T *localDW);
 extern void ENV_SPIControllerTransfer_Term(DW_SPIControllerTransfer_ENV_T
   *localDW);
 extern void ENV_SPIControllerTransfer1_Term(DW_SPIControllerTransfer1_ENV_T
@@ -58,7 +87,21 @@ extern void E_SPIControllerTransfer1_c_Term(DW_SPIControllerTransfer1_E_f_T
   *localDW);
 extern void E_SPIControllerTransfer1_d_Term(DW_SPIControllerTransfer1_fw_T
   *localDW);
+extern void E_SPIControllerTransfer1_e_Term(DW_SPIControllerTransfer1_fwu_T
+  *localDW);
+extern void ENV_SPIControllerTransfer4_Term(DW_SPIControllerTransfer4_ENV_T
+  *localDW);
+extern void E_SPIControllerTransfer1_k_Term(DW_SPIControllerTransfer_fwu4_T
+  *localDW);
+extern void E_SPIControllerTransfer4_e_Term(DW_SPIControllerTransfer4_E_f_T
+  *localDW);
+extern void E_SPIControllerTransfer1_l_Term(DW_SPIControllerTransfe_fwu4s_T
+  *localDW);
 extern void ENV_SPIControllerTransfer5_Term(DW_SPIControllerTransfer5_ENV_T
+  *localDW);
+extern void E_SPIControllerTransfer1_b_Term(DW_SPIControllerTransf_fwu4sl_T
+  *localDW);
+extern void E_SPIControllerTransfer4_o_Term(DW_SPIControllerTransfer4_fw_T
   *localDW);
 
 #endif                                 /* ENV_private_h_ */

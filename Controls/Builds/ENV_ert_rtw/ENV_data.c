@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'ENV'.
  *
- * Model version                  : 13.231
+ * Model version                  : 13.275
  * Simulink Coder version         : 24.2 (R2024b) 21-Jun-2024
- * C/C++ source code generated on : Mon Sep 14 14:14:10 2026
+ * C/C++ source code generated on : Wed Sep 16 15:56:24 2026
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex-M
@@ -54,7 +54,7 @@ const ConstB_ENV_T ENV_ConstB = {
     { 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U }
   },                                   /* '<S1>/CAN Pack3' */
   0.0,                                 /* '<Root>/Gain' */
-  true                                 /* '<S35>/Constant' */
+  true                                 /* '<S59>/Constant' */
 };
 
 /* Constant parameters (default storage) */
@@ -62,57 +62,95 @@ const ConstP_ENV_T ENV_ConstP = {
   /* Pooled Parameter (Expression: uint8([0x90, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))
    * Referenced by:
    *   '<S2>/Read RX Buffer start at RXB0SIDH1'
+   *   '<S2>/Read RX Buffer start at RXB0SIDH2'
    *   '<S2>/Read RX Buffer start at RXB0SIDH3'
    *   '<S2>/Read RX Buffer start at RXB0SIDH4'
    *   '<S2>/Read RX Buffer start at RXB0SIDH5'
    *   '<S2>/Read RX Buffer start at RXB0SIDH6'
    *   '<S2>/Read RX Buffer start at RXB0SIDH7'
+   *   '<S2>/Read RX Buffer start at RXB0SIDH8'
    *   '<S3>/Read RX Buffer start at RXB0SIDH1'
+   *   '<S3>/Read RX Buffer start at RXB0SIDH2'
    *   '<S3>/Read RX Buffer start at RXB0SIDH3'
    *   '<S3>/Read RX Buffer start at RXB0SIDH4'
    *   '<S3>/Read RX Buffer start at RXB0SIDH5'
    *   '<S3>/Read RX Buffer start at RXB0SIDH6'
    *   '<S3>/Read RX Buffer start at RXB0SIDH7'
+   *   '<S3>/Read RX Buffer start at RXB0SIDH8'
+   *   '<S4>/Read RX Buffer start at RXB0SIDH7'
+   *   '<S5>/Read RX Buffer start at RXB0SIDH7'
    */
   { 144U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U, 0U },
 
-  /* Expression: 0xc0
-   * Referenced by: '<S36>/Enter Configuration Mode'
+  /* Pooled Parameter (Expression: 0xc0)
+   * Referenced by:
+   *   '<S55>/Enter Configuration Mode'
+   *   '<S57>/Enter Configuration Mode'
+   *   '<S60>/Enter Configuration Mode'
+   *   '<S62>/Enter Configuration Mode'
    */
   192U,
 
-  /* Expression: [0x02, 0x2A, 0xC0]
-   * Referenced by: '<S36>/CNF1'
+  /* Pooled Parameter (Expression: [0x02, 0x2A, 0xC0])
+   * Referenced by:
+   *   '<S55>/CNF1'
+   *   '<S57>/CNF1'
+   *   '<S60>/CNF1'
+   *   '<S62>/CNF1'
    */
   { 2U, 42U, 192U },
 
-  /* Expression: [0x02, 0x29, 0x99]
-   * Referenced by: '<S36>/CNF2'
+  /* Pooled Parameter (Expression: [0x02, 0x29, 0x99])
+   * Referenced by:
+   *   '<S55>/CNF2'
+   *   '<S57>/CNF2'
+   *   '<S60>/CNF2'
+   *   '<S62>/CNF2'
    */
   { 2U, 41U, 153U },
 
-  /* Expression: [0x02, 0x28, 0x02]
-   * Referenced by: '<S36>/CNF3'
+  /* Pooled Parameter (Expression: [0x02, 0x28, 0x02])
+   * Referenced by:
+   *   '<S55>/CNF3'
+   *   '<S57>/CNF3'
+   *   '<S60>/CNF3'
+   *   '<S62>/CNF3'
    */
   { 2U, 40U, 2U },
 
-  /* Expression: [0x05, 0x2B, 0xFF, 0x01]
-   * Referenced by: '<S36>/CANINTE'
+  /* Pooled Parameter (Expression: [0x05, 0x2B, 0xFF, 0x01])
+   * Referenced by:
+   *   '<S55>/CANINTE'
+   *   '<S57>/CANINTE'
+   *   '<S60>/CANINTE'
+   *   '<S62>/CANINTE'
    */
   { 5U, 43U, 255U, 1U },
 
-  /* Expression: [0x02, 0x60, 0x60]
-   * Referenced by: '<S36>/Set acceptance filters'
+  /* Pooled Parameter (Expression: [0x02, 0x60, 0x60])
+   * Referenced by:
+   *   '<S55>/Set acceptance filters'
+   *   '<S57>/Set acceptance filters'
+   *   '<S60>/Set acceptance filters'
+   *   '<S62>/Set acceptance filters'
    */
   { 2U, 96U, 96U },
 
-  /* Expression: [0x05, 0x2C, 0xFF, 0x00]
-   * Referenced by: '<S36>/Clear flags'
+  /* Pooled Parameter (Expression: [0x05, 0x2C, 0xFF, 0x00])
+   * Referenced by:
+   *   '<S55>/Clear flags'
+   *   '<S57>/Clear flags'
+   *   '<S60>/Clear flags'
+   *   '<S62>/Clear flags'
    */
   { 5U, 44U, 255U, 0U },
 
-  /* Expression: [0x02, 0x0F, 0x00]
-   * Referenced by: '<S36>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
+  /* Pooled Parameter (Expression: [0x02, 0x0F, 0x00])
+   * Referenced by:
+   *   '<S55>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
+   *   '<S57>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
+   *   '<S60>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
+   *   '<S62>/ 000: normal mode, 0: don't abort pending transmit buffers, 0: one-shot disabled, 0: CLKOUT disabled, 00: sysclk//1 | 0000 0000 | 0x00'
    */
   { 2U, 15U, 0U }
 };
